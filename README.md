@@ -1,5 +1,5 @@
 # cityfans-frontend
-Front-end code for the cityfans web project
+### Front-end code for the cityfans web project.
 
 This is mostly vanilla. Using SCSS and Gulp to enhance output performance.
 
