@@ -1,0 +1,16 @@
+:root {
+  /* regular (400), medium (500), bold (700) */
+  --font-default: "Manrope", "Helvetica Neue", helvetica, "Segoe UI", "Apple Color Emoji", arial, sans-serif;
+
+  /* light (300), regular (400), medium (500) */
+  --font-alternative: "Inter", "Helvetica Neue", helvetica, "Segoe UI", "Apple Color Emoji", arial, sans-serif;
+
+  --nav:                        #380E93;
+  --nav-rgb:                     56, 14, 147;
+  --text-color: #363045;
+  --price-color: #5911F4;
+}
+
+body {
+  font-family: var(--font-default);
+}

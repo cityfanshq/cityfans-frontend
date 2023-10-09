@@ -1,0 +1,24 @@
+{
+  "name": "cityfans-frontend",
+  "version": "1.0.0",
+  "description": "This is mostly vanilla. Using SCSS and Gulp to enhance output performance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tazpellegrini",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.69.0"
+  }
+}

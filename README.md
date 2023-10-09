@@ -1,8 +1,16 @@
 # cityfans-frontend
-### Front-end code for the cityfans web project.
+## The front-end code for the cityfans web project
 
-This is mostly vanilla. Using SCSS and Gulp to enhance output performance.
+This is mostly vanilla. Using Sass and Gulp to enhance output performance.
 
-The `assets/css/app.scss` file is the raw one. I’m not familiar with Phoenix but it will probably output it into `phoenix.css`. 
+### For distribution (app)
+- *CSS*: These files are inside `html/app/assets/css/phoenix.css` and are minified and concatened based on the source files written in Sass.
+- *JS*: These files are inside `html/app/assets/js/all.js` and are minified and concatened based on the source files written in vanilla JS.
+- *Images*: The files under `html/app/assets/img/ui` are for UI details and shouldn’t be replaced or deleted, whereas `html/app/assets/img/content` are just for mocking up and can be replaced by images coming from our database
+ 
+### For development (src)
+- *CSS*: These files are inside `html/src/assets/css/` and use the `.scss` extension, combined in one after running `gulp`
+- *JS*: These files are inside `html/src/assets/js/` and are minified and concatened after running `gulp`
 
-`assets/img/ui` are there for UI-design purposes. The ones in `assets/img/content` are for mocking up only and can be replaced by the actual ones when integrated with real content.
+### Pages
+The `html` pages are on the root of the folder `html` and point to the files inside `html/app/…`.
