@@ -17,8 +17,8 @@
     1.3—whereas here lies a havier usage of the layer 1.4, components.
 
     To use our color tokens inside CSS classes, we wrap the color’s variable
-    inside a hsl() functional notation without commas (e.g: hsl(20 80% 80%)),
-    where we can add an optional alpha number for transparency effects 
+    inside a hsl() functional notation (we use the version without commas)
+    where we can add an optional alpha number for transparency effects
     (e.g: hsl(var(--color-surface) / .7)).
   ----------------------------------------------------------------------------
   */
@@ -325,11 +325,13 @@
   --footer-content:           var(--color-almost-white-400);
   --footer-divider:           var(--color-black-200);
 
-  /* REMINDER:
-     To use our color tokens inside CSS classes, we wrap the color’s variable
-     inside a hsl() functional notation without commas (e.g: hsl(20 80% 80%)),
-     where we can add an optional alpha number for transparency effects 
-     (e.g: hsl(var(--color-surface) / .7)) */
+  /* 
+    REMINDER:
+    To use our color tokens inside CSS classes, we wrap the color’s variable
+    inside a hsl() functional notation (we use the version without commas)
+    where we can add an optional alpha number for transparency effects
+    (e.g: hsl(var(--color-surface) / .7)).
+  */
 
   /*
   ----------------------------------------------------------------------------
