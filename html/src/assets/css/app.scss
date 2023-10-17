@@ -333,6 +333,7 @@
     (e.g: hsl(var(--color-surface) / .7)).
   */
 
+
   /*
   ----------------------------------------------------------------------------
   2.TYPESETTING
@@ -382,9 +383,6 @@
     (while line-height should not have any units attached to it, ideally).
     Although `em` is a good unit in certain occasions, for typography its best 
     if we use `rem` for its predictability.
-
-
-
   ----------------------------------------------------------------------------
   */
 
@@ -426,8 +424,42 @@
                         var(--font-size-48px));
   --text-size-900: var(--font-size-48px);
 
+
+  /*
+  ----------------------------------------------------------------------------
+  3.SPACING
+    We are using Lexend Deca as the main typeface of the application with the following weights:
+  */
+
+  /* this is based on our grid and is used as a fallback. Values can be rewritten if needed */
+
+  --default-spacing: 1rem; /* 16px */
 }
 
+/* ////////////////////////
+  HELLOO
+\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+html {
+  font-size:              var(--root-fontsize);
+}
+
+body {
+  font-family:            var(--typeface-default);
+  color:                  hsl(var(--color-content));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* UTILITIES */
+/*text sizes */
 .text-size-100 {
   font-size:      var(--text-size-100);
   line-height:    1.2;
@@ -473,20 +505,26 @@
   line-height:    1.41;
 }
 
-/* ////////////////////////
-  HELLOO
-\\\\\\\\\\\\\\\\\\\\\\\\\*/
-/* Here, when using colors, wrap them in HSL, new format, zonder , */
 
-html {
-  font-size:              var(--root-fontsize);
+/* flexbox */
+.flex { display: flex; }
+.align-items-center { align-items: center; }
+.space-between { justify-content: space-between; }
+
+/* spacing */
+.spacing > *:where(:not(:first-child)) {
+  margin-top: var(--space, var(--default-spacing)); 
+  outline: 1px solid red;
 }
 
-body {
-  font-family:            var(--typeface-default);
-  color:                  hsl(var(--color-content));
-}
+/* colors */
+.color-content-inverted { color: hsl(var(--color-content-inverted)); }
+.bg-color-primary { background-color: hsl(var(--color-primary)); }
+.bg-color-ancillary { background-color: hsl(var(--color-ancillary)); }
+.bg-color-surface { background-color: hsl(var(--color-surface)); }
 
-p {
-  margin-bottom: 2rem;
+/* COMPONENTS */
+.primary-footer {
+  background-color: hsl(var(--footer-bg));
+  color: hsl(var(--footer-content));
 }
