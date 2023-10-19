@@ -22,57 +22,110 @@
   <script src="app/assets/js/all.js" defer></script>
 </head>
 
-<body class="spacing bg-color-primary">
-  <main>
-    <header class="primary-header">
+<body class="bg-color-primary">
+  <main class="">
+    <header class="primary-header | padding-all-400">
       <div class="default-container flex align-items-center space-between">
-        <div>Logo</div>
+        <div>
+          <a href="index.html" class="logo"><img src="app/assets/img/ui/logo.svg" alt="the cityfans logo"></a>
+        </div>
         <nav>
           <ul class="primary-navigation | flex">
-            <li><a href="">EN / €</a></li>
-            <li><a href="">Login</a></li>
+            <li><a href="" class="color-content-inverted">EN / €</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <section class="hero-intro">
-      <div class="default-container">
-        <h1 class="hero-header | text-align-center color-content-inverted margin-block-800">Exploring Amsterdam with the best blend of digital and real</h1>
-        <!-- TODO: add video placeholder -->
+      <div>
+        <div class="video-home">
+          <img src="app/assets/img/content/video-mockup.png" alt="">
+        </div>
+        <h1 class="hero-header | text-align-center color-content-inverted">Exploring Amsterdam with the best blend of digital and real</h1>
       </div>
     </section>
 
-    <section class="usp-list | grid bg-color-ancillary">
-      <ul class="default-container | grid">
+    <section>
+      <ul class="usp-list">
         <li>
-          <!-- TODO: add image -->
-          <p role="heading" class="text-size-500">City exploration, you way</p>
+          <img src="app/assets/img/ui/balloon.svg" alt="">
+          <p role="heading" class="text-size-400 font-weight-700 margin-block-400 heading-balance">City Exploration, Your Way</p>
           <p>Experience interactive city games and immersive digital adventures all under your control</p>
         </li>
 
         <li>
-          <!-- TODO: add image -->
-          <p role="heading" class="text-size-500">Explore, Connect, Experience</p>
+          <img src="app/assets/img/ui/diamond.svg" alt="">
+          <p role="heading" class="text-size-400 font-weight-700 margin-block-400 heading-balance">Explore, Connect, Experience</p>
           <p>Join friends or venture solo for city exploration and unforgettable memories</p>
         </li>
 
         <li>
-          <!-- TODO: add image -->
-          <p role="heading" class="text-size-500">Discover Local Stories</p>
+          <img src="app/assets/img/ui/explainer.svg" alt="">
+          <p role="heading" class="text-size-400 font-weight-700 margin-block-400 heading-balance">Discover Local Stories</p>
           <p>Have fun while supporting local creators of unique digital adventures</p>
         </li>
       </ul>
     </section>
 
-    <section class="bg-color-surface">
+    <section class="padding-all-400 bg-color-surface">
       <div class="default-container">
         <div class="hero-cards">
           <h2 class="text-size-600">Try it for yourself</h2>
+
+          <div class="hero-cards-carousel">
+
+          </div>
         </div>
 
         <div class="category-cards">
           <h2 class="text-size-600">Experiences that are good for…</h2>
+
+          <!-- the buttons that control the tabs --> 
+          <div class="tab-list | flex" role="tablist" aria-
+          label="types of experiences">
+            <button aria-selected="true" role="tab" aria-controls="solotravelers-tab" class="" tabindex="0">Solo Travelers</button>
+
+            <button aria-selected="false" role="tab" aria-controls="families-tab"  
+            tabindex="-1">Families</button>
+
+            <button aria-selected="false" role="tab" aria-controls="firsttime-tab"  
+            tabindex="-1">First-time visitors</button>
+
+            <button aria-selected="false" role="tab" aria-controls="exploring-tab"  
+            tabindex="-1">Exploring</button>
+          </div>
+
+          <!-- tab 1: solo travelers -->
+          <article class="spacing" id="solotravelers-tab" tabindex="0" 
+          role="tabpanel">
+            <ul class="card-list">
+              <li class="card">
+                <a href="productpage.html">
+                    <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                    <span class="card-category">Audio Guide</span>
+
+                    <section class="card-content">
+                      <header class="card-header">
+                        <h3>Self-Guided Audio Tour at Van Gogh Museum</h3>
+                      </header>
+                      <footer class="card-footer">
+                        <span class="rating">4.3</span>
+                        <span class="location">Amsterdam, NL</span>
+                        <span class="price">€7.99</span>
+                      </footer>
+                    </section>
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <!-- tab 2: Families -->
+          <article hidden class="spacing" id="families-tab" tabindex="0" role="tabpanel">
+            <p>card 2</p>
+          </article>
+
         </div>
 
         <div class="type-cards">
