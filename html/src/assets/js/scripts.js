@@ -1,3 +1,4 @@
+//TABS
 window.addEventListener("load", function() {
   // store tabs variable
   var theTabs = document.querySelectorAll("ul.nav-tabs > li");
@@ -25,3 +26,9 @@ window.addEventListener("load", function() {
       theTabs[i].addEventListener("click", theTabClicks)
   }
 });
+
+//IMAGE GALLERY
+//https://codesandbox.io/s/vanilla-js-responsive-image-slider-vblu3
+
+// OR USE GLIDER
+//https://nickpiscitelli.github.io/Glider.js/
