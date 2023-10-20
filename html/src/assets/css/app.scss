@@ -444,6 +444,18 @@
   --spacing-48:    calc(var(--spacing-default) * 3);
   --spacing-64:    calc(var(--spacing-default) * 4);
   --spacing-80:    calc(var(--spacing-default) * 5);
+
+  /*
+  ----------------------------------------------------------------------------
+  4.BORDER RADIUS
+    We are using Lexend Deca as the main typeface of the application with the following weights:
+  */
+
+  --border-radius-outer:       1rem;
+  --border-radius-inner:       0.875rem;
+  --border-radius-inner-inner: 0.75rem;
+
+
 }
 
 /* ////////////////////////
@@ -753,4 +765,94 @@ h6 {
 
 .video-home {
   margin-bottom: var(--spacing-24);
+}
+
+/* tab list */
+.tab-list button {
+  background: hsl(var(--color-surface));
+  content: hsl(var(--color-content));
+  border: 1px solid hsl(var(--color-content));
+  border-radius: var(--border-radius-outer);
+  padding: var(--spacing-8);
+}
+
+.tab-list button[aria-selected="true"] {
+  background: hsl(var(--color-surface-dark));
+  color: hsl(var(--color-content-inverted));
+}
+
+/* category cards */
+.card-list {
+  display: grid;
+  gap: var(--spacing-default, --spacing-16);
+  grid-template-columns: minmax(1rem, 1fr) minmax(1rem, 1fr);
+}
+
+.card {
+  padding: var(--spacing-8);
+  list-style-type: none;
+  border-radius: var(--border-radius-outer);
+  border: 2px solid hsl(var(--categorycard-border));
+  color: hsl(var(--categorycard-content));
+  background: hsl(var(--categorycard-bg));
+}
+
+.card a {
+  color: var(--color-content);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.card img { 
+  border-radius: var(--border-radius-inner-inner);
+}
+
+.card-category {
+  text-transform: uppercase;
+  display: block;
+  font-size: var(--font-size-12px);
+  font-weight: 300;
+  margin-block: var(--spacing-8);
+}
+
+.card-header {
+  flex: 1;
+}
+
+.card-header h3 {
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.card-footer {
+  margin-top: var(--spacing-16);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: end;
+}
+
+.card-footer .location,
+.card-footer .price {
+  display: block;
+  text-align: right;
+}
+
+.card-footer .location {
+  font-size: var(--text-size-300);
+  font-weight: 300;
+  display: block;
+}
+
+.card-footer .price {
+  font-size: var(--text-size-500);
+  font-weight: 700;
+}
+
+.card-footer .rating {
+  background: url('/html/app/assets/img/ui/star-filled.svg') left center no-repeat;
+  padding-left: var(--spacing-24);
+  font-weight: 300;
+  font-size: var(--text-size-400);
 }
