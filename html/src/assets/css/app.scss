@@ -482,6 +482,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  text-wrap: balance;
 }
 
 /* UTILITIES */
@@ -513,7 +514,7 @@ h6 {
 
 .text-size-600 {
   font-size:      var(--text-size-600);
-  line-height:    clamp(1.66, var(--font-size-clamp-factor), 1.5);
+  line-height:    1.16;
 }
 
 .text-size-700 {
@@ -768,17 +769,51 @@ h6 {
 }
 
 /* tab list */
-.tab-list button {
+.tab-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab-list li {
+  list-style-type: none;
+}
+
+.tab-list a {
+  display: block;
+  text-decoration: none;
   background: hsl(var(--color-surface));
   content: hsl(var(--color-content));
   border: 1px solid hsl(var(--color-content));
   border-radius: var(--border-radius-outer);
-  padding: var(--spacing-8);
+  padding: var(--spacing-4);
+  font-size: var(--text-size-300);
+  margin-block: var(--spacing-16);
+  color: hsl(var(--color-content));
+
+  text-wrap: nowrap;
 }
 
-.tab-list button[aria-selected="true"] {
+.tab-list a:visited {
+  color: hsl(var(--color-content));
+}
+
+.tab-list .active a {
   background: hsl(var(--color-surface-dark));
   color: hsl(var(--color-content-inverted));
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active,
+.tab-pane .active {
+  display: block;
+
 }
 
 /* category cards */
@@ -851,8 +886,10 @@ h6 {
 }
 
 .card-footer .rating {
-  background: url('/html/app/assets/img/ui/star-filled.svg') left center no-repeat;
+  background: url('../../assets/img/ui/star-filled.svg') left center no-repeat;
   padding-left: var(--spacing-24);
   font-weight: 300;
   font-size: var(--text-size-400);
 }
+
+

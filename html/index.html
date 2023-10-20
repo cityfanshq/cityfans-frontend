@@ -68,9 +68,9 @@
       </ul>
     </section>
 
-    <section class="padding-all-400 bg-color-surface">
+    <section class="padding-all-400 bg-color-surface home-cards">
       <div class="default-container">
-        <div class="hero-cards">
+        <div class="hero-cards margin-bottom-800">
           <h2 class="text-size-600">Try it for yourself</h2>
           <!-- 
             https://css-tricks.com/css-only-carousel/
@@ -83,133 +83,631 @@
           </div>
         </div>
 
-        <div class="category-cards">
+        <div class="category-cards margin-bottom-800">
           <h2 class="text-size-600">Experiences that are good for…</h2>
 
-          <!-- the buttons that control the tabs --> 
-          <div class="tab-list | flex" role="tablist" aria-
-          label="types of experiences">
-            <button aria-selected="true" role="tab" aria-controls="solotravelers-tab" class="" tabindex="0">Solo Travelers</button>
+            <!-- HOW THE TABS WORK: -->
+            <section class="container--tabs"> 
+            <!-- the <section> container--tabs holds each instance of 
+              the “tab component”. We can have as many as we want in a page. -->
+              <ul class="nav nav-tabs tab-list">
+                <!-- the tab-list <ul> contain the categories/types/themes etc with a link to a panel ID. This can be anything, as long as it matches with the tab-pane ID. 
 
-            <button aria-selected="false" role="tab" aria-controls="families-tab"  
-            tabindex="-1">Families</button>
+                the first item must always have the “active” class.
+                -->
+                <li class="active"><a href="#tab-1">Solo Travelers</a></li>
+                <li class=""><a href="#tab-2">Families</a></li>
+                <li class=""><a href="#tab-3">First-Time Visitors</a></li>
+                <li class=""><a href="#tab-4">Exploring</a></li>
+              </ul>
+      
+              <div class="tab-content">
+                <!-- the first <div> should also have the class of “active” -->
+                <div id="tab-1" class="tab-pane active"> 
+                  <!-- tab 1: Solo-travelers  -->
+                  <ul class="card-list">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
 
-            <button aria-selected="false" role="tab" aria-controls="firsttime-tab"  
-            tabindex="-1">First-time visitors</button>
+                          <span class="card-category">Audio Guide</span>
 
-            <button aria-selected="false" role="tab" aria-controls="exploring-tab"  
-            tabindex="-1">Exploring</button>
-          </div>
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets extra vIP package awesome  opportunity </h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
 
-          <!-- tab 1: solo travelers -->
-          <article class="" id="solotravelers-tab" tabindex="0" 
-          role="tabpanel">
-            <ul class="card-list">
-              <li class="card">
-                <a href="productpage.html">
-                    <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
 
-                    <span class="card-category">Audio Guide</span>
+                          <span class="card-category">Audio Guide</span>
 
-                    <header class="card-header">
-                      <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets extra vIP package awesome  opportunity </h3>
-                    </header>
-                    
-                    <footer class="card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="location">Amsterdam, NL</span>
-                        <span class="price">€7.99</span>
-                      </div>
-                    </footer>
-                </a>
-              </li>
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
 
-              <li class="card">
-                <a href="productpage.html">
-                    <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
 
-                    <span class="card-category">Audio Guide</span>
+                          <span class="card-category">Audio Guide</span>
 
-                    <header class="card-header">
-                      <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                    </header>
-                    
-                    <footer class="card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="location">Amsterdam, NL</span>
-                        <span class="price">€7.99</span>
-                      </div>
-                    </footer>
-                </a>
-              </li>
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
 
-              <li class="card">
-                <a href="productpage.html">
-                    <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
 
-                    <span class="card-category">Audio Guide</span>
+                          <span class="card-category">Audio Guide</span>
 
-                    <header class="card-header">
-                      <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                    </header>
-                    
-                    <footer class="card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="location">Amsterdam, NL</span>
-                        <span class="price">€7.99</span>
-                      </div>
-                    </footer>
-                </a>
-              </li>
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
 
-              <li class="card">
-                <a href="productpage.html">
-                    <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
 
-                    <span class="card-category">Audio Guide</span>
+                          <span class="card-category">Audio Guide</span>
 
-                    <header class="card-header">
-                      <h3>Uncovering Amsterdam</h3>
-                    </header>
-                    
-                    <footer class="card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="location">Amsterdam, NL</span>
-                        <span class="price">€7.99</span>
-                      </div>
-                    </footer>
-                </a>
-              </li>
-            </ul>
-          </article>
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets extra vIP package awesome  opportunity </h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
 
-          <!-- tab 2: Families -->
-          <article hidden class="spacing" id="families-tab" tabindex="0" role="tabpanel">
-            <p>card 2</p>
-          </article>
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
 
-        </div>
+                          <span class="card-category">Audio Guide</span>
 
-        <div class="type-cards">
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="tab-2" class="tab-pane">
+                  <!-- tab 2 (e.g: Families) -->
+                  <ul class="card-list">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">CITY GAME</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="tab-3" class="tab-pane">
+                  <!-- tab 3 (e.g: First-time visitors) -->
+                  <ul class="card-list">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">CITY GAME</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="tab-4" class="tab-pane">
+                  <!-- tab 4 (e.g: Exploring) -->
+                  <ul class="card-list">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">CITY GAME</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+            </section> <!-- CLOSE: TABS “Experiences that are good for…” -->
+        </div> <!-- closes div:category-cards -->
+
+        <div class="type-cards margin-bottom-800">
           <h2 class="text-size-600">Choose your style</h2>
-        </div>
-      </div>
+
+            <section class="container--tabs">
+              <ul class="nav nav-tabs tab-list">
+                <li class="active"><a href="#tab-audioguides">Audio Guides</a></li>
+                <li class=""><a href="#tab-citygames">City Games</a></li>
+                <li class=""><a href="#tab-virtualtours">Virtual Tours</a></li>
+              </ul>
+
+              <div class="tab-content">
+                <div id="tab-audioguides" class="tab-pane active">
+                  <!-- tab 5 (e.g: audio guides) -->
+                  <ul class="card-list">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">CITY GAME</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="tab-citygames" class="tab-pane">
+                  <!-- tab 6 (e.g: city games) -->
+                  <ul class="card-list">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">CITY GAME</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="tab-virtualtours" class="tab-pane">
+                  <!-- tab 7 (e.g: virtual tours) -->
+                  <ul class="card-list">
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">CITY GAME</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+
+                    <li class="card">
+                      <a href="productpage.html">
+                          <img class="card-thumbnail" src="app/assets/img/content/card2.jpg" alt="card image">
+
+                          <span class="card-category">Audio Guide</span>
+
+                          <header class="card-header">
+                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
+                          </header>
+                          
+                          <footer class="card-footer">
+                            <div>
+                              <span class="rating">4.3</span>
+                            </div>
+                            
+                            <div> 
+                              <span class="location">Amsterdam, NL</span>
+                              <span class="price">€7.99</span>
+                            </div>
+                          </footer>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+            </section> <!-- CLOSE: TABS “Choose your style” -->
+        </div> <!-- closes div:type-cards -->
+
+      </div> <!-- closes div: default-container -->
     </section>
 
     <section class="bg-surface-bright">
