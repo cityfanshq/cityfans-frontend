@@ -705,9 +705,10 @@ h6 {
 .bg-color-primary { background-color: hsl(var(--color-primary)); }
 .bg-color-ancillary { background-color: hsl(var(--color-ancillary)); }
 .bg-color-surface { background-color: hsl(var(--color-surface)); }
+.bg-color-surface-bright { background-color: hsl(var(--color-surface-bright)); }
 
 /* COMPONENTS */
-/* IMAGES -- keeping aspect rations */
+/* IMAGES -- keeping aspect ratios */
 .img-container {
   position: relative;
   width: 100%;
@@ -990,4 +991,94 @@ h6 {
   font-size: var(--text-size-400);
 }
 
+/* Destination cards (aka city cards) */
+.destination-cards {
+  display: grid;
+  gap: var(--spacing-default,--spacing-16);
+  grid-template-columns: minmax(1rem,1fr) minmax(1rem,1fr);
+}
+
+.destination-card {
+  position: relative;
+  list-style-type: none;
+  border-radius: var(--border-radius-outer);
+  border: 2px solid hsl(var(--categorycard-border));
+  overflow: hidden;
+}
+
+.destination-card img {
+  width: 100%;
+}
+
+.destination-card a {
+  color: hsl(var(--color-content-inverted));
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  text-decoration: none;
+}
+
+.destination-card figure {
+  flex: 1;
+}
+
+.destination-card h3 {
+  background-color: hsl(var(--color-surface-dark));
+  padding: var(--spacing-8);
+  font-size: var(--text-size-400);
+  text-align: center;
+}
+
+/* scroller */
+.scroller {
+  max-width: 70.5rem;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
 
