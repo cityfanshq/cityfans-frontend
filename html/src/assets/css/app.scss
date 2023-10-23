@@ -455,6 +455,8 @@
   --border-radius-inner:       0.875rem;
   --border-radius-inner-inner: 0.75rem;
 
+  /* BOX SHADOW */
+  --box-shadow-default: 0.15rem 0.15rem hsl(var(--color-border));
 
 }
 
@@ -787,6 +789,7 @@ h6 {
   font-size: var(--text-size-400);
   font-weight: 700;
   margin-block: var(--spacing-8);
+  line-height: 1.25;
 }
 
 .video-home {
@@ -846,6 +849,7 @@ h6 {
 /* hero carousel */
 .hero-cards {
   margin-bottom: var(--spacing-32);
+  overflow: visible;
 }
 
 .hero-carousel-cell {
@@ -869,6 +873,11 @@ h6 {
   background: hsl(var(--herocard-bg));
   padding: var(--spacing-8);
   position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.hero-card:hover {
+  background: hsl(var(--color-blue-700));
 }
 
 .hero-card img {
@@ -997,6 +1006,12 @@ h6 {
   border: 2px solid hsl(var(--categorycard-border));
   color: hsl(var(--categorycard-content));
   background: hsl(var(--categorycard-bg));
+  transition: all .2s ease-in-out;
+}
+
+.card:hover {
+  background: hsl(var(--color-white-400));
+  transform: scale(1.02) rotate(1deg);
 }
 
 .card a {
@@ -1088,6 +1103,10 @@ h6 {
   border-radius: var(--border-radius-outer);
   border: 2px solid hsl(var(--categorycard-border));
   overflow: hidden;
+}
+
+.destination-card:hover h3 {
+  color: hsl(var(--color-yellow-400));
 }
 
 .destination-card img {
@@ -1208,13 +1227,13 @@ h6 {
   opacity: 1;
 }
 
+.footer-logos {
+  border-top: 1px solid hsl(var(--footer-divider));
+}
+
 .footer-logos div {
   margin: 0 auto;
-  /* display: flex; 
-  align-items: center; 
-  justify-content: space-between; */
   padding: var(--spacing-24) var(--spacing-16) var(--spacing-16) var(--spacing-16);
-  border-top: 1px solid hsl(var(--footer-divider));
 }
 
 .footer-logos ul {
@@ -1231,6 +1250,30 @@ h6 {
   background-size: fill;
 }
 
+/* buttons */
+.see-all {
+  text-align: center;
+  margin-block: var(--spacing-24);
+}
+
+.btn-see-all {
+  display: inline-block;
+  padding: var(--spacing-8) var(--spacing-16);
+  border: 2px solid hsl(var(--color-border));
+  color: hsl(var(--color-content));
+  font-size: var(--text-size-300);
+  text-transform: uppercase;
+  background-color: hsl(var(--color-blue-700) / 0.8);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: var(--border-radius-outer);
+  box-shadow: var(--box-shadow-default);
+}
+
+.btn-see-all:hover {
+  background-color: hsl(var(--color-blue-700) / 1);
+}
+
 
 /* ============ MEDIA QUERIES ============ */
 /* 768px */
@@ -1239,12 +1282,16 @@ h6 {
     background-size: contain;
   }
 
+  .default-container {
+    padding-inline: var(--font-size-32px);
+  }
+
   .hero-intro {
     width: 80%;
     margin: 0 auto;
   }
 
-  .hero-intro div {
+  .hero-intro > div {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
@@ -1254,6 +1301,8 @@ h6 {
     grid-row: 1;
     text-align: left;
     padding: 0;
+    font-size: var(--text-size-600);
+    text-wrap: balance;
   }
 
   .video-home {
@@ -1261,6 +1310,201 @@ h6 {
     border-radius: var(--border-radius-outer);
     overflow: hidden;
     transform: rotate(1.5deg);
+  }
+
+  .usp-list p {
+    font-size: var(--text-size-300);
+  }
+
+  .hero-cards {
+    margin-left: var(--font-size-32px);
+  }
+
+  .hero-card {
+    min-width: 50%;
+  }
+
+  .hero-card:first-child {
+    margin: 0;
+  }
+
+  .hero-cards h2 {
+    padding-inline: 0;
+  }
+
+  .category-cards h2, .type-cards h2,
+  .tab-content, .destination-cards {
+    padding-inline: 0;
+  }
+
+  .tab-list li:first-child {
+    margin-left: 0;
+  }
+
+  .footer-logos div {
+    padding-inline: var(--font-size-32px);
+    margin-top: var(--font-size-16px);
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+  }
+
+  .footer-content {
+    padding: var(--font-size-32px) 0;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-logos ul {
+    margin-top: 0;
+  }
+
+  /* card-list */
+  .card-list,
+  .destination-cards {
+    grid-template-columns: repeat(3, minmax(1rem,1fr));
+  }
+}
+
+/* 1024px */
+@media screen and (min-width: 64em) {
+  .hero-intro div h1 {
+    grid-row: 1;
+    text-align: left;
+    padding: 0;
+    font-size: var(--text-size-700);
+    text-wrap: balance;
+  }
+
+  .usp-list p {
+    font-size: var(--text-size-300);
+  }
+
+  .hero-card {
+    min-width: 30%;
+  }
+
+  .card-list, .destination-cards {
+    grid-template-columns: repeat(4, minmax(1rem,1fr));
+  }
+
+  .hero-card-footer .price {
+    font-size: var(--text-size-500);
+  }
+
+  .category-cards h2, .destination-cards, .hero-cards h2, .tab-content, 
+  .type-cards h2 {
+    font-size: var(--text-size-500);
+  }
+
+  .hero-card h3,
+  .card-header h3 {
+    font-size: var(--text-size-400);
+  }
+
+  .hero-card h3 {
+    margin-top: var(--font-size-16px);
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .card-category {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: hsl(var(--color-surface-dark));
+    color: hsl(var(--color-content-inverted));
+    padding-inline: var(--spacing-16);
+    padding-block: var(--spacing-4);
+    border-radius: var(--border-radius-inner-inner);
+
+    font-size: var(--text-size-300);
+
+    margin-block: 0;
+    text-transform: none;
+  }
+
+  .card-header h3 {
+    margin-block: var(--spacing-8);
+  }
+
+}
+
+/* 1344 */
+@media screen and (min-width: 84em) {
+  .primary-header .logo {
+    width: 7rem;
+  }
+
+  .usp-list,
+  .hero-cards,
+  .footer-logos div,
+  .default-container {
+    padding: 0;
+    width: 68em;
+    margin: 0 auto;
+  }
+
+  .primary-footer {
+    padding-block: 0;
+  }
+
+  .footer-logos div {
+    padding-block: var(--spacing-24);
+  }
+
+  .hero-intro {
+    width: 52em;
+    margin: 0 auto;
+  }
+
+  .hero-intro > div {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .usp-list li {
+    padding-top: 0;
+  }
+
+  .hero-cards {
+    margin-bottom: var(--spacing-32);
+  }
+
+  .hero-card {
+    min-width: 300px;
+  }
+
+  .usp-list p[role='heading'] {
+    font-size: 1.05rem;
+  }
+
+  .usp-list p {
+    font-size: font;
+  }
+}
+
+/* 1920 */
+@media screen and (min-width: 120em) {
+  .hero-intro {
+    width: 68em;
+  }
+
+  .usp-list p[role='heading'] {
+    margin-block: var(--spacing-16);
+  }
+
+  .usp-list p {
+    font-size: var(--font-size-16px);
+    text-wrap: balance;
+  }
+  .usp-list {
+    padding-bottom: var(--spacing-16);
+  }
+
+  .hero-cards h2 {
+    padding-bottom: var(--spacing-16);
   }
 
 }
