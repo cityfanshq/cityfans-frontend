@@ -750,8 +750,8 @@ h6 {
 .usps {
   background-image: linear-gradient(
     to bottom,
-    hsl(var(--color-primary)) 0 10%,
-    hsl(var(--color-primary)) 10% 20%,
+    transparent 0 10%,
+    transparent 10% 20%,
     hsl(var(--color-ancillary)) 20% 50%,
     hsl(var(--color-ancillary))
     );
@@ -811,6 +811,10 @@ h6 {
 .destinations h2, 
 .partners h2 {
   font-size: var(--text-size-600);
+}
+
+.hero-intro h1 {
+  text-align: center;
 }
 
 .category-cards h2, 
@@ -1220,12 +1224,43 @@ h6 {
   align-items: center;
 }
 
+.bg-home {
+  background-color: hsl(var(--color-primary));
+  background-image: url('../../assets/img/ui/decorative.svg');
+  background-repeat: no-repeat;
+  background-size: fill;
+}
 
-/* === MEDIA QUERIES === */
+
+/* ============ MEDIA QUERIES ============ */
 /* 768px */
 @media screen and (min-width: 48em) {
+  .bg-home {
+    background-size: contain;
+  }
+
+  .hero-intro {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .hero-intro div {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
   }
+
+  .hero-intro div h1 {
+    grid-row: 1;
+    text-align: left;
+    padding: 0;
+  }
+
+  .video-home {
+    border: 8px solid hsl(var(--color-white-400) / 0.5);
+    border-radius: var(--border-radius-outer);
+    overflow: hidden;
+    transform: rotate(1.5deg);
+  }
+
 }
