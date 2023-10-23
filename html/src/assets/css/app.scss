@@ -1313,7 +1313,7 @@ h6 {
 /* PAGE-SPECIFIC */
 /* --- product page */
 .product-page-content .default-container, 
-.more-experiences .default-container{
+.more-experiences .default-container {
   padding: var(--spacing-16);
 }
 
@@ -1330,7 +1330,6 @@ h6 {
 .product-metadata {
   display: grid;
   gap: 0.5rem;
-  margin-bottom: var(--spacing-16);
 }
 
 .product-metadata li {
@@ -1625,8 +1624,9 @@ h6 {
 }
 
 .review-profile {
-  display: flex;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: 64px auto;
   align-items: center;
 }
 
@@ -1647,8 +1647,14 @@ h6 {
     background-size: contain;
   }
 
-  .default-container {
-    padding-inline: var(--font-size-32px);
+  .primary-header {
+    padding-inline: 0;
+  }
+
+  .default-container,
+  .product-page-content .default-container,
+  .more-experiences .default-container {
+    padding-inline: var(--spacing-32);
   }
 
   .hero-intro {
@@ -1682,7 +1688,7 @@ h6 {
   }
 
   .hero-cards {
-    margin-left: var(--font-size-32px);
+    margin-left: var(--spacing-32);
   }
 
   .hero-card {
@@ -1707,15 +1713,15 @@ h6 {
   }
 
   .footer-logos div {
-    padding-inline: var(--font-size-32px);
-    margin-top: var(--font-size-16px);
+    padding-inline: var(--spacing-32);
+    margin-top: var(--spacing-16);
     display: flex; 
     align-items: center; 
     justify-content: space-between;
   }
 
   .footer-content {
-    padding: var(--font-size-32px) 0;
+    padding: var(--spacing-32) 0;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
@@ -1727,6 +1733,14 @@ h6 {
   .card-list,
   .destination-cards {
     grid-template-columns: repeat(3, minmax(1rem,1fr));
+  }
+
+  .included {
+    background-position: 27% 5%;
+  }
+
+  .not-included {
+    background-position: 33% 15%;
   }
 }
 
@@ -1767,7 +1781,7 @@ h6 {
   }
 
   .hero-card h3 {
-    margin-top: var(--font-size-16px);
+    margin-top: var(--spacing-16);
   }
 
   .card {
@@ -1795,12 +1809,75 @@ h6 {
     margin-block: var(--spacing-8);
   }
 
+  .buy-now-sticky {
+    display: none;
+  }
+
+  .product-page .primary-footer {
+    margin-bottom: 0;
+  }
+
+  .product-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+
+  .buy-now {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 16px;
+    align-self: start;
+    font-size: var(--text-size-300);
+  }
+
+  .btn-buy-now {
+    font-size: var(--text-size-300);
+    margin-bottom: var(--spacing-16);
+  }
+
+  .product-page-content {
+    padding-top: var(--spacing-24);
+  }
+  .product-page-content h1 {
+    font-size: var(--text-size-700);
+  }
+
+  .product-metadata {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .product-metadata .distance, .product-metadata .duration, .product-metadata .info, .product-metadata .language {
+    font-size: var(--text-size-300);
+    background-size: 1rem;
+    padding-left: var(--spacing-24);
+    background-position: left top;
+  }
+
+  .review-header {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .review-evaluation {
+    margin-top: 0;
+    align-self: flex-end;
+    margin-bottom: var(--spacing-12);
+  }
+
 }
 
 /* 1344 */
 @media screen and (min-width: 84em) {
   .primary-header .logo {
     width: 7rem;
+  }
+
+  .primary-header .default-container {
+    padding-inline: var(--spacing-32);
   }
 
   .usp-list,
@@ -1847,6 +1924,23 @@ h6 {
 
   .usp-list p {
     font-size: font;
+  }
+
+  .product-metadata .distance, .product-metadata .duration, .product-metadata .info, .product-metadata .language {
+    font-size: 1rem;
+    background-position: left 0.25rem;
+  }
+
+  .btn-buy-now, .buy-now {
+    font-size: 0.88rem;
+  }
+
+  .included {
+    background-position: 34% 6%;
+  }
+
+  .not-included {
+    background-position: 42% 13%;
   }
 }
 
