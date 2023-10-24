@@ -1794,7 +1794,8 @@ h6 {
   font-weight: 300;
 }
 
-.product-fineprint .product-price {
+.product-fineprint .product-price,
+.ticket-content-footer .ticket-price {
   font-weight: 700;
   font-size: var(--text-size-500);
   text-align: right;
@@ -1851,6 +1852,19 @@ input[type="checkbox"]:checked{
   gap: 1rem;
 }
 
+.ticket-no {
+  display: grid;
+  grid-template-columns: 2.2rem auto;
+  align-items: center;
+  gap: 1rem;
+  border-top: 2px solid hsl(var(--color-border));
+}
+
+.ticket-no label {
+  display: block;
+  line-height: 1.25;
+}
+
 .ticket-choice h2 {
   font-size: var(--text-size-400);
   line-height: 1.16;
@@ -1875,6 +1889,47 @@ input[type="checkbox"]:checked{
 .ticket-summary em {
   text-decoration: underline;
   font-style: normal;
+}
+
+.ticket-module-content {
+  background: hsl(var(--color-surface-elevated));
+}
+
+/* ticket input controls/forms */
+.ticket-date-time {
+  margin-bottom: var(--spacing-32);
+}
+
+.ticket-date-time input,
+.ticket-date-time select {
+  background: hsl(var(--color-white-400));
+  border: 2px solid hsl(var(--color-border));
+  padding: var(--spacing-8) var(--spacing-16);
+  min-width: 12rem;
+  border-radius: var(--border-radius-inner-inner);
+}
+
+.ticket-date-time label {
+  display: inline-block;
+  min-width: 7rem;
+  font-weight: 700;
+}
+
+.ticket-time,
+.ticket-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-16);
+}
+
+.ticket-content-footer {
+  border-top: 2px solid hsl(var(--color-border));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--spacing-24);
+  padding-top: var(--spacing-16);
 }
 
 

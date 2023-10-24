@@ -112,8 +112,66 @@
                   </div>
                 </div>
 
+                <div class="error-message-inner">Please choose at least one type of ticket</div>
+
                 <div class="ticket-module-content">
-                  <div class="ticket-content-footer"><p>price</p></div>
+                  <div class="ticket-date-time">
+                    <div class="ticket-date">
+                      <label for="ticket-day">Which day?</label>
+
+                      <input type="date" id="ticket-day" name="ticket-day" value="2023-10-20" min="2023-10-20" max="2023-12-31" />
+                    </div>
+                    
+                    <div class="ticket-time">
+                      <label for="ticket-time">What time?</label>
+                      <select name="ticket-time" id="ticket-time">
+                        <!-- <option value="" disabled>--Please choose an option--</option> -->
+                        <option value="10:30">10:30</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:30" disabled>12:30 (sold out)</option>
+                        <option value="14:00">14:00</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="product-options">
+                    <ul>
+                      <li>
+                        <p class="product-option-title">Adult (age +18)</p>
+                        <p class="product-option-price">$9.49</p>
+                        <div class="quantity-control">
+                          <button class="qc-minus" aria-label="Decrease by one" disabled></button>
+                          <div class="qc-number qc-dim">0</div>
+                          <button class="qc-plus" aria-label="Increase by one"></button>
+                        </div>
+                      </li>
+
+                      <li>
+                        <p class="product-option-title">Child</p>
+                        <p class="product-option-price">0</p>
+                        <div class="quantity-control">
+                          <button class="qc-minus" aria-label="Decrease by one"></button>
+                          <div class="qc-number qc-dim">0</div>
+                          <button class="qc-plus" aria-label="Increase by one"></button>
+                        </div>
+                      </li>
+
+                      <li>
+                        <p class="product-option-title">Senior</p>
+                        <p class="product-option-price">$8</p>
+                        <div class="quantity-control">
+                          <button class="qc-minus" aria-label="Decrease by one" disabled></button>
+                          <div class="qc-number qc-dim">0</div>
+                          <button class="qc-plus" aria-label="Increase by one"></button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="ticket-content-footer">
+                    <p>Total</p>
+                    <p class="ticket-price">$18.99</p>
+                  </div>
                   
                   <div class="module-controls">
                     <button class="btn-confirm">Confirm</button>
