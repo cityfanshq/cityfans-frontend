@@ -328,6 +328,9 @@
   --footer-content:           var(--color-almost-white-400);
   --footer-divider:           var(--color-black-200);
 
+  --error-message-bg:         var(--color-red-400);
+  --error-message-content:    var(--color-content-inverted);
+
   --btn-active-animation:     scale(0.97);
 
   /* 
@@ -1351,7 +1354,7 @@ h6 {
 
 .product-metadata {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .product-metadata li {
@@ -1361,6 +1364,7 @@ h6 {
 .product-metadata .language,
 .product-metadata .duration,
 .product-metadata .distance,
+.product-metadata .rating,
 .product-metadata .info {
   padding-left: var(--spacing-32);
   font-weight: 300;
@@ -1385,6 +1389,11 @@ h6 {
 .product-metadata .info {
   background: url('../../assets/img/ui/info.svg') left center no-repeat;
   background-size: 1.15rem;
+}
+
+.product-metadata .rating {
+  background: url('../../assets/img/ui/star-filled.svg') left center no-repeat;
+  background-size: 1.25rem;
 }
 
 .photo-gallery {
@@ -1723,6 +1732,11 @@ h6 {
   margin-bottom: 0;
 }
 
+.product-options li:only-child {
+  border-bottom: 1px solid hsl(var(--color-border-lighter));
+  padding-bottom: var(--spacing-16);
+}
+
 .product-option-title {
   flex: 1;
 }
@@ -1732,10 +1746,12 @@ h6 {
 }
 
 /* main product module */
-.main-product-module {
+.main-product-module,
+.ticket-module {
   border-radius: var(--border-radius-outer);
   border: 2px solid hsl(var(--color-border));
   overflow: hidden;
+  margin-bottom: var(--spacing-16);
 }
 
 .main-product-header {
@@ -1759,6 +1775,9 @@ h6 {
 .main-product-header,
 .main-product-content,
 .main-product-footer,
+.ticket-module-header,
+.ticket-module-content,
+.ticket-no,
 .module-controls {
   padding: var(--spacing-16);
 }
@@ -1783,6 +1802,79 @@ h6 {
 
 .module-controls {
   text-align: center;
+}
+
+
+/* error messages */
+.error-message-inner {
+  background: hsl(var(--error-message-bg));
+  color: hsl(var(--error-message-content));
+  font-size: var(--text-size-300);
+  font-weight: 500;
+  padding: var(--spacing-12);
+  border-bottom: 2px solid hsl(var(--color-border));
+}
+
+.ticket-module-header {
+  background: hsl(var(--color-ancillary-variant));
+  border-bottom: 2px solid hsl(var(--color-border));
+}
+
+/* tikcet module checkbox */
+.ticket-module input:where([type="checkbox"]) {
+  -webkit-appearance : none;
+  appearance         : none;
+  width              : 2.125rem;
+  height             : 2.125rem;
+  vertical-align     : top;
+  border             : 2px solid hsl(var(--color-border));
+  border-radius      : 50%;
+  background         : hsl(var(--color-white-400)) no-repeat center center;
+}
+
+.ticket-module input:where([type="checkbox"]):where(:active:not(:disabled), :focus){
+  outline      : none;
+}
+
+.ticket-module input:where([type="checkbox"]):disabled {
+  opacity: 0.5;
+}
+
+input[type="checkbox"]:checked{
+  background: hsl(var(--color-white-400))  url('../../assets/img/ui/dot.svg') no-repeat center center;
+}
+
+.ticket-choice {
+  display: grid;
+  grid-template-columns: 2.2rem auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ticket-choice h2 {
+  font-size: var(--text-size-400);
+  line-height: 1.16;
+}
+
+.module-price-estimation {
+  display: block;
+  min-width: 5rem;
+  font-size: var(--text-size-300);
+  background-color: hsl(var(--color-surface-dark));
+  color: hsl(var(--color-content-inverted));
+  text-align: center;
+  padding: var(--spacing-8);
+  border-radius: var(--border-radius-inner-inner);
+}
+
+.ticket-summary {
+  font-size: var(--text-size-300);
+  margin-top: var(--spacing-16);
+}
+
+.ticket-summary em {
+  text-decoration: underline;
+  font-style: normal;
 }
 
 
@@ -1993,14 +2085,18 @@ h6 {
   .product-metadata {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
   }
 
-  .product-metadata .distance, .product-metadata .duration, .product-metadata .info, .product-metadata .language {
+  .product-metadata .distance, .product-metadata .duration, .product-metadata .info, .product-metadata .language, .product-metadata .rating {
     font-size: var(--text-size-300);
     background-size: 1rem;
     padding-left: var(--spacing-24);
     background-position: left top;
+  }
+
+  .product-metadata .rating {
+    background-size: 1.25rem;
   }
 
   .review-header {
@@ -2073,9 +2169,13 @@ h6 {
     font-size: font;
   }
 
-  .product-metadata .distance, .product-metadata .duration, .product-metadata .info, .product-metadata .language {
+  .product-metadata .distance, .product-metadata .duration, .product-metadata .info, .product-metadata .language, .product-metadata .rating {
     font-size: 1rem;
     background-position: left 0.25rem;
+  }
+
+  .product-metadata .rating {
+    background-position: left 0.05rem;
   }
 
   .btn-buy-now, .buy-now {

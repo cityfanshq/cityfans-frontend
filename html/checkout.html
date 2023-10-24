@@ -47,7 +47,9 @@
                   </figure>
                   <h1>Self-Guided Audio Tour at Van Gogh Museum</h1>
                 </div>
-                <div class="error-message-inner"></div>
+                
+                <div class="error-message-inner">Please choose at least one type of ticket</div>
+                
                 
                 <div class="main-product-content">
                   <div class="product-options">
@@ -97,7 +99,32 @@
                 </div> 
               </section><!-- main product module -->
 
-              <section class="ticket-module"></section>
+              <section class="ticket-module">
+                <div class="ticket-module-header">
+                  <div class="ticket-choice">
+                    <input type="checkbox" id="ticket-yes" name="ticket" />
+                    <h2>Buy an entrance to the Van Gogh museum</h2>
+                    <span class="module-price-estimation">from €222</span>
+                  </div>
+
+                  <div class="ticket-summary">
+                    <p>You’re about to purchase a digital experience that <em>doesn’t include</em> entrance tickets. To make sure you can use the product, buy entrances right here.</p>
+                  </div>
+                </div>
+
+                <div class="ticket-module-content">
+                  <div class="ticket-content-footer"><p>price</p></div>
+                  
+                  <div class="module-controls">
+                    <button class="btn-confirm">Confirm</button>
+                  </div> 
+                </div>
+
+                <div class="ticket-no">
+                  <input type="checkbox" id="ticket-no" name="no-ticket" />
+                  <label for="no-ticket">No, thanks. I already have my entrance ticket(s)</label>
+                </div>
+              </section><!-- ticket module -->
 
               <section class="addons-module"></section>
             </article>
