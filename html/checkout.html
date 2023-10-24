@@ -108,7 +108,13 @@
                   </div>
 
                   <div class="ticket-summary">
-                    <p>You’re about to purchase a digital experience that <em>doesn’t include</em> entrance tickets. To make sure you can use the product, buy entrances right here.</p>
+                      <figure class="extras-thumbnail">
+                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
+                      </figure>
+
+                      <div>
+                        <p>You’re about to purchase a digital experience that <em>doesn’t include</em> entrance tickets. To make sure you can use the product, buy entrances right here.</p>
+                      </div>
                   </div>
                 </div>
 
@@ -184,11 +190,184 @@
                 </div>
               </section><!-- ticket module -->
 
-              <section class="addons-module"></section>
+              <section class="addons-module">
+                <h2>Make your experience even better</h2>
+
+                <section class="addon-item">
+                  <div class="addon-module-header">
+                    <div class="addon-choice">
+                      <input type="checkbox" id="addon-yes" name="addon-01" />
+                      <h3>Tickets for GVB Amsterdam Public Transport</h3>
+                      <span class="module-price-estimation">from €16.90</span>
+                    </div>
+
+                    <div class="addon-summary">
+                      <figure class="extras-thumbnail">
+                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
+                      </figure>
+                      
+                      <div>
+                        <p>Unlimited travel on all GVB routes regardless of distance, both day and night, for the chosen period (Train,  Connexxion and EBS not included)</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="error-message-inner">Please choose at least one type of ticket</div>
+
+                  <div class="ticket-module-content">
+                    <div class="ticket-date-time">
+                      <div class="ticket-date">
+                        <label for="ticket-day">Which day?</label>
+
+                        <input type="date" id="ticket-day" name="ticket-day" value="2023-10-20" min="2023-10-20" max="2023-12-31" />
+                      </div>
+                      
+                      <!-- <div class="ticket-time">
+                        <label for="ticket-time">What time?</label>
+                        <select name="ticket-time" id="ticket-time">
+                          <option value="10:30">10:30</option>
+                          <option value="11:30">11:30</option>
+                          <option value="12:30" disabled>12:30 (sold out)</option>
+                          <option value="14:00">14:00</option>
+                        </select>
+                      </div> -->
+                    </div> 
+
+                    <div class="product-options">
+                      <ul>
+                        <li>
+                          <p class="product-option-title">Adult (age +18)</p>
+                          <p class="product-option-price">$9.49</p>
+                          <div class="quantity-control">
+                            <button class="qc-minus" aria-label="Decrease by one" disabled></button>
+                            <div class="qc-number qc-dim">0</div>
+                            <button class="qc-plus" aria-label="Increase by one"></button>
+                          </div>
+                        </li>
+
+                        <li>
+                          <p class="product-option-title">Child <span>Testing subdescription if needed (good if we can avoid)</span></p>
+                          <p class="product-option-price">0</p>
+                          <div class="quantity-control">
+                            <button class="qc-minus" aria-label="Decrease by one"></button>
+                            <div class="qc-number qc-dim">0</div>
+                            <button class="qc-plus" aria-label="Increase by one"></button>
+                          </div>
+                        </li>
+
+                        <li>
+                          <p class="product-option-title">Senior</p>
+                          <p class="product-option-price">$8</p>
+                          <div class="quantity-control">
+                            <button class="qc-minus" aria-label="Decrease by one" disabled></button>
+                            <div class="qc-number qc-dim">0</div>
+                            <button class="qc-plus" aria-label="Increase by one"></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="ticket-content-footer">
+                      <p>Total</p>
+                      <p class="ticket-price">$18.99</p>
+                    </div>
+                    
+                    <div class="module-controls">
+                      <button class="btn-confirm">Confirm</button>
+                    </div> 
+                  </div>
+                </section> <!-- addon item (e.g: GVB) -->
+
+                <section class="addon-item">
+                  <div class="addon-module-header">
+                    <div class="addon-choice">
+                      <input type="checkbox" id="addon-yes" name="addon-01" />
+                      <h3>Tickets for MacBike Amsterdam Bike Rental</h3>
+                      <span class="module-price-estimation">from €16.90</span>
+                    </div>
+
+                    <div class="addon-summary">
+                      <!-- it also works without images -->
+                      <!-- <figure class="extras-thumbnail">
+                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
+                      </figure> -->
+
+                      <div>
+                        <p>Testing same code without an image, in case there is none. See Amsterdam like a local with a bike rental from MacBike!</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="error-message-inner">Please choose at least one type of ticket</div>
+
+                  <div class="ticket-module-content">
+                    <div class="ticket-date-time">
+                      <div class="ticket-date">
+                        <label for="ticket-day">Which day?</label>
+
+                        <input type="date" id="ticket-day" name="ticket-day" value="2023-10-20" min="2023-10-20" max="2023-12-31" />
+                      </div>
+                      
+                      <div class="ticket-time">
+                        <label for="ticket-time">What time?</label>
+                        <select name="ticket-time" id="ticket-time">
+                          <option value="10:30">10:30</option>
+                          <option value="11:30">11:30</option>
+                          <option value="12:30" disabled>12:30 (sold out)</option>
+                          <option value="14:00">14:00</option>
+                        </select>
+                      </div>
+                    </div> 
+
+                    <div class="product-options">
+                      <ul>
+                        <li>
+                          <p class="product-option-title">Adult (age +18)</p>
+                          <p class="product-option-price">$9.49</p>
+                          <div class="quantity-control">
+                            <button class="qc-minus" aria-label="Decrease by one" disabled></button>
+                            <div class="qc-number qc-dim">0</div>
+                            <button class="qc-plus" aria-label="Increase by one"></button>
+                          </div>
+                        </li>
+
+                        <li>
+                          <p class="product-option-title">Child <span>Testing subdescription if needed (good if we can avoid)</span></p>
+                          <p class="product-option-price">0</p>
+                          <div class="quantity-control">
+                            <button class="qc-minus" aria-label="Decrease by one"></button>
+                            <div class="qc-number qc-dim">0</div>
+                            <button class="qc-plus" aria-label="Increase by one"></button>
+                          </div>
+                        </li>
+
+                        <li>
+                          <p class="product-option-title">Senior</p>
+                          <p class="product-option-price">$8</p>
+                          <div class="quantity-control">
+                            <button class="qc-minus" aria-label="Decrease by one" disabled></button>
+                            <div class="qc-number qc-dim">0</div>
+                            <button class="qc-plus" aria-label="Increase by one"></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="ticket-content-footer">
+                      <p>Total</p>
+                      <p class="ticket-price">$18.99</p>
+                    </div>
+                    
+                    <div class="module-controls">
+                      <button class="btn-confirm">Confirm</button>
+                    </div> 
+                  </div>
+                </section> <!-- addon item (e.g: Bikes) -->
+              </section><!-- addons module-->
             </article>
             
             <aside>
-              <p>Purchase Overview</p>
+              <!-- <p>Purchase Overview</p> -->
             </aside>
           </div>
     </section>

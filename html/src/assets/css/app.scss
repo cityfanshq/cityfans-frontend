@@ -1775,7 +1775,7 @@ h6 {
 .main-product-header,
 .main-product-content,
 .main-product-footer,
-.ticket-module-header,
+.ticket-choice,
 .ticket-module-content,
 .ticket-no,
 .module-controls {
@@ -1819,6 +1819,11 @@ h6 {
 .ticket-module-header {
   background: hsl(var(--color-ancillary-variant));
   border-bottom: 2px solid hsl(var(--color-border));
+  transition: all .2s;
+}
+
+.ticket-module-header:has([type="checkbox"]:checked) {
+background: hsl(var(--color-ancillary));
 }
 
 /* tikcet module checkbox */
@@ -1841,7 +1846,7 @@ h6 {
   opacity: 0.5;
 }
 
-input[type="checkbox"]:checked{
+.ticket-module input[type="checkbox"]:checked{
   background: hsl(var(--color-white-400))  url('../../assets/img/ui/dot.svg') no-repeat center center;
 }
 
@@ -1857,7 +1862,6 @@ input[type="checkbox"]:checked{
   grid-template-columns: 2.2rem auto;
   align-items: center;
   gap: 1rem;
-  border-top: 2px solid hsl(var(--color-border));
 }
 
 .ticket-no label {
@@ -1872,7 +1876,7 @@ input[type="checkbox"]:checked{
 
 .module-price-estimation {
   display: block;
-  min-width: 5rem;
+  text-wrap: nowrap;
   font-size: var(--text-size-300);
   background-color: hsl(var(--color-surface-dark));
   color: hsl(var(--color-content-inverted));
@@ -1881,19 +1885,17 @@ input[type="checkbox"]:checked{
   border-radius: var(--border-radius-inner-inner);
 }
 
-.ticket-summary {
-  font-size: var(--text-size-300);
-  margin-top: var(--spacing-16);
-}
 
-.ticket-summary em {
-  text-decoration: underline;
-  font-style: normal;
-}
 
 .ticket-module-content {
   background: hsl(var(--color-surface-elevated));
+  border-bottom: 2px solid hsl(var(--color-border));
 }
+
+.addons-module .ticket-module-content {
+  border: none;
+}
+
 
 /* ticket input controls/forms */
 .ticket-date-time {
@@ -1902,7 +1904,6 @@ input[type="checkbox"]:checked{
 
 .ticket-date-time input,
 .ticket-date-time select {
-  background: hsl(var(--color-white-400));
   border: 2px solid hsl(var(--color-border));
   padding: var(--spacing-8) var(--spacing-16);
   min-width: 12rem;
@@ -1932,7 +1933,108 @@ input[type="checkbox"]:checked{
   padding-top: var(--spacing-16);
 }
 
+.ticket-time select {
+  appearance: none;
+  background: hsl(var(--color-white-400))  url('../../assets/img/ui/select-arrow.svg') no-repeat right 10% center;
+}
 
+/* add-ons module */
+.addons-module {
+  background: hsl(var(--color-surface-elevated));
+  border: 2px solid hsl(var(--color-border));
+  border-radius: var(--border-radius-outer);
+  overflow: hidden;
+}
+
+.addons-module h2 {
+  font-size: var(--text-size-400);
+  padding: var(--spacing-16);
+}
+
+.addons-module input:where([type="checkbox"]) {
+  -webkit-appearance : none;
+  appearance         : none;
+  width              : 2.125rem;
+  height             : 2.125rem;
+  vertical-align     : top;
+  border             : 2px solid hsl(var(--color-border));
+  border-radius      : 0.5rem;
+  background         : hsl(var(--color-white-400)) no-repeat center center;
+}
+
+.addons-module input:where([type="checkbox"]):where(:active:not(:disabled), :focus){
+  outline      : none;
+}
+
+.addons-module input:where([type="checkbox"]):disabled {
+  opacity: 0.5;
+}
+
+.addons-module input[type="checkbox"]:checked{
+  background: hsl(var(--color-blue-400)) url('../../assets/img/ui/checked.svg') no-repeat center center;
+}
+
+.addon-module-header h3 {
+  font-size: var(--text-size-400);
+  line-height: 1.25;
+}
+
+.addon-choice {
+  display: grid;
+  grid-template-columns: 2.2rem auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: var(--spacing-16);
+  border-bottom: 1px dotted hsl(var(--color-border) / 0.3);
+}
+
+.ticket-summary {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: var(--text-size-300);
+  border-top: 1px solid hsl(var(--color-border) / 0.2);
+  padding: var(--spacing-16);
+}
+
+
+.ticket-summary em {
+  text-decoration: underline;
+  font-style: normal;
+}
+
+.extras-thumbnail {
+  display: block;
+  width: 25rem;
+}
+
+.addon-summary {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: var(--spacing-16);
+  font-size: var(--text-size-300);
+}
+
+.addon-item {
+  border-top: 2px solid hsl(var(--color-border));
+}
+
+.extras-thumbnail img {
+  border-radius: var(--border-radius-inner-inner);
+  border: 1px solid hsl(var(--color-border));
+}
+
+.addon-item .error-message-inner {
+  border: none;
+}
+
+.product-option-title span {
+  display: block;
+  font-size: var(--text-size-300);
+  color: hsl(var(--color-black-400) / 0.5);
+  margin-top: var(--spacing-4);
+}
 
 /* ============ MEDIA QUERIES ============ */
 /* 768px */
