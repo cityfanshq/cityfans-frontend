@@ -1343,7 +1343,7 @@ h6 {
 .product-page-content .default-container, 
 .more-experiences .default-container,
 .checkout-grid.default-container {
-  padding: var(--spacing-16);
+  padding: var(--spacing-16) var(--spacing-16) var(--spacing-64) var(--spacing-16);
 }
 
 .product-page-content {
@@ -1761,10 +1761,10 @@ h6 {
 .main-product-header {
   background-color: hsl(var(--color-blue-400));
   border-bottom: 2px solid hsl(var(--color-border));
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: space-between;
 }
 
 .main-product-header img {
@@ -1817,17 +1817,15 @@ h6 {
   font-size: var(--text-size-300);
   font-weight: 500;
   padding: var(--spacing-12);
-  border-bottom: 2px solid hsl(var(--color-border));
 }
 
 .ticket-module-header {
   background: hsl(var(--color-ancillary-variant));
-  border-bottom: 2px solid hsl(var(--color-border));
   transition: all .2s;
 }
 
 .ticket-module-header:has([type="checkbox"]:checked) {
-background: hsl(var(--color-ancillary));
+  background: hsl(var(--color-ancillary));
 }
 
 /* tikcet module checkbox */
@@ -1840,6 +1838,7 @@ background: hsl(var(--color-ancillary));
   border             : 2px solid hsl(var(--color-border));
   border-radius      : 50%;
   background         : hsl(var(--color-white-400)) no-repeat center center;
+  flex: 0 0 2.125rem;
 }
 
 .ticket-module input:where([type="checkbox"]):where(:active:not(:disabled), :focus){
@@ -1855,13 +1854,14 @@ background: hsl(var(--color-ancillary));
 }
 
 .ticket-choice {
-  display: grid;
-  grid-template-columns: 2.2rem auto 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .ticket-no {
+  border-top: 2px solid hsl(var(--color-border));
   display: grid;
   grid-template-columns: 2.2rem auto;
   align-items: center;
@@ -1876,6 +1876,9 @@ background: hsl(var(--color-ancillary));
 .ticket-choice h2 {
   font-size: var(--text-size-400);
   line-height: 1.16;
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .module-price-estimation {
@@ -1892,11 +1895,11 @@ background: hsl(var(--color-ancillary));
 
 .ticket-module-content {
   background: hsl(var(--color-surface-elevated));
-  border-bottom: 2px solid hsl(var(--color-border));
+  border-top: 2px solid hsl(var(--color-border));
 }
 
 .addons-module .ticket-module-content {
-  border: none;
+  border-top: 1px solid hsl(var(--color-border) / 0.8);
 }
 
 /* ticket input controls/forms */
@@ -1962,6 +1965,7 @@ background: hsl(var(--color-ancillary));
   border             : 2px solid hsl(var(--color-border));
   border-radius      : 0.5rem;
   background         : hsl(var(--color-white-400)) no-repeat center center;
+  flex: 0 0 2.125rem;
 }
 
 .addons-module input:where([type="checkbox"]):where(:active:not(:disabled), :focus){
@@ -1979,12 +1983,15 @@ background: hsl(var(--color-ancillary));
 .addon-module-header h3 {
   font-size: var(--text-size-400);
   line-height: 1.25;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
 .addon-choice {
-  display: grid;
-  grid-template-columns: 2.2rem auto 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: var(--spacing-16);
   border-bottom: 1px dotted hsl(var(--color-border) / 0.3);
@@ -1994,6 +2001,7 @@ background: hsl(var(--color-ancillary));
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: space-between;
   font-size: var(--text-size-300);
   border-top: 1px solid hsl(var(--color-border) / 0.2);
   padding: var(--spacing-16);
@@ -2006,7 +2014,9 @@ background: hsl(var(--color-ancillary));
 
 .extras-thumbnail {
   display: block;
-  width: 25rem;
+  flex: 0 0 25%;
+  align-self: center;  
+
 }
 
 .addon-summary {
@@ -2063,6 +2073,7 @@ background: hsl(var(--color-ancillary));
   font-size: var(--text-size-500);
   margin: var(--spacing-16) 0 var(--spacing-32) 0;
   text-align: center;
+  line-height: 1.25;
 }
 
 .purchase-overview li {
@@ -2149,7 +2160,7 @@ background: hsl(var(--color-ancillary));
   font-size: var(--text-size-300);
   background: url('../../assets/img/ui/cc.svg') no-repeat left 10%;
   padding-left: var(--spacing-32);
-  margin-block: var(--spacing-24);
+  margin-top: var(--spacing-24);
 }
 
 .payment-tc {
@@ -2171,6 +2182,90 @@ background: hsl(var(--color-ancillary));
 .payment-tc p:last-child {
   margin-bottom: 0;
 }
+
+.purchase-overview .btn-buy-now {
+  margin-top: var(--spacing-24);
+}
+
+.product-overview li {
+  list-style-type: none;
+  padding-left: var(--spacing-24);
+  background-size: 1rem;
+}
+
+.product-overview {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-size-300);
+}
+
+.product-overview-date {
+  background: url('../../assets/img/ui/calendar2.svg') no-repeat left 50%;
+}
+
+.product-overview-time {
+  background: url('../../assets/img/ui/duration.svg') no-repeat left 50%;
+}
+
+.product-overview-quantity {
+  background: url('../../assets/img/ui/users.svg') no-repeat left 50%;
+}
+
+.btn-change {
+  display: inline-block;
+  border: 1px solid hsl(var(--color-border));
+  text-decoration: none;
+  color: hsl(var(--color-content));
+  font-size: var(--text-size-300);
+  padding: var(--spacing-8) var(--spacing-16);
+  border-radius: 100vw;
+  opacity: 0.8;
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.btn-change:visited {
+  color: hsl(var(--color-content));
+}
+
+.btn-change:hover {
+  opacity: 1;
+}
+
+
+.btn-remove {
+  display: inline-block;
+  border: 1px solid hsl(var(--color-red-400));
+  text-decoration: none;
+  color: hsl(var(--color-red-400));
+  font-size: var(--text-size-300);
+  padding: var(--spacing-8) var(--spacing-8) var(--spacing-8) var(--spacing-32);
+  border-radius: 100vw;
+  opacity: 0.8;
+  background: url('../../assets/img/ui/remove-red.svg') no-repeat left 0.5rem center;
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.btn-remove:visited {
+  color: hsl(var(--color-red-400));
+  opacity: 1;
+}
+
+.btn-remove:hover {
+  opacity: 1;
+}
+
+.ticket-module .btn-remove {
+  border: 1px solid hsl(var(--color-border));
+  color: hsl(var(--color-content));
+  background: url('../../assets/img/ui/remove.svg') no-repeat left 0.5rem center;
+}
+
+
+
 
 /* ============ MEDIA QUERIES ============ */
 /* 768px */
@@ -2274,6 +2369,44 @@ background: hsl(var(--color-ancillary));
   .not-included {
     background-position: 33% 15%;
   }
+
+  .checkout-grid {
+    display: grid;
+    grid-template-columns: 58% 40%;
+    gap: 1rem;
+  }
+
+  .purchase-overview {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1rem;
+    margin-top: 0;
+    padding: var(--spacing-24);
+  }
+
+  .purchase-overview h2 {
+    margin: var(--spacing-8) 0 var(--spacing-32) 0;
+  }
+  
+  .purchase-overview li p {
+    font-size: var(--text-size-300);
+    font-weight: 300;
+  }
+  
+    .purchase-item h3 {
+    font-weight: 500;
+    line-height: 1.30;
+    font-size: var(--text-size-300);
+  }
+  
+  .purchase-total p {
+    font-size: var(--text-size-400);
+    font-weight: 700;
+  }
+
+  .purchase-total span {
+    font-size: var(--text-size-300);
+  }
 }
 
 /* 1024px */
@@ -2358,7 +2491,7 @@ background: hsl(var(--color-ancillary));
   .buy-now {
     position: -webkit-sticky;
     position: sticky;
-    top: 16px;
+    top: 1rem;
     align-self: start;
     font-size: var(--text-size-300);
   }
@@ -2404,16 +2537,38 @@ background: hsl(var(--color-ancillary));
     margin-bottom: var(--spacing-12);
   }
 
+  .checkout-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .ticket-summary {
+    font-size: 1rem;
+  }
+
+  .product-overview {
+    font-size: 1rem;
+  }
+
 }
 
 /* 1344 */
 @media screen and (min-width: 84em) {
+  .default-container, .more-experiences .default-container, .product-page-content .default-container,
+  .checkout-grid .default-container,
+  .checkout-grid.default-container {
+    padding-inline: 0;
+  }
+
   .primary-header .logo {
     width: 7rem;
   }
 
+  .checkout-grid.default-container {
+    padding-top: 1.5rem;
+  }
+
   .primary-header .default-container {
-    padding-inline: var(--spacing-32);
+    padding-inline: 0;
   }
 
   .usp-list,
@@ -2481,6 +2636,19 @@ background: hsl(var(--color-ancillary));
 
   .not-included {
     background-position: 42% 13%;
+  }
+
+  .addon-summary {
+    font-size: 1rem;
+  }
+
+  .checkout-grid {
+    gap: 1.5rem;
+  }
+
+  .product-overview {
+    justify-content: start;
+    gap: 2rem;
   }
 }
 
