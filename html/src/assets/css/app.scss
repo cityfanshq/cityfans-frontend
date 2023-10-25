@@ -212,7 +212,7 @@
   
   --color-gray-900: 
         var(--gray-h) var(--gray-s) 
-        calc(var(--gray-l) - calc(var(--base-token-variation-value) + 20));
+        calc(var(--gray-l) - calc(var(--base-token-variation-value) * 2));
 
   /* Green: Variants */
   --color-green-200: 
@@ -332,6 +332,10 @@
   --error-message-content:    var(--color-content-inverted);
 
   --btn-active-animation:     scale(0.97);
+
+  --receipt-bg:               var(--color-gray-400);
+  --receipt-border:           var(--color-gray-700);  
+  --receipt-content-faded:    var(--color-gray-900);
 
   /* 
     REMINDER:
@@ -1877,6 +1881,7 @@ background: hsl(var(--color-ancillary));
 .module-price-estimation {
   display: block;
   text-wrap: nowrap;
+  white-space: nowrap;
   font-size: var(--text-size-300);
   background-color: hsl(var(--color-surface-dark));
   color: hsl(var(--color-content-inverted));
@@ -1884,8 +1889,6 @@ background: hsl(var(--color-ancillary));
   padding: var(--spacing-8);
   border-radius: var(--border-radius-inner-inner);
 }
-
-
 
 .ticket-module-content {
   background: hsl(var(--color-surface-elevated));
@@ -1895,7 +1898,6 @@ background: hsl(var(--color-ancillary));
 .addons-module .ticket-module-content {
   border: none;
 }
-
 
 /* ticket input controls/forms */
 .ticket-date-time {
@@ -1997,7 +1999,6 @@ background: hsl(var(--color-ancillary));
   padding: var(--spacing-16);
 }
 
-
 .ticket-summary em {
   text-decoration: underline;
   font-style: normal;
@@ -2034,6 +2035,141 @@ background: hsl(var(--color-ancillary));
   font-size: var(--text-size-300);
   color: hsl(var(--color-black-400) / 0.5);
   margin-top: var(--spacing-4);
+}
+
+/* checkout receipt */
+.purchase-overview {
+  background: hsl(var(--receipt-bg));
+  position: relative;
+  border-radius: var(--border-radius-outer) var(--border-radius-outer) 0 0;
+  margin-block: var(--spacing-16);
+  padding: var(--spacing-16);
+}
+
+.purchase-overview::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  height: 20px;
+  background: linear-gradient(45deg, transparent 33.333%, hsl(var(--receipt-bg)) 33.333%, hsl(var(--receipt-bg)) 66.667%, transparent 66.667%), linear-gradient(-45deg, transparent 33.333%, hsl(var(--receipt-bg)) 33.333%, hsl(var(--receipt-bg)) 66.667%, transparent 66.667%);
+  background-size: 20px 40px;
+  background-position: 0 -20px;
+}
+
+.purchase-overview h2 {
+  font-size: var(--text-size-500);
+  margin: var(--spacing-16) 0 var(--spacing-32) 0;
+  text-align: center;
+}
+
+.purchase-overview li {
+  list-style-type: none;
+  margin-bottom: var(--spacing-8);
+}
+
+.purchase-overview li p {
+  font-size: var(--text-size-400);
+  font-weight: 300;
+}
+
+.purchase-item {
+  border-bottom: 1px dotted hsl(var(--receipt-border));
+  padding-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-16);
+}
+
+.purchase-item:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.purchase-item h3 {
+  font-weight: 500;
+  line-height: 1.30;
+}
+
+.purchase-item li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.purchase-item-price {
+  text-align: right;
+  font-weight: 500 !important;
+}
+
+.price-discount {
+  color: hsl(var(--receipt-content-faded));
+  position: relative;
+  text-align: right;
+}
+
+.price-discount::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 1px;
+  background: hsl(var(--color-red-400));
+  top: 50%;
+  left: -7%;
+  transform: rotate(2deg);
+}
+
+.price-voucher {
+  text-transform: uppercase;
+  font-size: var(--text-size-300) !important;
+}
+
+.purchase-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-block: var(--spacing-16);
+  border-top: 2px solid hsl(var(--receipt-border));
+  border-bottom: 2px solid hsl(var(--receipt-border));
+}
+
+.purchase-total span {
+  color: hsl(var(--receipt-content-faded));
+  font-weight: 300;
+}
+
+.purchase-total p {
+  font-size: var(--text-size-500);
+  font-weight: 700;
+}
+
+.payment-disclaimer {
+  font-size: var(--text-size-300);
+  background: url('../../assets/img/ui/cc.svg') no-repeat left 10%;
+  padding-left: var(--spacing-32);
+  margin-block: var(--spacing-24);
+}
+
+.payment-tc {
+  font-size: var(--text-size-300);
+  color: hsl(var(--receipt-content-faded));
+  text-align: center;
+  margin-top: var(--spacing-24);
+}
+
+.payment-tc a,
+.payment-tc a:visited {
+  color: hsl(var(--receipt-content-faded));
+}
+
+.payment-tc p {
+  margin-bottom: var(--spacing-8);
+}
+
+.payment-tc p:last-child {
+  margin-bottom: 0;
 }
 
 /* ============ MEDIA QUERIES ============ */
