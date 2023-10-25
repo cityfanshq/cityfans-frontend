@@ -1343,7 +1343,7 @@ h6 {
 .product-page-content .default-container, 
 .more-experiences .default-container,
 .checkout-grid.default-container {
-  padding: var(--spacing-16) var(--spacing-16) var(--spacing-64) var(--spacing-16);
+  padding: var(--spacing-16);
 }
 
 .product-page-content {
@@ -1542,6 +1542,10 @@ h6 {
 
 .not-included {
   background: url('../../assets/img/ui/icon-notincluded.svg') no-repeat 65% 7%;
+}
+
+.checkout-page .checkout-grid {
+  padding-bottom: var(--spacing-64);
 }
 
 /* buy-now aside */
