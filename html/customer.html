@@ -43,14 +43,27 @@
               <section class="customer-module">
                 <div class="customer-module-header">
                   <h1>You’re almost there!</h1>
-                  <p>We need some valid information about you to send your tickets. Please add them below:</p>
+                  <p>We need some valid information about you to send your tickets.</p>
                 </div>
 
                 <div class="customer-module-content">
                   <form action="">
                     <div class="customer-data-item">
                       <label for="">Full Name</label>
+                      <input type="text" required />
+                      <span class="form-error-message">Name must have at least 3 letters</span>
+                    </div>
+
+                    <div class="customer-data-item">
+                      <label for="">Email Address</label>
+                      <input type="email" name="email"/>
+                      <!-- <span class="form-error-message">Please enter a valid email address</span> -->
+                    </div>
+
+                    <div class="customer-data-item">
+                      <label for="">Country</label>
                       <select name="" id="">
+                        <option value="" disabled>-- Select an option --</option>
                         <option value="">The Netherlands</option>
                         <option value="">Germany</option>
                         <option value="">Italy</option>
@@ -58,8 +71,23 @@
                     </div>
 
                     <div class="customer-data-item">
-                      <label for="">Test</label>
-                      <input type="text" id="name" name="name" required />
+                      <label for="">Mobile Phone Number</label>
+                      <input type="tel" name="phone" required />
+                      <!-- <span class="form-error-message">Please include a phone number</span> -->
+                    </div>
+
+                    <div class="customer-module-footer">
+                      <!-- We can use the disabled attribute on the button when customers haven’t filled in all the data yet. In this way we offer an affordance about what they need to do. 
+                      
+                        There are also error messages below each field for whatever validation needed (type of field, etc)
+
+                        Removing the disabled attribute makes the button work and look normally. So whatever method of validation is chosen, it should visually work.
+                      -->
+                      <button class="btn-buy-now" disabled>Pay €50.70</button>
+
+                      <div class="payment-tc">
+                        <p>By proceeding you agree to our <a href="">Terms and Conditions</a> & <a href="">Privacy Policy</a>.</p>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -125,16 +153,12 @@
                 <div class="payment-disclaimer">
                   <p>Your order will be placed in EUR (<strong>€156.16</strong>). The final exchange rate will be applied by your bank or credit card provider.</p>
                 </div>
-
-                <a href="customer.html" class="btn-buy-now">
-                  PROCEED
-                </a>
-
-                <div class="payment-tc">
-                  <p>You won’t be charded yet.</p>
-                  <p>By proceeding you agree to our <a href="">Terms and Conditions</a> & <a href="">Privacy Policy</a>.</p>
-                </div>
               </aside>
+
+              <!-- TODO: remove after integration -->
+              <div class="padding-all-500">
+                <a href="intermediary.html">DEV only: go to intermediary page</a>
+              </div>
             </div>
           </div>
     </section>

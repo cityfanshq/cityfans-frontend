@@ -1317,6 +1317,12 @@ h6 {
   transform: var(--btn-active-animation);
 }
 
+.btn-buy-now:disabled {
+  opacity: 0.7;
+  background-color: hsl(var(--color-yellow-200) / 0.3);
+  transform: none;
+}
+
 .btn-confirm {
   display: inline-block;
   text-align: center;
@@ -1931,7 +1937,9 @@ h6 {
 .ticket-date-time input,
 .ticket-date-time select,
 select,
-input[type="text"] {
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
   border: 2px solid hsl(var(--color-border));
   padding: var(--spacing-8) var(--spacing-16);
   min-width: 12rem;
@@ -1939,11 +1947,17 @@ input[type="text"] {
 }
 
 select,
-input[type="text"] {
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"] {
   width: 100%;
   height: 3rem;
 }
 
+input[type="text"],
+input[type="tel"],
+input[type="email"],
 input[type="date"] {
   width: 100%;
   height: 3rem;
@@ -1962,8 +1976,6 @@ input[type="date"] {
   justify-content: space-between;
   margin-bottom: var(--spacing-16);
 }
-
-
 
 .ticket-content-footer {
   border-top: 2px solid hsl(var(--color-border));
@@ -1996,6 +2008,9 @@ select {
 .addons-module h2 {
   font-size: var(--text-size-400);
   padding: var(--spacing-16);
+  
+  background: hsl(var(--color-white-400));
+  font-weight: 500;
 }
 
 .addons-module input:where([type="checkbox"]) {
@@ -2037,6 +2052,14 @@ select {
   gap: 1rem;
   padding: var(--spacing-16);
   border-bottom: 1px dotted hsl(var(--color-border) / 0.3);
+}
+
+.intermediary-page .addon-item:first-child  {
+  border-top: none;
+}
+
+.intermediary-page .checkout-grid {
+  padding-bottom: var(--spacing-64);
 }
 
 .ticket-summary {
@@ -2242,15 +2265,21 @@ select {
 }
 
 .product-overview-date {
-  background: url('../../assets/img/ui/calendar2.svg') no-repeat left 10%;
+  background: url('../../assets/img/ui/calendar2.svg') no-repeat left top;
 }
 
 .product-overview-time {
-  background: url('../../assets/img/ui/duration.svg') no-repeat left 10%;
+  background: url('../../assets/img/ui/duration.svg') no-repeat left top;
 }
 
 .product-overview-quantity {
-  background: url('../../assets/img/ui/users.svg') no-repeat left 10%;
+  background: url('../../assets/img/ui/users.svg') no-repeat left top;
+}
+
+.product-overview-date,
+.product-overview-time {
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .btn-change {
@@ -2273,7 +2302,6 @@ select {
 .btn-change:hover {
   opacity: 1;
 }
-
 
 .btn-remove {
   display: inline-block;
@@ -2336,6 +2364,12 @@ select {
   padding: var(--spacing-16);
 }
 
+.customer-module label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--spacing-4);
+}
+
 .customer-module-header h1 {
   font-size: var(--text-size-500);
   margin-bottom: var(--spacing-16);
@@ -2344,6 +2378,49 @@ select {
 .customer-module-content {
   padding: var(--spacing-16);
   background: hsl(var(--color-surface-elevated));
+}
+
+.customer-data-item {
+  padding-bottom: var(--spacing-16);
+  position: relative;
+}
+
+.customer-data-item:has([class="form-error-message"]) {
+  padding-bottom: var(--spacing-32);
+}
+
+.customer-data-item label,
+.customer-data-item input,
+.customer-data-item select {
+  z-index: 2222;
+  position: relative;
+}
+
+.customer-data-item .form-error-message {
+  display: block;
+  position: absolute;
+  bottom: 8px;
+  z-index: 1;
+  font-size: var(--text-size-300);
+  background: hsl(var(--color-red-400));
+  color: hsl(var(--color-content-inverted));
+  padding: var(--spacing-24) var(--spacing-8) var(--spacing-4) var(--spacing-8);
+  border-radius: 0 var(--border-radius-inner-inner) var(--border-radius-inner-inner) var(--border-radius-inner-inner);
+}
+
+.customer-module-footer {
+  margin-block: var(--spacing-24);
+}
+
+.customer-module .btn-buy-now {
+  min-width: 50%;
+  margin: 0 auto;
+}
+
+.customer-module .payment-tc,
+.customer-module .payment-tc a,
+.customer-module .payment-tc a:visited {
+  color: hsl(var(--color-content) / 0.8);
 }
 
 /* ============ MEDIA QUERIES ============ */
@@ -2653,6 +2730,23 @@ select {
     flex: 0;
   }
 
+  .customer-module-content,
+  .customer-module-header {
+    padding: var(--spacing-32);
+  }
+
+  .addon-summary,
+  .ticket-summary {
+    font-weight: 300;
+  }
+
+  .product-overview-date,
+  .product-overview-time,
+  .product-overview-quantity {
+    background-position: left 0.3rem;
+  }
+
+
 }
 
 /* 1344 */
@@ -2752,7 +2846,13 @@ select {
 
   .product-overview {
     justify-content: start;
-    gap: 2rem;
+    gap: 3rem;
+  }
+
+  .product-overview-date,
+  .product-overview-time,
+  .product-overview-quantity {
+    background-position: left 0.2rem;
   }
 }
 
