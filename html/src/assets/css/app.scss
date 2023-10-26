@@ -2332,7 +2332,6 @@ select {
   background: url('../../assets/img/ui/remove.svg') no-repeat left 0.5rem center;
 }
 
-/* preparing for the spinner */
 .main-product-module,
 .ticket-module,
 .addons-module {
@@ -2421,6 +2420,28 @@ select {
 .customer-module .payment-tc a,
 .customer-module .payment-tc a:visited {
   color: hsl(var(--color-content) / 0.8);
+}
+
+/* The Intermediary page */
+.error-outer {
+  padding: var(--spacing-16);
+  color: hsl(var(--color-red-700));
+  border: 2px solid hsl(var(--color-red-400));
+  margin-bottom: var(--spacing-16);
+  border-radius: var(--border-radius-outer);
+  font-size: var(--text-size-400);
+}
+
+.error-outer p[role="title"] {
+  font-size: var(--text-size-600);
+  color: hsl(var(--color-red-400));
+  font-weight: 700;
+  margin-bottom: var(--spacing-8);
+}
+
+.intermediary-page h4 {
+  font-size: var(--text-size-600);
+  margin: var(--spacing-48) 0 var(--spacing-16) 0;
 }
 
 /* ============ MEDIA QUERIES ============ */
@@ -2746,6 +2767,15 @@ select {
     background-position: left 0.3rem;
   }
 
+  .error-outer {
+    padding: var(--spacing-24);
+    border: 2px solid hsl(var(--color-red-400));
+    font-size: 1rem;
+  }
+  
+  .error-outer p[role="title"] {
+    margin-bottom: var(--spacing-16);
+  }
 
 }
 
