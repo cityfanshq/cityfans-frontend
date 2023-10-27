@@ -2444,6 +2444,162 @@ select {
   margin: var(--spacing-48) 0 var(--spacing-16) 0;
 }
 
+/* Confirmation page */
+.confirmation-container {
+  background: hsl(var(--color-surface));
+  overflow-x: visible;
+  width: 85%;
+  margin-inline: auto;
+  padding-block: var(--spacing-24);
+  padding-inline: var(--spacing-24);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.confirmation-header::after,
+.confirmation-header::before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: hsl(var(--color-ancillary));
+  border-radius: 50%;
+  top: 2rem;
+}
+
+.confirmation-header::before {
+  left: -16px;
+}
+
+.confirmation-header::after {
+  right: -16px;
+}
+
+.confirmation-header {
+  border-bottom: 2px dashed hsl(var(--color-gray-700));
+  margin-bottom: var(--spacing-24);
+  padding-bottom: var(--spacing-24);
+  text-align: center;
+}
+
+.confirmation-header .booking-number {
+  font-weight: 300;
+}
+
+.confirmation-container .purchase-item li {
+  margin-bottom: var(--spacing-8);
+}
+
+.confirmation-email,
+.confirmation-email-form {
+  border-bottom: 1px dashed hsl(var(--color-gray-700));
+  padding-block: var(--spacing-24);
+  margin-bottom: var(--spacing-16);
+}
+
+.confirmation-email a {
+  color: hsl(var(--color-primary));
+}
+
+.confirmation-email-form label {
+  display: block;
+  margin-bottom: var(--spacing-8);
+}
+
+.confirmation-container h2 {
+  font-size: var(--text-size-600);
+  margin-bottom: var(--spacing-24);
+}
+
+.instructions-item {
+  display: flex; 
+  align-items: flex-start;
+  padding-bottom: var(--spacing-24);
+  margin-bottom: var(--spacing-24);
+  border-bottom: 1px solid hsl(var(--color-gray-700) / 0.5);
+}
+
+.instructions-item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.instructions-item .extras-thumbnail {
+  align-self: self-start;
+  margin-right: 0.5rem;
+}
+
+.instructions-item > div {
+  text-wrap: wrap;
+
+  font-size: var(--text-size-300);
+}
+
+.instructions-item h3 {
+  margin-bottom: var(--spacing-4);
+}
+
+.instructions-item a,
+.instructions-item a:visited {
+  color: hsl(var(--color-primary));
+}
+
+.confirmation-container a:hover {
+  color: hsl(var(--color-purple-700));
+}
+
+.instructions-item p {
+  margin-bottom: var(--spacing-16);
+}
+
+.instructions-item p:last-child {
+  margin-bottom: 0;
+}
+
+.confirmation-footer {
+  text-align: center;
+  padding-bottom: var(--spacing-8);
+}
+
+.confirmation-footer p {
+  padding-block: var(--spacing-16);
+  border-top: 1px solid hsl(var(--color-border));
+  border-bottom: 1px solid hsl(var(--color-border));
+  margin-bottom: var(--spacing-24);
+}
+
+.confirmation-container .btn-see-all:hover {
+  color: hsl(var(--color-content));
+}
+
+.instruction-download {
+  display: block;
+  background-color: hsl(var(--color-surface-elevated) / 0.7);
+  margin-bottom: var(--spacing-16);
+  padding: var(--spacing-16);
+  border: 1px dashed hsl(var(--color-border));
+  border-radius: var(--border-radius-inner);
+  
+}
+
+a.instruction-download {
+  background: no-repeat left 8px center;
+  background-image: url('../../assets/img/ui/download.svg');
+  background-size: 1rem;
+  padding-left: var(--spacing-32);
+  word-break: break-all;
+  word-wrap: wrap;
+  
+}
+
+.instruction-download:hover {
+  background-color: hsl(var(--color-surface-elevated) / 1);
+}
+
+.instruction-download:last-child {
+  margin-bottom: 0;
+}
+
 /* ============ MEDIA QUERIES ============ */
 /* 768px */
 @media screen and (min-width: 48em) {
@@ -2669,7 +2825,7 @@ select {
     position: -webkit-sticky;
     position: sticky;
     top: 1rem;
-    align-self: start;
+    align-self: flex-start;
     font-size: var(--text-size-300);
   }
 
@@ -2777,6 +2933,83 @@ select {
     margin-bottom: var(--spacing-16);
   }
 
+  .confirmation-container {
+    width: 45em;
+    padding-inline: var(--spacing-8);
+  }
+
+  .instructions-item {
+    gap: 1rem;
+  }
+
+  .extras-thumbnail {
+    width: 200px;
+  }
+
+  .confirmation-header,
+  .confirmation-content,
+  .confirmation-footer {
+    padding-inline: var(--spacing-48);
+  }
+
+  .price-discount {
+    align-self: end;
+    flex: 1;
+  }
+
+  .price-discount:after {
+    right: -1%;
+    left: auto;
+    width: 4rem;
+  }
+
+  .confirmation-header {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--spacing-8);
+    margin-bottom: var(--spacing-24);
+  }
+
+  .confirmation-header h1 {
+    font-size: var(--text-size-500);
+  }
+
+  .confirmation-content h3 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .price-voucher {
+    opacity: 0.8;
+  }
+
+  .booking-number {
+    font-size: var(--text-size-300);
+    padding: var(--spacing-8) var(--spacing-16);
+    border-radius: var(--border-radius-inner-inner);
+    border: 1px solid hsl(var(--color-border));
+  }
+
+  .confirmation-email-form {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: var(--spacing-16);
+  }
+
+  .confirmation-container .btn-confirm {
+    align-self: center;
+  }
+
+  .customer-data-item {
+    flex: 1;
+  }
+
+  .customer-data-item {
+    padding-bottom: var(--spacing-32);
+  }
+
 }
 
 /* 1344 */
@@ -2875,7 +3108,7 @@ select {
   }
 
   .product-overview {
-    justify-content: start;
+    justify-content: flex-start;
     gap: 3rem;
   }
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Oooops · cityfans</title>
+  <title>Your order details · cityfans</title>
   <meta name="description" content="Self-Guided Audio Tour at Van Gogh Museum">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -22,7 +22,7 @@
   <script src="app/assets/js/all.js" defer></script>
 </head>
 
-<body class="intermediary-page | bg-color-primary ">
+<body class="confirmation-page | bg-color-primary ">
   <main class="">
     <header class="primary-header">
       <div class="default-container flex align-items-center space-between">
@@ -37,249 +37,14 @@
       </div>
     </header>
 
-    <section class="bg-color-surface">
-          <div class="checkout-grid default-container">
-            <article>
+    <section class="bg-color-ancillary padding-block-600">
+          <div class="confirmation-container">
+            <section class="confirmation-header">
+              <h1><span>✨</span> Thank you for your order!</h1>
+              <span class="booking-number">Booking number #00092</span>
+            </section>
 
-              <div class="error-outer">
-                <p role="title">Oops, just one more thing…</p>
-                <p>The tickets you selected became unavailable while the payment was being processed. No sweat—you can choose another date and time right here:</p>
-              </div>
-
-              <section class="ticket-module">
-                <div class="ticket-module-header">
-                  <div class="ticket-choice">
-                    <input type="checkbox" checked id="ticket-yes" name="ticket" />
-                    <h2>Buy an entrance to the Van Gogh museum</h2>
-                    <span class="module-price-estimation">from €222</span>
-                  </div>
-
-                  <div class="ticket-summary">
-                      <figure class="extras-thumbnail">
-                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
-                      </figure>
-
-                      <div>
-                        <p>You’re about to purchase a digital experience that <em>doesn’t include</em> entrance tickets. To make sure you can use the product, buy entrances right here.</p>
-                      </div>
-                  </div>
-                </div>
-
-                <!-- <div class="error-message-inner">There are no available tickets at this date. Please choose another day.</div> -->
-
-                <div class="ticket-module-content">
-                  <div class="ticket-date-time">
-                    <div class="ticket-date">
-                      <label for="ticket-day">Which day?</label>
-
-                      <input type="date" id="ticket-day" name="ticket-day" value="2023-10-20" min="2023-10-20" max="2023-12-31" />
-                    </div>
-                    
-                    <div class="ticket-time">
-                      <label for="ticket-time">What time?</label>
-                      <select name="ticket-time" id="ticket-time">
-                        <!-- <option value="" disabled>--Please choose an option--</option> -->
-                        <option value="10:30">10:30</option>
-                        <option value="11:30">11:30</option>
-                        <option value="12:30" disabled>12:30 (sold out)</option>
-                        <option value="14:00">14:00</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="product-options">
-                    <ul>
-                      <li>
-                        <p class="product-option-title">Adult (age +18)</p>
-                        <p class="product-option-price">$9.49</p>
-                        <div class="quantity-control">
-                          <button class="qc-minus" aria-label="Decrease by one" disabled></button>
-                          <div class="qc-number qc-dim">0</div>
-                          <button class="qc-plus" aria-label="Increase by one"></button>
-                        </div>
-                      </li>
-
-                      <li>
-                        <p class="product-option-title">Child</p>
-                        <p class="product-option-price">0</p>
-                        <div class="quantity-control">
-                          <button class="qc-minus" aria-label="Decrease by one"></button>
-                          <div class="qc-number qc-dim">0</div>
-                          <button class="qc-plus" aria-label="Increase by one"></button>
-                        </div>
-                      </li>
-
-                      <li>
-                        <p class="product-option-title">Senior</p>
-                        <p class="product-option-price">$8</p>
-                        <div class="quantity-control">
-                          <button class="qc-minus" aria-label="Decrease by one" disabled></button>
-                          <div class="qc-number qc-dim">0</div>
-                          <button class="qc-plus" aria-label="Increase by one"></button>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="ticket-content-footer">
-                    <p>Total</p>
-                    <p class="ticket-price">$18.99</p>
-                  </div>
-                  
-                  <div class="module-controls">
-                    <button class="btn-confirm">Confirm</button>
-                  </div> 
-                </div>
-
-                <div class="ticket-no">
-                  <input type="checkbox" id="ticket-no" name="no-ticket" />
-                  <label for="no-ticket">No, thanks. I already have my entrance ticket(s)</label>
-                </div>
-              </section><!-- ticket module -->
-
-              <h4><span>🎉</span> These items are confirmed:</h4>
-
-              <section class="main-product-module">
-                <div class="main-product-header">
-                  <figure class="extras-thumbnail">
-                    <img src="app/assets/img/content/card2.jpg" alt="product image">
-                  </figure>
-                  <h1>Self-Guided Audio Tour at Van Gogh Museum</h1>
-                  <a href="" class="btn-change">Change</a>
-                </div>
-
-                <div class="main-product-content">
-                  <ul class="product-overview">
-                    <li class="product-overview-date">Nov 4</li>
-                    <li class="product-overview-time">10:30</li>
-                    <li class="product-overview-quantity">2x Child, 2x Adult, 1x Senior</li>
-                  </ul>
-                </div>
-              </section><!-- main product module confirmed -->
-
-              <section class="main-product-module">
-                <div class="main-product-header">
-                  <figure class="extras-thumbnail">
-                    <img src="app/assets/img/content/card2.jpg" alt="product image">
-                  </figure>
-                  <h1>If the user clicks on “change”, we return to the original module state</h1>
-                </div>
-
-                <!-- <div class="error-message-inner">Please choose at least one type of ticket</div> -->
-
-                <div class="main-product-content">
-                  <div class="product-options">
-                    <ul>
-                      <li>
-                        <p class="product-option-title">Adult (age +18)</p>
-                        <p class="product-option-price">$9.49</p>
-                        <div class="quantity-control">
-                          <button class="qc-minus" aria-label="Decrease by one" disabled></button>
-                          <div class="qc-number qc-dim">0</div>
-                          <button class="qc-plus" aria-label="Increase by one"></button>
-                        </div>
-                      </li>
-
-                      <li>
-                        <p class="product-option-title">Child</p>
-                        <p class="product-option-price">0</p>
-                        <div class="quantity-control">
-                          <button class="qc-minus" aria-label="Decrease by one"></button>
-                          <div class="qc-number qc-dim">0</div>
-                          <button class="qc-plus" aria-label="Increase by one"></button>
-                        </div>
-                      </li>
-
-                      <li>
-                        <p class="product-option-title">Senior</p>
-                        <p class="product-option-price">$8</p>
-                        <div class="quantity-control">
-                          <button class="qc-minus" aria-label="Decrease by one" disabled></button>
-                          <div class="qc-number qc-dim">0</div>
-                          <button class="qc-plus" aria-label="Increase by one"></button>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="main-product-footer">
-                  <div class="product-fineprint">
-                    <p class="product-message">2-5 people recommended per smartphone (1 credit per device)</p>
-                    <p class="product-price">$18.99</p>
-                  </div>
-                </div>
-
-                <div class="module-controls">
-                  <button class="btn-confirm">Confirm</button>
-                </div> 
-              </section><!-- main product module (if clicked 'change') -->
-
-              <section class="addons-module">
-                <section class="addon-item">
-                  <div class="addon-module-header">
-                    <div class="addon-choice">
-                      <h3>Tickets for GVB Amsterdam Public Transport</h3>
-                      <a href="" class="btn-remove">Remove</a>
-                    </div>
-
-                    <div class="addon-summary">
-                      <figure class="extras-thumbnail">
-                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
-                      </figure>
-                      
-                      <div>
-                        <p>Unlimited travel on all GVB routes regardless of distance, both day and night, for the chosen period (Train,  Connexxion and EBS not included)</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="ticket-module-content">
-                      <ul class="product-overview">
-                        <li class="product-overview-date">Nov 4</li>
-                        <li class="product-overview-time">10:30</li>
-                        <li class="product-overview-quantity">2x Child, 2x Adult, 1x Senior</li>
-                      </ul>
-                  </div>
-                </section> <!-- addon item (e.g: GVB) -->
-
-                <section class="addon-item">
-                  <div class="addon-module-header">
-                    <div class="addon-choice">
-                      <h3>Tickets for MacBike Amsterdam Bike Rental</h3>
-                      <a href="" class="btn-remove">Remove</a>
-                    </div>
-
-                    <div class="addon-summary">
-                      <!-- it also works without images -->
-                      <!-- <figure class="extras-thumbnail">
-                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
-                      </figure> -->
-
-                      <div>
-                        <p>Testing same code without an image, in case there is none. See Amsterdam like a local with a bike rental from MacBike!</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="ticket-module-content">
-                    <ul class="product-overview">
-                      <li class="product-overview-date">Nov 4</li>
-                      <li class="product-overview-time">10:30</li>
-                      <li class="product-overview-quantity">2x Child, 2x Adult, 1x Senior</li>
-                    </ul>
-                </div> 
-
-                </section> <!-- addon item (e.g: Bikes) -->
-              </section><!-- addons module-->
-
-            </article>
-            
-            <div>
-              <aside class="purchase-overview">
-              <h2>Overview of your purchase</h2>
-
-              <!-- simple version with voucher -->
+            <article class="confirmation-content">
               <ul class="purchase-item">
                 <li>
                   <h3>1x Self-guided audio-tour at Van Gogh</h3>
@@ -290,8 +55,7 @@
                   <p class="purchase-item-price">€6.40</p>
                 </li>
               </ul>
-              
-              <!-- simple version (no voucher) -->
+
               <ul class="purchase-item">
                 <li>
                   <h3>1x Self-guided audio-tour at Van Gogh</h3>
@@ -299,7 +63,6 @@
                 </li>
               </ul>
 
-              <!-- complex version with voucher -->
               <ul class="purchase-item">
                 <li><h3>Virtual Reality Experience in The Netherlands</h3></li>
                 <li>
@@ -327,24 +90,74 @@
               </ul>
 
               <div class="purchase-total">
-                <span>All taxes are included</span>
+                <span>All taxes are included. Paid via Stripe on 27-10-2023</span>
                 <p>€157.20</p>
               </div>
 
-              <div class="payment-disclaimer">
-                <p>Your order will be placed in EUR (<strong>€156.16</strong>). The final exchange rate will be applied by your bank or credit card provider.</p>
+              <div class="confirmation-email">
+                <p>Check the email sent to <strong>youremail@gmail.com</strong> for tickets and more details <span><a href="#">(wrong email?)</a></span></p>
               </div>
 
-              <a href="confirmation.html" class="btn-buy-now">
-                Pay €157.20
-              </a>
+              <!-- appears after clicking on “wrong email” -->
+              <div class="confirmation-email-form">
+                <div class="customer-data-item">
+                  <label for="">Type a new email address:</label>
+                  <input type="email" name="email"/>
+                  <span class="form-error-message">Please enter a valid email address</span>
+                </div>
 
-              <div class="payment-tc">
-                <p>You won’t be charded yet.</p>
-                <p>By proceeding you agree to our <a href="">Terms and Conditions</a> & <a href="">Privacy Policy</a>.</p>
+                <button class="btn-confirm">Confirm</button>
               </div>
-              </aside>
-            </div>
+
+              <div class="confirmation-instructions">
+                <h2>Instructions</h2>
+
+                <div class="instructions-item">
+                  <figure class="extras-thumbnail">
+                    <img src="app/assets/img/content/card.png" alt="addon description">
+                  </figure>
+
+                  <div>
+                    <h3>Self-guided audio tour at Van Gogh</h3>
+                    <p>To play the game, go to https://www.voxcity.com/redeem, and add your booking number and e-mail address to unlock the self-guide. Then, download the Vox City app and create a new account. Head to the starting point to begin your walk.</p>
+                  </div>
+                </div>
+
+                <div class="instructions-item">
+                  <figure class="extras-thumbnail">
+                    <img src="app/assets/img/content/vangogh.png" alt="addon description">
+                  </figure>
+
+                  <div>
+                    <h3>Entrance to the Van Gogh Museum</h3>
+                    <p>You can download your tickets and use on your mobile phone and show at the entrance.</p>
+
+                    <a class="instruction-download" href="">1xadult-vangogh_tickets34749834.pdf</a>
+
+                    <p class="instruction-download">Your tickets will be available shortly. Check your email soon!</p>
+                  </div>
+                </div>
+
+                <div class="instructions-item">
+                  <figure class="extras-thumbnail">
+                    <img src="app/assets/img/content/gvb.png" alt="addon description">
+                  </figure>
+
+                  <div>
+                    <h3>GVB Amsterdam Public Transport</h3>
+                    <p>Collect your ticket from any of the four participating stations then check in when boarding a tram, bus, or metro, and then check out when you exit or disembark the vehicle. Your ticket will be validated on first use and can be used for unlimited travel until the end of its validity.</p>
+
+                    <p>GVB Service & Tickets Central Station (Monday - Sunday 8:30 AM - 7:00 PM), GVB Station Zuid (Monday - Friday 8:30 AM - 7:00 PM; Saturday - Sunday 10:00 AM - 6:00 PM), GVB Station Bijlmer Arena (Monday - Friday 8:30 AM - 7:00 PM; Saturday - Sunday 10:00 AM - 6:00 PM), and GVB Station North (Monday - Sunday 10:00 AM - 6:00 PM)</p>
+                  </div>
+                </div>
+
+              </div>
+            </article>
+
+            <section class="confirmation-footer">
+              <p><strong>We wish you tons of fun!</strong></p>
+              <a href="index.html" class="btn-see-all">Continue Shopping</a>
+            </section>
           </div>
     </section>
 
