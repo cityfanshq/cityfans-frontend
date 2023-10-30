@@ -2626,6 +2626,14 @@ a.instruction-download {
   width: 100%;
 }
 
+.category-cards-description p {
+  margin-bottom: var(--spacing-12);
+}
+
+.category-cards-description p:last-child {
+  margin-bottom: 0;
+}
+
 .category-cards-description {
   padding-inline: var(--spacing-16);
   margin-bottom: var(--spacing-32);
@@ -3211,6 +3219,10 @@ a.instruction-download {
 
   .category-page-cards {
     padding-block: var(--spacing-32);
+  }
+
+  .category-cards-description {
+    max-width: 50rem;
   }
 }
 
