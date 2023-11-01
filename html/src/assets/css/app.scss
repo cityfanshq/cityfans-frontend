@@ -1329,6 +1329,10 @@ body:has(.hero-intro) {
   transform: none;
 }
 
+.btn-confirm:disabled {
+  opacity: 0.7;
+}
+
 .btn-confirm {
   display: inline-block;
   text-align: center;
