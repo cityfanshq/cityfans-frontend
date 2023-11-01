@@ -27,13 +27,6 @@ window.addEventListener("load", function() {
   }
 });
 
-//IMAGE GALLERY
-//https://codesandbox.io/s/vanilla-js-responsive-image-slider-vblu3
-
-// OR USE GLIDER
-//https://nickpiscitelli.github.io/Glider.js/
-
-
 //SCROLLER
 const scrollers = document.querySelectorAll(".scroller");
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -114,3 +107,4 @@ function initProgressBar() {
 
 $(ui.play).addEventListener('click', togglePlay)
 $(ui.audio).addEventListener('timeupdate', initProgressBar);
+

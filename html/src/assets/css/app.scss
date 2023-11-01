@@ -1259,12 +1259,14 @@ h6 {
   align-items: center;
 }
 
-.bg-home {
+body:has(.hero-intro) {
   background-color: hsl(var(--color-primary));
   background-image: url('../../assets/img/ui/decorative.svg');
   background-repeat: no-repeat;
   background-size: fill;
 }
+
+
 
 /* buttons */
 .see-all {
@@ -1416,6 +1418,23 @@ h6 {
   margin-bottom: var(--spacing-16);
 }
 
+.photo-gallery img {
+  width: 100%;
+}
+
+.photo-gallery-video {
+  position: relative; 
+  padding-top: 56.25%;
+}
+
+.photo-gallery iframe {
+  border: none; 
+  position: absolute; 
+  top: 0; 
+  height: 100%; 
+  width: 100%;
+}
+
 .more-experiences h2 {
   font-size: var(--text-size-500);
   margin-top: var(--spacing-16);
@@ -1554,7 +1573,7 @@ h6 {
   background: url('../../assets/img/ui/icon-notincluded.svg') no-repeat 65% 7%;
 }
 
-.checkout-page .checkout-grid {
+.checkout-grid {
   padding-bottom: var(--spacing-64);
 }
 
@@ -2058,12 +2077,8 @@ select {
   border-bottom: 1px dotted hsl(var(--color-border) / 0.3);
 }
 
-.intermediary-page .addon-item:first-child  {
+.intermediary-page-content .addon-item:first-child  {
   border-top: none;
-}
-
-.intermediary-page .checkout-grid {
-  padding-bottom: var(--spacing-64);
 }
 
 .ticket-summary {
@@ -2443,7 +2458,7 @@ select {
   margin-bottom: var(--spacing-8);
 }
 
-.intermediary-page h4 {
+.intermediary-page-content h4 {
   font-size: var(--text-size-600);
   margin: var(--spacing-48) 0 var(--spacing-16) 0;
 }
@@ -3124,7 +3139,7 @@ a.instruction-download {
   }
 
   .checkout-grid.default-container {
-    padding-top: 1.5rem;
+    padding-block: 1.5rem;
   }
 
   .primary-header .default-container {
