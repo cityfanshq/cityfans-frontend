@@ -2195,7 +2195,6 @@ select {
 
 .purchase-item-price {
   text-align: right;
-  font-weight: 500 !important;
 }
 
 .price-discount {
@@ -2215,10 +2214,18 @@ select {
   transform: rotate(2deg);
 }
 
-.price-voucher {
+.price-voucher,
+.price-subtotal {
   text-transform: uppercase;
   font-size: var(--text-size-300) !important;
 }
+
+.purchase-item-subtotal,
+.purchase-item-discounted {
+  font-weight: 700 !important;
+}
+
+ 
 
 .purchase-total {
   display: flex;
