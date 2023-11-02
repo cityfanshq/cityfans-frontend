@@ -105,7 +105,7 @@ function initProgressBar() {
   calculatePercentPlayed();
 }
 
-$(ui.play).addEventListener('click', togglePlay)
+$(ui.play).addEventListener('click', togglePlay);
 $(ui.audio).addEventListener('timeupdate', initProgressBar);
 
 //PRODUCT PAGE CAROUSEL

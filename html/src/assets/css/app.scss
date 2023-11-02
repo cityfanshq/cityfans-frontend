@@ -2280,8 +2280,6 @@ select {
   font-weight: 700 !important;
 }
 
- 
-
 .purchase-total {
   display: flex;
   justify-content: space-between;
@@ -2737,6 +2735,52 @@ a.instruction-download {
 
 .category-page-cards:last-child {
   margin-bottom: 0;
+}
+
+.long-content {
+  padding-block: var(--spacing-24);
+  padding-inline: var(--spacing-16);
+}
+
+.long-content h1 {
+  font-size: var(--text-size-700);
+  line-height: 1.24;
+  font-weight: 700;
+}
+
+.long-content h2 {
+  font-size: var(--text-size-600);
+  line-height: 1.24;
+  font-weight: 700;
+}
+
+.long-content h3 {
+  font-size: var(--text-size-500);
+}
+
+.long-content h4 {
+  font-size: var(--text-size-400);
+}
+
+.long-content h5 {
+  font-size: var(--text-size-300);
+  text-transform: uppercase;
+}
+
+.long-content h6 {
+  font-size: var(--text-size-300);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.long-content li:where(:not(:first-child)) {
+  margin-top: var(--space, var(--spacing-default));
+}
+
+.long-content ul,
+.long-content ol {
+  margin-bottom: var(--spacing-32);
+  padding-left: var(--spacing-16);
 }
 
 /* ============ MEDIA QUERIES ============ */
