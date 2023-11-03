@@ -2754,10 +2754,6 @@ a.instruction-download {
   margin-bottom: 0;
 }
 
-.long-content {
-  padding-block: var(--spacing-24);
-  padding-inline: var(--spacing-16);
-}
 
 .long-content h1 {
   font-size: var(--text-size-700);
@@ -2769,10 +2765,13 @@ a.instruction-download {
   font-size: var(--text-size-600);
   line-height: 1.24;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 .long-content h3 {
   font-size: var(--text-size-500);
+  text-wrap: pretty;
+  line-height: 1.22;
 }
 
 .long-content h4 {
@@ -2790,14 +2789,64 @@ a.instruction-download {
   font-weight: 300;
 }
 
+.long-content p {
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.long-content a {
+  color: hsl(var(--color-primary));
+}
+
 .long-content li:where(:not(:first-child)) {
   margin-top: var(--space, var(--spacing-default));
+  line-height: 1.65;
+  text-wrap: pretty;
 }
 
 .long-content ul,
 .long-content ol {
   margin-bottom: var(--spacing-32);
   padding-left: var(--spacing-16);
+}
+
+.long-content li a[href*="tiktok"],
+.long-content li a[href*="instagram"],
+.long-content li a[href*="facebook"],
+.long-content li a[href*="twitter"], 
+.long-content li a[href*="linkedin"] {
+  padding-left: var(--spacing-24);
+  color: hsl(var(--color-content));
+}
+
+.long-content li a[href*="tiktok"] {
+  background: url('../../assets/img/ui/tiktok-black.svg') no-repeat left center;
+  background-size: 1rem;
+}
+
+.long-content li a[href*="instagram"] {
+  background: url('../../assets/img/ui/instagram-black.svg') no-repeat left center;
+  background-size: 1rem;
+}
+
+.long-content li a[href*="facebook"] {
+  background: url('../../assets/img/ui/facebook-black.svg') no-repeat left center;
+  background-size: 1rem;
+}
+
+.long-content li a[href*="twitter"] {
+  background: url('../../assets/img/ui/twitter-black.svg') no-repeat left center;
+  background-size: 1rem;
+}
+
+.long-content li a[href*="linkedin"] {
+  background: url('../../assets/img/ui/linkedin-black.svg') no-repeat left center;
+  background-size: 1rem;
+}
+
+.terms-and-conditions {
+  padding-block: var(--spacing-24);
+  padding-inline: var(--spacing-16);
 }
 
 /* ============ MEDIA QUERIES ============ */
@@ -2967,6 +3016,19 @@ a.instruction-download {
   }
 
   .slider { min-height: 26rem; }
+
+  .terms-and-conditions { 
+    padding-inline: 0;
+  }
+
+  .terms-and-conditions .long-content {
+    margin: var(--spacing-24) auto;
+    padding: var(--spacing-32);
+    background: hsl(var(--color-surface-elevated));
+    border-radius: var(--border-radius-outer);
+    border: 2px solid hsl(var(--color-border));
+    width: 70%;
+  }
 
 }
 
