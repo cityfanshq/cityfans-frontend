@@ -1871,6 +1871,7 @@ body:has(.hero-intro) {
 .main-product-header h1 {
   font-size: var(--text-size-400);
   line-height: 1.16;
+  flex: 1;
 }
 
 .main-product-header,
