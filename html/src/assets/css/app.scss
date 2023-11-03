@@ -2226,6 +2226,19 @@ select {
   font-weight: 300;
 }
 
+.cart-empty-state {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 2rem;
+  grid-template-rows: auto;
+  margin-bottom: var(--spacing-32);
+}
+
+.cart-empty-state img {
+  display: inline;
+}
+
 .purchase-item {
   border-bottom: 1px dotted hsl(var(--receipt-border));
   padding-bottom: var(--spacing-12);
@@ -2409,6 +2422,7 @@ select {
 .btn-remove:hover {
   opacity: 1;
 }
+
 
 .ticket-module .btn-remove {
   border: 1px solid hsl(var(--color-border));
