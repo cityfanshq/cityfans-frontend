@@ -2137,7 +2137,8 @@ select {
   border-bottom: 1px dotted hsl(var(--color-border) / 0.3);
 }
 
-.intermediary-page-content .addon-item:first-child  {
+.intermediary-page-content .addon-item:first-child,
+.addons-module:not(h2) > .addon-item:first-child {
   border-top: none;
 }
 
@@ -3168,7 +3169,8 @@ a.instruction-download {
     grid-template-columns: 3fr 2fr;
   }
 
-  .ticket-summary {
+  .ticket-summary,
+  .addon-summary {
     font-size: 1rem;
   }
 
