@@ -1210,8 +1210,8 @@ h6 {
 .primary-footer {
   background-color: hsl(var(--footer-bg));
   color: hsl(var(--footer-content));
-  /* position: sticky;
-   top: 100%; */
+  position: sticky;
+  top: 100%;
   padding-block: var(--spacing-24);
 }
 
@@ -2446,7 +2446,6 @@ select {
   opacity: 1;
 }
 
-
 .ticket-module .btn-remove {
   border: 1px solid hsl(var(--color-border));
   color: hsl(var(--color-content));
@@ -2777,7 +2776,6 @@ a.instruction-download {
   margin-bottom: 0;
 }
 
-
 .long-content h1 {
   font-size: var(--text-size-700);
   line-height: 1.24;
@@ -2871,6 +2869,96 @@ a.instruction-download {
   padding-block: var(--spacing-24);
   padding-inline: var(--spacing-16);
 }
+
+/* FAQ Accordions */
+.accordion-panel div > *:where(:not(:first-child)) {
+  margin-top: var(--space, var(--spacing-default));
+}
+
+.accordion {
+  margin: var(--spacing-32) 0 0 0;
+  padding: 0;
+  border: 2px solid hsl(var(--color-border));
+  border-radius: var(--border-radius-inner);
+  overflow: hidden;
+  background-color: hsl(var(--color-surface));
+}
+
+.accordion button {
+  border-style: none;
+  cursor: pointer;
+}
+
+.accordion h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion > * + * {
+  border-top: 1px solid hsl(var(--color-border));
+}
+
+.accordion-trigger {
+  background: none;
+  color: hsl(var(--color-content));
+  display: block;
+  font-size: var(--text-size-400);
+  font-weight: 700;
+  margin: 0;
+  padding: var(--spacing-16) var(--spacing-24);
+  position: relative;
+  text-align: left;
+  width: 100%;
+  outline: none;
+}
+
+.accordion-trigger:focus,
+.accordion-trigger:hover {
+  background: hsl(var(--color-blue-400));
+}
+
+.accordion-trigger:focus {
+  outline: 4px solid transparent;
+}
+
+.accordion-title {
+  display: block;
+  pointer-events: none;
+  border: transparent 2px solid;
+  border-radius: 5px;
+  padding: var(--spacing-4);
+  outline: none;
+}
+
+.accordion-icon {
+  border: solid currentcolor;
+  border-width: 0 2px 2px 0;
+  height: 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  right: 2em;
+  top: 50%;
+  transform: translateY(-60%) rotate(45deg);
+  width: 0.5rem;
+}
+
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.accordion-panel {
+  margin: 0;
+  padding: var(--spacing-16) var(--spacing-32);
+
+}
+
+.accordion-panel[hidden] {
+  display: none;
+}
+
+
+
 
 /* ============ MEDIA QUERIES ============ */
 @media screen and (min-width: 23em) { .slider { min-height: 12.937rem; } }
