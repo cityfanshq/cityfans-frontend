@@ -2263,6 +2263,28 @@ select {
   gap: 1rem;
 }
 
+.purchase-item .error-outer {
+  margin-bottom: 0;
+}
+
+.purchase-item .error-outer h3 {
+  font-weight: 700;
+  margin-bottom: var(--spacing-16);
+}
+
+.purchase-item .error-outer p {
+  font-weight: 300;
+  margin-bottom: var(--spacing-16);
+}
+
+.purchase-item .error-outer p:last-child {
+  margin-bottom: 0;
+}
+
+.purchase-item .error-outer p strong {
+  font-weight: 700;
+}
+
 .purchase-item-price {
   text-align: right;
 }
