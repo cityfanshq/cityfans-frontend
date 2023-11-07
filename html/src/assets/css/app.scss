@@ -3660,8 +3660,8 @@ a.instruction-download {
 }
 
 .choices[data-type*="select-one"] .choices__inner {
-  padding-bottom: var(--spacing-8);
   border: none;
+  padding: var(--spacing-4) var(--spacing-8);
   border-radius: var(--border-radius-inner-inner);
 }
 .choices[data-type*="select-one"] .choices__input {
@@ -3720,7 +3720,7 @@ a.instruction-download {
   vertical-align: top;
   width: 100%;
   background-color: hsl(var(--color-white-400));
-  padding: var(--spacing-8);
+  
   border: 1px solid hsl(var(--color-border-lighter));
   border-radius: var(--border-radius-inner-inner);
   overflow: hidden;
