@@ -772,6 +772,7 @@ h6 {
   padding: var(--spacing-4) var(--spacing-24) var(--spacing-4) var(--spacing-4);
   font-size: var(--text-size-300);
   text-align: right;
+  line-height: 1.25;
   border: none;
   height: 100%;
   min-width: 100%;
@@ -3172,7 +3173,6 @@ a.instruction-download {
 @media screen and (min-width: 64em) {
   .primary-navigation li select {
     font-size: 1rem;
-    line-height: 1.25;
     padding-right: var(--spacing-32);
   }
 
