@@ -31,7 +31,29 @@
         </div>
         <nav>
           <ul class="primary-navigation | flex">
-            <li><a href="" class="color-content-inverted">EN / €</a></li>
+            <li>
+              <form action="#">
+                <select name="language-select">
+                  <option value="en" selected="">English</option>
+                  <option value="de">Deutsch</option>
+                  <option value="es">Español </option>
+                  <option value="fr">Français</option>
+                  <option value="it">Italiano</option>
+                </select>
+              </form>
+            </li>
+
+            <li>
+              <form action="#">
+                <select name="currency-select">
+                  <option selected="" value="EUR">€ EUR</option>
+                  <option value="USD">$ USD</option>
+                  <option value="GBP">£ GBP</option>
+                  <option value="CAD">C$ CAD</option>
+                  <option value="NOK">kr NOK</option>
+                </select>
+              </form>
+            </li>
           </ul>
         </nav>
       </div>

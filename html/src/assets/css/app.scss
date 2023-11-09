@@ -764,6 +764,25 @@ h6 {
   padding-inline: var(--spacing-8);
 }
 
+.primary-navigation {
+  gap: 1rem;
+}
+
+.primary-navigation li select {
+  padding: var(--spacing-4) var(--spacing-24) var(--spacing-4) var(--spacing-4);
+  font-size: var(--text-size-300);
+  text-align: right;
+  border: none;
+  height: 100%;
+  min-width: 100%;
+  color: hsl(var(--color-content-inverted));
+  background: transparent url('../../assets/img/ui/select-arrow-white.svg') no-repeat right 10% center;
+}
+
+.primary-navigation li select:focus {
+  outline: none;
+}
+
 /* USP list */
 .usps {
   background-image: linear-gradient(
@@ -782,9 +801,16 @@ h6 {
   gap: 1rem;
   overflow-x: auto;
   scrollbar-width: none;
+  -ms-overflow-style: none;
   text-align: center;
   max-width: 70.5rem;
   margin: 0 auto;
+}
+
+.usp-list::-webkit-scrollbar,
+.hero-carousel-cell::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
 }
 
 .usp-list li {
@@ -2543,8 +2569,6 @@ select {
   color: hsl(var(--color-content) / 0.8);
 }
 
-
-
 /* The Intermediary page */
 .error-outer {
   padding: var(--spacing-16);
@@ -2722,7 +2746,6 @@ a.instruction-download {
 .instruction-download:last-child {
   margin-bottom: 0;
 }
-
 
 /* Category Page */
 .category-media {
@@ -2959,8 +2982,6 @@ a.instruction-download {
 }
 
 
-
-
 /* ============ MEDIA QUERIES ============ */
 @media screen and (min-width: 23em) { .slider { min-height: 12.937rem; } }
 @media screen and (min-width: 30em) { .slider { min-height: 15rem; } }
@@ -3142,15 +3163,19 @@ a.instruction-download {
     width: 70%;
   }
 
-
-.cart-empty-state .ghost {
-  background: url('../../assets/img/ui/ghost.svg') top left no-repeat;
-}
-
+  .cart-empty-state .ghost {
+    background: url('../../assets/img/ui/ghost.svg') top left no-repeat;
+  }
 }
 
 /* 1024px */
 @media screen and (min-width: 64em) {
+  .primary-navigation li select {
+    font-size: 1rem;
+    line-height: 1.25;
+    padding-right: var(--spacing-32);
+  }
+
   .hero-intro div h1 {
     grid-row: 1;
     text-align: left;
