@@ -2236,10 +2236,11 @@ select {
   margin-bottom: var(--spacing-32);
 }
 
-.cart-empty-state img {
-  display: inline;
+.cart-empty-state .ghost {
+  width: 6.25rem;
+  height: 8rem;
+  background: url('../../assets/img/ui/ghost-up.svg') top left no-repeat;
 }
-
 .purchase-item {
   border-bottom: 1px dotted hsl(var(--receipt-border));
   padding-bottom: var(--spacing-12);
@@ -3140,6 +3141,11 @@ a.instruction-download {
     border: 2px solid hsl(var(--color-border));
     width: 70%;
   }
+
+
+.cart-empty-state .ghost {
+  background: url('../../assets/img/ui/ghost.svg') top left no-repeat;
+}
 
 }
 
