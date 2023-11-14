@@ -1677,16 +1677,21 @@ body:has(.hero-intro) {
   margin-bottom: var(--spacing-8);
 }
 
-.included {
-  background: url('../../assets/img/ui/icon-included.svg') no-repeat 52% 5%;
+.included h3 {
+  background: url('../../assets/img/ui/icon-included.svg') no-repeat left center;
+  background-size: 1.8rem;
+  padding-left: 2.5rem;
 }
 
-.not-included {
-  background: url('../../assets/img/ui/icon-notincluded.svg') no-repeat 65% 7%;
+.not-included h3 {
+  background: url('../../assets/img/ui/icon-notincluded.svg') no-repeat left center;
+  background-size: 1.8rem;
+  padding-left: 2.5rem;
 }
 
 .checkout-grid {
   padding-bottom: var(--spacing-64);
+  min-height: 100vh;
 }
 
 /* buy-now aside */
@@ -2248,6 +2253,10 @@ select {
   border-radius: var(--border-radius-outer) var(--border-radius-outer) 0 0;
   margin-block: var(--spacing-16);
   padding: var(--spacing-16);
+}
+
+.purchase-overview p + .btn-buy-now {
+  margin-bottom: var(--spacing-32);
 }
 
 .purchase-overview::after {
@@ -3285,14 +3294,6 @@ a.instruction-download {
     grid-template-columns: repeat(3, minmax(1rem,1fr));
   }
 
-  .included {
-    background-position: 27% 5%;
-  }
-
-  .not-included {
-    background-position: 33% 15%;
-  }
-
   .checkout-grid {
     display: grid;
     grid-template-columns: 58% 40%;
@@ -3874,14 +3875,6 @@ a.instruction-download {
 
   .btn-buy-now, .buy-now {
     font-size: 0.88rem;
-  }
-
-  .included {
-    background-position: 34% 6%;
-  }
-
-  .not-included {
-    background-position: 42% 13%;
   }
 
   .addon-summary {

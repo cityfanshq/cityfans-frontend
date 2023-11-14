@@ -66,11 +66,80 @@
               <h2>Next step: Payment</h2>
               <p>In order to confirm your reserved items, you need to proceed to payment. In the next step, you can do it safely via Stripe 🔒</p>
 
-              
-
               <a href="confirmation.html" class="btn-buy-now">
                 PAY $150
               </a>
+
+              <!-- simple version with voucher -->
+              <ul class="purchase-item">
+                <li>
+                  <h3>1x Self-guided audio-tour at Van Gogh</h3>
+                </li>
+                <li class="purchase-item-voucher">
+                  <p class="price-voucher">Voucher Applied (-20%)</p>
+                  <p class="price-discount">€7.99</p>
+                  <p class="purchase-item-discounted">€6.40</p>
+                </li>
+              </ul>
+
+              <!-- complex version with total (similar to voucher) -->
+              <ul class="purchase-item">
+                <li>
+                  <h3>Self-guided audio-tour at Van Gogh</h3>
+                </li>
+                <li>
+                  <p>2x Adult</p>
+                  <p class="purchase-item-price">€112</p>
+                </li>
+                <li>
+                  <p>1x Child</p>
+                  <p class="purchase-item-price">€42</p>
+                </li>
+                <li class="purchase-item-subtotal">
+                  <p class="price-subtotal">Sub-total</p>
+                  <p class="purchase-item-subtotal">€154</p>
+                </li>
+              </ul>
+              
+              <!-- simple version (no voucher) -->
+              <ul class="purchase-item">
+                <li>
+                  <h3>1x Self-guided audio-tour at Van Gogh</h3>
+                  <p class="purchase-item-price">€6.40</p>
+                </li>
+              </ul>
+
+              <!-- complex version with voucher -->
+              <ul class="purchase-item">
+                <li><h3>Virtual Reality Experience in The Netherlands</h3></li>
+                <li>
+                  <p>2x Adult</p>
+                  <p class="purchase-item-price">€112</p>
+                </li>
+                <li>
+                  <p>1x Child</p>
+                  <p class="purchase-item-price">€42</p>
+                </li>
+                <li class="purchase-item-voucher">
+                  <p class="price-voucher">Voucher Applied (-20%)</p>
+                  <p class="price-discount">€1545.25</p>
+                  <p class="purchase-item-discounted">€123.20</p>
+                </li>
+              </ul>
+              
+              <!-- complex version (no voucher) -->
+              <ul class="purchase-item">
+                <li><h3>Tickets for GVB Amsterdam Public Transport</h3></li>
+                <li>
+                  <p>1x Child</p>
+                  <p class="purchase-item-price">€42</p>
+                </li>
+              </ul>
+
+              <div class="purchase-total">
+                <span>All taxes are included</span>
+                <p>€157.20</p>
+              </div>
 
               <div class="payment-disclaimer">
                 <p>Your order will be placed in EUR (<strong>€156.16</strong>). The final exchange rate will be applied by your bank or credit card provider.</p>
