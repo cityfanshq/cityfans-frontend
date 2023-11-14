@@ -560,6 +560,11 @@ h6 {
 .align-items-center { align-items: center; }
 .space-between { justify-content: space-between; }
 
+
+/* grid */
+.grid { display: grid; }
+.place-center { place-items: center; }
+
 /* spacing */
 .spacing > *:where(:not(:first-child)) {
   margin-top: var(--space, var(--spacing-default));
@@ -782,6 +787,10 @@ h6 {
 
 .primary-navigation li select:focus {
   outline: none;
+}
+
+.primary-navigation li select option {
+  background: hsl(var(--color-primary));
 }
 
 /* USP list */
@@ -1448,6 +1457,17 @@ body:has(.hero-intro) {
   overflow: hidden;
   margin-bottom: var(--spacing-16);
 }
+
+.stripe-checkout {
+  margin-block: var(--spacing-32);
+  display: grid;
+  place-items: center;
+}
+
+.stripe-checkout aside {
+  margin-inline: var(--spacing-16);
+}
+
 
 /* product page carousel */
 .slider {
@@ -3459,6 +3479,11 @@ a.instruction-download {
   }
 
   .slider { min-height: 22rem; }
+
+  .stripe-checkout aside {
+    width: 50%;
+    margin-inline: 0;
+  }
 
 }
 

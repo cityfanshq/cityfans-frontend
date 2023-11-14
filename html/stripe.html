@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>When using the back button from the Stripe page · cityfans</title>
+  <title>Payment · cityfans</title>
   <meta name="description" content="Self-Guided Audio Tour at Van Gogh Museum">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -59,195 +59,24 @@
       </div>
     </header>
 
-    <section class="bg-color-surface">
-          <div class="checkout-grid default-container">
-            <article>
-              <section class="main-product-module">
-                <div class="main-product-header">
-                  <figure class="extras-thumbnail">
-                    <img src="app/assets/img/content/card2.jpg" alt="product image">
-                  </figure>
-                  <h1>Self-Guided Audio Tour at Van Gogh Museum</h1>
-                  
-                </div>
-
-                <div class="main-product-content">
-                  <ul class="product-overview">
-                    <li class="product-overview-date">Nov 4</li>
-                    <li class="product-overview-time">10:30</li>
-                    <li class="product-overview-quantity">2x Child, 2x Adult, 1x Senior</li>
-                  </ul>
-                </div>
-              </section><!-- main product module confirmed -->
-
-              <section class="ticket-module">
-                <div class="ticket-module-header">
-                  <div class="ticket-choice">
-                    <h2>Entrance to the Van Gogh museum</h2>
-                  </div>
-
-                  <div class="ticket-summary">
-                      <figure class="extras-thumbnail">
-                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
-                      </figure>
-
-                      <div>
-                        <p>You’re about to purchase a digital experience that <em>doesn’t include</em> entrance tickets. To make sure you can use the product, buy entrances right here.</p>
-                      </div>
-                  </div>
-                </div>
-
-                <div class="ticket-module-content">
-                    <ul class="product-overview">
-                      <li class="product-overview-date">Nov 4</li>
-                      <li class="product-overview-time">10:30</li>
-                      <li class="product-overview-quantity">2x Child, 2x Adult, 1x Senior</li>
-                    </ul>
-                </div>
-              </section><!-- ticket module after selection -->
-
-              <section class="addons-module">
-                <section class="addon-item">
-                  <div class="addon-module-header">
-                    <div class="addon-choice">
-                      <h3>Tickets for GVB Amsterdam Public Transport</h3>
-                    </div>
-
-                    <div class="addon-summary">
-                      <figure class="extras-thumbnail">
-                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
-                      </figure>
-                      
-                      <div>
-                        <p>Unlimited travel on all GVB routes regardless of distance, both day and night, for the chosen period (Train,  Connexxion and EBS not included)</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="ticket-module-content">
-                      <ul class="product-overview">
-                        <li class="product-overview-date">Nov 4</li>
-                        <li class="product-overview-time">10:30</li>
-                        <li class="product-overview-quantity">2x Child, 2x Adult, 1x Senior</li>
-                      </ul>
-                  </div>
-                </section> <!-- addon item (e.g: GVB) -->
-
-                <section class="addon-item">
-                  <div class="addon-module-header">
-                    <div class="addon-choice">
-                      <h3>Tickets for MacBike Amsterdam Bike Rental</h3>
-                    </div>
-
-                    <div class="addon-summary">
-                      <!-- it also works without images -->
-                      <!-- <figure class="extras-thumbnail">
-                        <img src="app/assets/img/content/card2.jpg" alt="addon description">
-                      </figure> -->
-
-                      <div>
-                        <p>Testing same code without an image, in case there is none. See Amsterdam like a local with a bike rental from MacBike!</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="ticket-module-content">
-                    <ul class="product-overview">
-                      <li class="product-overview-date">Nov 4</li>
-                      <li class="product-overview-time">10:30</li>
-                      <li class="product-overview-quantity">2x Child, 2x Adult, 1x Senior</li>
-                    </ul>
-                </div> 
-
-                </section> <!-- addon item (e.g: Bikes) -->
-              </section><!-- addons module-->
-            </article>
-            
-            <div>
+    <section>
+          <div class="default-container">
+            <div class="stripe-checkout">
               <aside class="purchase-overview">
-              <h2>Overview of your purchase</h2>
+              <h2>Next step: Payment</h2>
+              <p>In order to confirm your reserved items, you need to proceed to payment. In the next step, you can do it safely via Stripe 🔒</p>
 
-              <!-- simple version with voucher -->
-              <ul class="purchase-item">
-                <li>
-                  <h3>1x Self-guided audio-tour at Van Gogh</h3>
-                </li>
-                <li class="purchase-item-voucher">
-                  <p class="price-voucher">Voucher Applied (-20%)</p>
-                  <p class="price-discount">€7.99</p>
-                  <p class="purchase-item-discounted">€6.40</p>
-                </li>
-              </ul>
-
-              <!-- complex version with total (similar to voucher) -->
-              <ul class="purchase-item">
-                <li>
-                  <h3>Self-guided audio-tour at Van Gogh</h3>
-                </li>
-                <li>
-                  <p>2x Adult</p>
-                  <p class="purchase-item-price">€112</p>
-                </li>
-                <li>
-                  <p>1x Child</p>
-                  <p class="purchase-item-price">€42</p>
-                </li>
-                <li class="purchase-item-subtotal">
-                  <p class="price-subtotal">Sub-total</p>
-                  <p class="purchase-item-subtotal">€154</p>
-                </li>
-              </ul>
               
-              <!-- simple version (no voucher) -->
-              <ul class="purchase-item">
-                <li>
-                  <h3>1x Self-guided audio-tour at Van Gogh</h3>
-                  <p class="purchase-item-price">€6.40</p>
-                </li>
-              </ul>
-
-              <!-- complex version with voucher -->
-              <ul class="purchase-item">
-                <li><h3>Virtual Reality Experience in The Netherlands</h3></li>
-                <li>
-                  <p>2x Adult</p>
-                  <p class="purchase-item-price">€112</p>
-                </li>
-                <li>
-                  <p>1x Child</p>
-                  <p class="purchase-item-price">€42</p>
-                </li>
-                <li class="purchase-item-voucher">
-                  <p class="price-voucher">Voucher Applied (-20%)</p>
-                  <p class="price-discount">€1545.25</p>
-                  <p class="purchase-item-discounted">€123.20</p>
-                </li>
-              </ul>
-              
-              <!-- complex version (no voucher) -->
-              <ul class="purchase-item">
-                <li><h3>Tickets for GVB Amsterdam Public Transport</h3></li>
-                <li>
-                  <p>1x Child</p>
-                  <p class="purchase-item-price">€42</p>
-                </li>
-              </ul>
-
-              <div class="purchase-total">
-                <span>All taxes are included</span>
-                <p>€157.20</p>
-              </div>
-
-              <div class="payment-disclaimer">
-                <p>Your order will be placed in EUR (<strong>€156.16</strong>). The final exchange rate will be applied by your bank or credit card provider.</p>
-              </div>
 
               <a href="confirmation.html" class="btn-buy-now">
                 PAY $150
               </a>
 
+              <div class="payment-disclaimer">
+                <p>Your order will be placed in EUR (<strong>€156.16</strong>). The final exchange rate will be applied by your bank or credit card provider.</p>
+              </div>
+
               <div class="payment-tc">
-                <p>You won’t be charded yet.</p>
                 <p>By proceeding you agree to our <a href="">Terms and Conditions</a> & <a href="">Privacy Policy</a>.</p>
               </div>
               </aside>
@@ -302,13 +131,6 @@
         </div>
       </section>
     </footer>
-
-    <div class="buy-now-sticky | bg-color-ancillary padding-all-200">
-      <a href="confirmation.html" class="btn-buy-now margin-all-200">
-        PAY $150
-      </a>
-    </div>
-
   </main>
 </body>
 
