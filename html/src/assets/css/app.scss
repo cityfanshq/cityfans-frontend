@@ -2821,6 +2821,14 @@ a.instruction-download {
   margin-bottom: 0;
 }
 
+.long-content h2,
+.long-content h3,
+.long-content h4,
+.long-content h5,
+.long-content h6 {
+  margin-top: var(--spacing-32);
+}
+
 .long-content h1 {
   font-size: var(--text-size-700);
   line-height: 1.24;
@@ -2995,11 +3003,20 @@ a.instruction-download {
 .accordion-panel {
   margin: 0;
   padding: var(--spacing-16) var(--spacing-32);
-
 }
 
 .accordion-panel[hidden] {
   display: none;
+}
+
+.search-internal {
+  margin-top: var(--spacing-32);
+  background: hsl(var(--color-surface)) url('../../assets/img/ui/search.svg') no-repeat right 1rem center;
+  background-size: 1rem;
+}
+
+.search-internal + .accordion {
+  margin-top: var(--spacing-16);
 }
 
 
