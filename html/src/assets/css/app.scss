@@ -4266,20 +4266,3 @@ a.instruction-download {
 .choices__placeholder {
   opacity: 0.5;
 }
-
-
-@media print {
-  /* html, body {
-    min-height:initial !important;
-  } */
-
-  /* a:after {
-    content: "("attr(href)")";
-  } */
-}
-
-@page {
-  /* eliminates auto headers and footers */
-  /* size:auto;
-  margin:.5rem 0; */
-}
