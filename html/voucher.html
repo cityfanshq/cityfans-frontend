@@ -10,11 +10,287 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-  <link rel="stylesheet" href="app/assets/css/phoenix.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      font-size: inherit;
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+      scroll-padding: 10em 0 0 0;
+    }
+
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      text-rendering: optimizeSpeed;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    img,
+    picture {
+      max-width: 100%;
+      display: block; 
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    html {
+      line-height: 1.15; 
+      -webkit-text-size-adjust: 100%;
+      font-size: 1rem;
+    }
+
+    main {
+      display: block;
+    }
+
+    hr {
+      box-sizing: content-box; 
+      height: 0;
+      overflow: visible; 
+    }
+
+    pre {
+      font-family: monospace, monospace; 
+      font-size: 1em;
+    }
+
+    a {
+      background-color: transparent;
+    }
+
+    b,
+    strong {
+      font-weight: bolder;
+    }
+
+    img {
+      border-style: none;
+    }
+
+    [hidden] {
+      display: none;
+    }
+
+    .voucher-pdf {
+      background: #fff;
+      font-family: 'Lexend Deca', 
+                           'Helvetica Neue', helvetica, 'Segoe UI', 'Apple Color Emoji', arial, sans-serif;
+
+      color: #222222;
+    }
+
+    .voucher-pdf header  img {
+      display: inline-block;
+    }
+
+    .voucher-pdf header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .voucher-info table, 
+    .voucher-info td {
+      border: 1px solid #222222;
+      border-collapse: collapse;
+      padding: 8PX 16px;
+    }
+
+    .voucher-info tbody td {
+      width: 50%;
+    }
+
+    .voucher-info table {
+      width: 100%;
+      border: 3px solid #222222;
+      border-radius: 8px;
+    }
+
+    .voucher-info span {
+      font-weight: 700;
+    }
+
+    .voucher-info h2 {
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .voucher-info thead {
+      text-align: left;
+      border-bottom: 2px solid #222222;
+    }
+
+    .voucher-info thead tr th div {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .voucher-info thead tr th div figure {
+      border-right: 1px solid #222;
+      padding: 16px;
+      display: grid;
+      place-items: center;
+    }
+
+    .voucher-info th {
+      border: 1px solid #222222;
+      border-collapse: collapse;
+    }
+
+    .voucher-info h1 {
+      font-weight: 500;
+      text-transform: uppercase;
+      line-height: 1.24;
+      font-size: 14px;
+      padding: 16px 16px 16px 0;
+      flex: 1;
+      align-self: center;
+    }
+
+    .voucher-info p {
+      line-height: 1.30;
+    }
+
+    .voucher-info h1 strong {
+      font-weight: 700;
+    }
+
+    .voucher-info td {
+      font-size: 12px;
+    }
+
+    .voucher-info-item {
+      padding: 16px;
+      border-bottom: 1px solid #222222;
+      border-right: 1px solid #222222;
+    }
+
+    .voucher-instructions {
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    .voucher-instructions ol {
+      padding-left: 16px;
+    }
+
+    .voucher-instructions h2 {
+      font-size: 18px;
+    }
+
+    .voucher-pdf footer {
+      margin-top: 32px;
+      font-size: 14px;
+      border: 2px dotted #C4B8CF;
+    }
+
+    .voucher-pdf footer h2 {
+      border-bottom: 2px dotted #C4B8CF;
+      padding: 8px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .voucher-pdf footer h2 span {
+      font-weight: 700;
+    }
+
+    .voucher-image h4 {
+      font-size: 24px;
+      padding-block: 64px;
+      color: #9954C4;
+    }
+
+    .voucher-multiple-codes {
+      text-align: center;
+    }
+    .voucher-multiple-codes h4 {
+      font-size: 16px;
+      padding-block: 8px;
+      border-bottom: 1px dotted #C4B8CF;
+      color: #9954C4;
+      width: 100%;
+    }
+
+    .voucher-multiple-codes h4:last-child {
+      border: none;
+    }
+
+    .voucher-assistance {
+      margin-top: 16px;
+      border-top: 1px solid #EBE6EE;
+      border-bottom: 1px solid #EBE6EE;
+      padding-block: 16px;
+    }
+
+    .voucher-codes {
+      padding: 8px 8px 8px 0;
+      flex: 1;
+      align-self: center;
+    }
+
+    .voucher-codes p span {
+      opacity: 0.5;
+    }
+
+    .voucher-qr-code p {
+      margin-bottom: 16px;
+    }
+
+    .voucher-qr-code p:last-child {
+      margin-bottom: 0;
+    }
+
+    .voucher-image {
+      flex: 0 0 25%;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+    }
+
+    .voucher-instructions a {
+      color: #9954C4;
+      font-weight: 500;
+    }
+
+    .voucher-instructions a:visited {
+      color: #9954C4;
+    }
+
+    .voucher-instructions ol,
+    .voucher-instructions ul {
+      margin-top: 16px;
+    }
+    .voucher-instructions ol li,
+    .voucher-instructions ul li {
+      margin-bottom: 8px;
+    }
+
+    .voucher-instructions ol li:last-child,
+    .voucher-instructions ul li:last-child {
+      margin-bottom: 0px;
+    }
+  </style>
 </head>
 
 <body class="voucher-pdf">
@@ -37,7 +313,8 @@
         </thead>
         <tbody>
           <tr>
-            <td>
+            <!-- If DATE/TIME is not needed, we should use colspan=2 -->
+            <td colspan="2">
               <h2>Product</h2>
               <p>
                 Vatican: 60-minutes Saint Peter’s Basilica audio guided tour
@@ -45,10 +322,11 @@
               </p>
             </td>
 
-            <td>
+            <!-- If not needed, this can be ommitted then -->
+            <!-- <td>
               <h2>Date/Time</h2>
               <p>2023-10-18 13:30-18:00</p>
-            </td>
+            </td> -->
           </tr>
 
           <tr>
@@ -62,16 +340,16 @@
             
             <td>
               <h2>Tickets</h2>
-              <p>3 x Adult, 2 x Child</p>
+              <p>5 x Adult</p>
             </td>
           </tr>
         </tbody>
       </table>
   </section>
 
-  <article class="voucher-instructions spacing">
+  <article class="voucher-instructions">
     <h2>Instructions</h2>
-    <ol class="spacing">
+    <ol>
       <li>Please note that this is a digital experience, which means you will not be able to get the physical audio-guide at the Saint Peter’s Basilica desk; there is no meeting point or staff on site.</li>
       <li>To activate your Basilica digital guide, you will need to scan the QR code on this voucher or click on this link: <a href="https://www.example.com">https://www.example.com/7345898459384563945637456734-475834758</a></li>
       <li>We recommend you do this pre-arrival</li>
@@ -83,18 +361,29 @@
   </article>
 
   <footer>
-    <h2>Your activation code:</h2>
+    <h2>Your activation codes:</h2>
+
+    <!-- For multiple pages, change the title to include the #1, #2, etc -->
+    <!-- <h2>Your activation codes #1:</h2> -->
 
     <div class="voucher-qr-code">
-      <div class="voucher-image">
-        <img src="app/assets/img/content/qr-example.png" alt="">
+      <div class="voucher-multiple-codes">
+        <h4>7aR5690hJklm4-2023</h4>
+        <h4>8aR5690hJklyu4-2023</h4>
+        <h4>2aR5690hJkly098y7-2023</h4>
+        <h4>6aR5690hJkly0y7-2023</h4>
+      </div>
+
+      <!-- THIS IS THE VERSION WITH IMAGES AND A SINGLE CODE -->
+      <!-- <div class="voucher-image"> -->
+        <!-- <img src="app/assets/img/content/qr-example.png" alt=""> -->
 
         <!-- EXAMPLE with a bardcode instead of QR-code -->
         <!-- <img src="app/assets/img/content/barcode-example.png" alt=""> -->
 
          <!-- EXAMPLE with a text instead of image -->
         <!-- <h4>7aR5690hJklm4-2023</h4> -->
-      </div>
+      <!-- </div> -->
     </div>
   </footer>
 </body>
