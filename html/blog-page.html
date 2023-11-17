@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Blog Home · cityfans</title>
+  <title>Blog Page 2 · cityfans</title>
   <meta name="description" content="cityfans offers experiences for digital natives and curious city-fans that entertain and inspire through digital tools.">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -61,21 +61,21 @@
 
     <section class="bg-color-surface">
       <div class="blog | default-container">
-        <p class="blog-home-title text-align-center">
-          The Blog™
-        </p>
+        <!-- this becomes a link to the home of the blog -->
+        <p class="blog-home-title text-align-center"><a href="blog.html" title="Go back to the blog homepage">The Blog™</a></p>
 
+        <!-- for SEO, we could use the first item of the second page as hero, instead of being hand-picked. In this way, we generate a new title for this page with the <h1> there -->
         <div class="blog-home-hero">
           <a href="blogpost.html">
             <figure class="img-container">
-              <img src="app/assets/img/content/bangkok.png" alt="blog hero image">
+              <img src="app/assets/img/content/london.jpg" alt="blog post main image">
             </figure>
 
-            <h1>What Are Some Hidden Gems to Discover on a Rome Self-Guided Tour in 24 hours?</h1>
+            <h1>What are the must-visit attractions on a tour of London?</h1>
           </a>
         </div>
 
-        <h2>More Recent posts</h2>
+        <h2>More articles for you</h2>
         <article class="blog-posts">
             <ul class="blog-posts-list">
               <li class="blog-post-card">
@@ -141,9 +141,11 @@
 
             <div class="blog-pagination">
               <div>
+                <a href="" class="blog-pagination-control"><img src="app/assets/img/ui/pagination-left.svg" alt="Previous Page" aria-hidden="true"></a>
+
                 <ul class="blog-pagination-items">
-                  <li><a class="pagination-active" href="blog.html">1</a></li>
-                  <li><a href="blog-page.html">2</a></li>
+                  <li><a href="blog.html">1</a></li>
+                  <li><a class="pagination-active" href="blog-page.html">2</a></li>
                   <li><a href="blog-page.html">3</a></li>
                   <li><a href="blog-page.html">14</a></li>
                   <li><a href="blog-page.html">115</a></li>
