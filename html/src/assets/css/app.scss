@@ -2639,6 +2639,10 @@ select {
 }
 
 /* Confirmation page */
+.bg-color-ancillary.padding-block-600 {
+  min-height: 82vh;
+}
+
 .confirmation-container {
   background: hsl(var(--color-surface));
   overflow-x: visible;
