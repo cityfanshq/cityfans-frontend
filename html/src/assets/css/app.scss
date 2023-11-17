@@ -3063,9 +3063,8 @@ a.instruction-download {
 .blog-media-hero figure,
 .blog-media-hero-video,
 .blog-section-video {
-  position: relative;
-  padding-top: 41.7%;
-  /* 455 (height) / 1090 (width) = 0.417 */
+  position: relative; 
+  padding-top: 56.25%;
 }
 
 .blog-media-hero-video iframe,
@@ -3163,8 +3162,6 @@ a.instruction-download {
 }
 
 .blog-post-card a {
-  display: flex;
-  gap: 1rem;
   text-decoration: none;
   color: hsl(var(--color-content));
 }
@@ -3173,10 +3170,12 @@ a.instruction-download {
   color: hsl(var(--color-content));
 }
 
+.blog-post-card figure img {
+  width: 100%;
+}
+
 .blog-post-card figure {
-  flex: 0 0 8.75rem;
-  align-self: center;
-  min-height: 100%;
+  margin-bottom: var(--spacing-8);
 }
 
 .blog-post-card h3 {
