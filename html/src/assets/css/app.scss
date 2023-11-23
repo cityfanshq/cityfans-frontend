@@ -3099,7 +3099,7 @@ a.instruction-download {
 
 .blog-post-section {
   padding-inline: var(--spacing-16);
-  margin-bottom: var(--spacing-32);
+  margin-block: var(--spacing-32);
 }
 
 .blog-post-section figure,
@@ -3274,6 +3274,36 @@ a.instruction-download {
 
 .blog-pagination .pagination-active:hover {
   text-decoration: none;
+}
+
+.blog-post-section h1 {
+  margin-bottom: 0;
+}
+
+.blog-post-section:has(h1) {
+  margin-bottom: 0;
+}
+
+.blog-post-section {
+  padding-block: var(--spacing-24);
+}
+
+.blog-post-section + .blog-post-section {
+  padding-top: 0;
+}
+
+.blog-post-section:has(+ .blog-related-products) {
+  padding-bottom: 0;
+}
+
+.blog-related-products {
+  margin-top: 0;
+  padding-inline: var(--spacing-16);
+  padding-bottom: var(--spacing-24);
+}
+
+.blog {
+  padding-bottom: var(--spacing-32);
 }
 
 /* ============ MEDIA QUERIES ============ */
@@ -3883,6 +3913,10 @@ a.instruction-download {
   }
 
   .blog-post-picks .default-container {
+    padding-inline: 0;
+  }
+
+  .blog-related-products {
     padding-inline: 0;
   }
 
