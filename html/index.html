@@ -99,9 +99,13 @@
       <div class="hero-cards">
         <h2>Try it for yourself</h2>
 
-        <div class="hero-carousel"><!-- wrapper -->
-          <ul class="hero-carousel-cell" data-target="carousel"> <!-- carou. -->
-            <li class="hero-card" data-target="card">
+        <div class="hero-carousel" id="hero-carousel">
+          <button class="hero-carousel-prev">
+            previous
+          </button>
+
+          <ul class="hero-carousel-cell">
+            <li class="hero-card">
               <a href="productpage.html">
                   <figure class="img-container">
                     <img src="app/assets/img/content/card.png" alt="card image">
@@ -126,7 +130,7 @@
               </a>
             </li>
 
-            <li class="hero-card" data-target="card">
+            <li class="hero-card">
               <a href="productpage.html">
                   <figure class="img-container">
                     <img src="app/assets/img/content/card.png" alt="card image">
@@ -151,7 +155,7 @@
               </a>
             </li>
 
-            <li class="hero-card" data-target="card"> 
+            <li class="hero-card"> 
               <a href="productpage.html">
                   <figure class="img-container">
                     <img src="app/assets/img/content/card.png" alt="card image">
@@ -176,7 +180,7 @@
               </a>
             </li>
 
-            <li class="hero-card" data-target="card"> 
+            <li class="hero-card"> 
               <a href="productpage.html">
                   <figure class="img-container">
                     <img src="app/assets/img/content/card.png" alt="card image">
@@ -201,7 +205,32 @@
               </a>
             </li>
 
-            <li class="hero-card" data-target="card">
+            <li class="hero-card">
+              <a href="productpage.html">
+                  <figure class="img-container">
+                    <img src="app/assets/img/content/card.png" alt="card image">
+                  </figure>
+                  
+                  <span class="hero-card-category">City Game</span>
+
+                  <header class="hero-card-header">
+                    <h3>Ghosts of Amsterdam: The Haunting Stories</h3>
+                    <span class="location">Amsterdam, NL</span>
+                  </header>
+                  
+                  <footer class="hero-card-footer">
+                    <div>
+                      <span class="rating">4.3</span>
+                    </div>
+                    
+                    <div> 
+                      <span class="price">€18</span>
+                    </div>
+                  </footer>
+              </a>
+            </li>
+
+            <li class="hero-card">
               <a href="productpage.html">
                   <figure class="img-container">
                     <img src="app/assets/img/content/card.png" alt="card image">
@@ -227,8 +256,9 @@
             </li>
           </ul>
 
-          <div id="next" class="carousel__button--next">next ›</div>
-          <div id="prev" class="carousel__button--prev">‹ prev</div>
+          <button class="hero-carousel-next">
+            next
+         </button>
         </div>
       </div>
 

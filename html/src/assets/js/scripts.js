@@ -117,7 +117,6 @@ const homescroller = (function () {
 
 //PRODUCT PAGE GALLERY
 const productgallery = (function () {
-
   const slides = document.querySelectorAll(".slide");
 
     slides.forEach((slide, indx) => {
@@ -158,7 +157,6 @@ const productgallery = (function () {
         });
       });
     }
-
 })();
 
 //AUDIO PLAYER
@@ -167,61 +165,117 @@ const audioplayer = (function () {
   const media = $('audio');
 
   if(media) {
-
-  let ui = {
-    play: 'play-audio',
-    audio: 'audio',
-    percentage: 'player-percentage',
-    seekObj: 'seek-obj',
-    currentTime: 'current-time'
-  };
-
-  function togglePlay() {
-    if (media.paused === false) {
-      media.pause();
-      $(ui.play).classList.remove('pause');
-    } else {
-      media.play();
-      $(ui.play).classList.add('pause');
-    }
-  }
-
-  function calculatePercentPlayed() {
-    let percentage = (media.currentTime / media.duration).toFixed(2) * 100;
-    $(ui.percentage).style.width = `${percentage}%`;
-  }
-
-  function calculateCurrentValue(currentTime) {
-    const currentMinute = parseInt(currentTime / 60) % 60;
-    const currentSecondsLong = currentTime % 60;
-    const currentSeconds = currentSecondsLong.toFixed();
-    const currentTimeFormatted = `${currentMinute < 10 ? `0${currentMinute}` : currentMinute}:${
-    currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds
-    }`;
-
-    return currentTimeFormatted;
-  }
-
-  function initProgressBar() {
-    const currentTime = calculateCurrentValue(media.currentTime);
-    $(ui.currentTime).innerHTML = currentTime;
-    $(ui.seekObj).addEventListener('click', seek);
-
-    media.onended = () => {
-      $(ui.play).classList.remove('pause');
-      $(ui.percentage).style.width = 0;
-      $(ui.currentTime).innerHTML = '00:00';
+    let ui = {
+      play: 'play-audio',
+      audio: 'audio',
+      percentage: 'player-percentage',
+      seekObj: 'seek-obj',
+      currentTime: 'current-time'
     };
 
-    function seek(e) {
-      const percent = e.offsetX / this.offsetWidth;
-      media.currentTime = percent * media.duration;
+    function togglePlay() {
+      if (media.paused === false) {
+        media.pause();
+        $(ui.play).classList.remove('pause');
+      } else {
+        media.play();
+        $(ui.play).classList.add('pause');
+      }
     }
 
-    calculatePercentPlayed();
+    function calculatePercentPlayed() {
+      let percentage = (media.currentTime / media.duration).toFixed(2) * 100;
+      $(ui.percentage).style.width = `${percentage}%`;
+    }
+
+    function calculateCurrentValue(currentTime) {
+      const currentMinute = parseInt(currentTime / 60) % 60;
+      const currentSecondsLong = currentTime % 60;
+      const currentSeconds = currentSecondsLong.toFixed();
+      const currentTimeFormatted = `${currentMinute < 10 ? `0${currentMinute}` : currentMinute}:${
+      currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds
+      }`;
+
+      return currentTimeFormatted;
+    }
+
+    function initProgressBar() {
+      const currentTime = calculateCurrentValue(media.currentTime);
+      $(ui.currentTime).innerHTML = currentTime;
+      $(ui.seekObj).addEventListener('click', seek);
+
+      media.onended = () => {
+        $(ui.play).classList.remove('pause');
+        $(ui.percentage).style.width = 0;
+        $(ui.currentTime).innerHTML = '00:00';
+      };
+
+      function seek(e) {
+        const percent = e.offsetX / this.offsetWidth;
+        media.currentTime = percent * media.duration;
+      }
+
+      calculatePercentPlayed();
+    }
+
+    $(ui.play).addEventListener('click', togglePlay);
+    $(ui.audio).addEventListener('timeupdate', initProgressBar);
+  }
+})();
+
+//HERO CARD SCROLLER
+const cardscroller = (function () {
+  var isAnimating = false;
+
+  function scrollLeftAnimate(elem, unit) {
+      if (!elem || isAnimating) { return; }
+
+      var time = 300;
+      var from = elem.scrollLeft;
+      var aframe = 1;
+      isAnimating = true;
+
+      var start = new Date().getTime(),
+          timer = setInterval(function () {
+              var step = Math.min(1, (new Date().getTime() - start) / time);
+              elem.scrollLeft = ((step * unit) + from);
+              if (step === 1) {
+                  clearInterval(timer);
+                  isAnimating = false;
+              }
+          }, aframe);
   }
 
-  $(ui.play).addEventListener('click', togglePlay);
-  $(ui.audio).addEventListener('timeupdate', initProgressBar);
-}
+  function initDealCarrousel(dealCarrouselID) {
+      var target = document.querySelector("#" + dealCarrouselID + " .hero-carousel-cell");
+      var cardOutterWidth;
+      var maxCarrouselScroll;
+
+      function updateUpaCarrouselInfo() {
+          cardOutterWidth = document.querySelector("#" + dealCarrouselID + " .hero-card").offsetWidth; //you can define how far the scroll
+          maxCarrouselScroll = (document.querySelectorAll("#" + dealCarrouselID + " .hero-card").length *
+                  cardOutterWidth) - document.querySelector("#" + dealCarrouselID + " .hero-carousel-cell")
+              .clientWidth;
+      }
+
+      document.querySelector("#" + dealCarrouselID + " .hero-carousel-prev").addEventListener("click",
+          function () {
+              updateUpaCarrouselInfo(); //in case window resized, will get new info
+              if (target.scrollLeft > 0) {
+                  scrollLeftAnimate(target, -cardOutterWidth * 2);
+              }
+          }
+      );
+
+      document.querySelector("#" + dealCarrouselID + " .hero-carousel-next").addEventListener("click",
+          function () {
+              updateUpaCarrouselInfo(); //in case window resized, will get new info 
+              if (target.scrollLeft < maxCarrouselScroll) {
+                  scrollLeftAnimate(target, cardOutterWidth * 2);
+              }
+          }
+      );
+  }
+
+  initDealCarrousel('hero-carousel');
 })();
