@@ -119,44 +119,44 @@ const homescroller = (function () {
 const productgallery = (function () {
   const slides = document.querySelectorAll(".slide");
 
-    slides.forEach((slide, indx) => {
-      slide.style.transform = `translateX(${indx * 100}%)`;
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${indx * 100}%)`;
+  });
+
+  const nextSlide = document.querySelector(".btn-next");
+
+  let curSlide = 0;
+  let maxSlide = slides.length - 1;
+
+  if(nextSlide) {
+    nextSlide.addEventListener("click", function () {
+      if (curSlide === maxSlide) {
+        curSlide = 0;
+      } else {
+        curSlide++;
+      }
+  
+      slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+      });
     });
+  }
+
+  const prevSlide = document.querySelector(".btn-prev");
+
+  if(prevSlide) {
+    prevSlide.addEventListener("click", function () {
+      if (curSlide === 0) {
+        curSlide = maxSlide;
+      } else {
+        curSlide--;
+      }
   
-    const nextSlide = document.querySelector(".btn-next");
-  
-    let curSlide = 0;
-    let maxSlide = slides.length - 1;
-  
-    if(nextSlide) {
-      nextSlide.addEventListener("click", function () {
-        if (curSlide === maxSlide) {
-          curSlide = 0;
-        } else {
-          curSlide++;
-        }
-    
-        slides.forEach((slide, indx) => {
-          slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
+      slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
       });
-    }
-  
-    const prevSlide = document.querySelector(".btn-prev");
-  
-    if(prevSlide) {
-      prevSlide.addEventListener("click", function () {
-        if (curSlide === 0) {
-          curSlide = maxSlide;
-        } else {
-          curSlide--;
-        }
-    
-        slides.forEach((slide, indx) => {
-          slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
-      });
-    }
+    });
+  }
 })();
 
 //AUDIO PLAYER
@@ -265,24 +265,6 @@ const cardscroller = (function () {
           leftbutton.disabled = true;
       }
 
-      // function updateButtonState() {
-      //   if (target.scrollLeft === 0) { 
-      //     leftbutton.disabled = true;
-      //   } 
-        
-      //   if (target.scrollLeft < maxCarrouselScroll || target.scrollLeft > 1) {
-      //     leftbutton.disabled = false;
-      //   }
-        
-      //   if (target.scrollLeft === 0) { 
-      //     leftbutton.disabled = true;
-      //   } 
-
-        
-      // }
-      // updateButtonState();
-
-
       document.querySelector("#" + dealCarrouselID + " .hero-carousel-prev").addEventListener("click",
           function () {
               updateUpaCarrouselInfo();
@@ -318,9 +300,7 @@ const cardscroller = (function () {
               }
           }
       );
-
   }
 
   initDealCarrousel('hero-carousel');
-  
 })();
