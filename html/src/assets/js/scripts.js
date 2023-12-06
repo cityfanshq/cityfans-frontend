@@ -251,31 +251,76 @@ const cardscroller = (function () {
       var cardOutterWidth;
       var maxCarrouselScroll;
 
+      var leftbutton = document.querySelector(".hero-carousel-prev");
+      var rightbutton = document.querySelector(".hero-carousel-next");
+
       function updateUpaCarrouselInfo() {
-          cardOutterWidth = document.querySelector("#" + dealCarrouselID + " .hero-card").offsetWidth; //you can define how far the scroll
+          cardOutterWidth = document.querySelector("#" + dealCarrouselID + " .hero-card").offsetWidth;
           maxCarrouselScroll = (document.querySelectorAll("#" + dealCarrouselID + " .hero-card").length *
                   cardOutterWidth) - document.querySelector("#" + dealCarrouselID + " .hero-carousel-cell")
               .clientWidth;
       }
 
+      if (target.scrollLeft === 0) { 
+          leftbutton.disabled = true;
+      }
+
+      // function updateButtonState() {
+      //   if (target.scrollLeft === 0) { 
+      //     leftbutton.disabled = true;
+      //   } 
+        
+      //   if (target.scrollLeft < maxCarrouselScroll || target.scrollLeft > 1) {
+      //     leftbutton.disabled = false;
+      //   }
+        
+      //   if (target.scrollLeft === 0) { 
+      //     leftbutton.disabled = true;
+      //   } 
+
+        
+      // }
+      // updateButtonState();
+
+
       document.querySelector("#" + dealCarrouselID + " .hero-carousel-prev").addEventListener("click",
           function () {
-              updateUpaCarrouselInfo(); //in case window resized, will get new info
+              updateUpaCarrouselInfo();
+
               if (target.scrollLeft > 0) {
                   scrollLeftAnimate(target, -cardOutterWidth * 2);
+              }
+
+              if (target.scrollLeft === 0) { 
+                leftbutton.disabled = true;
+              }
+
+              if (target.scrollLeft < 800) { 
+                rightbutton.disabled = false;
               }
           }
       );
 
       document.querySelector("#" + dealCarrouselID + " .hero-carousel-next").addEventListener("click",
           function () {
-              updateUpaCarrouselInfo(); //in case window resized, will get new info 
+              updateUpaCarrouselInfo();
+
               if (target.scrollLeft < maxCarrouselScroll) {
                   scrollLeftAnimate(target, cardOutterWidth * 2);
               }
+
+              if (target.scrollLeft < maxCarrouselScroll || target.scrollLeft > 1) {
+                leftbutton.disabled = false;
+              }
+
+              if (target.scrollLeft > 700) { 
+                rightbutton.disabled = true;
+              }
           }
       );
+
   }
 
   initDealCarrousel('hero-carousel');
+  
 })();

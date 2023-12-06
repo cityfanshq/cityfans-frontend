@@ -984,6 +984,10 @@ h6 {
   font-weight: 700;
 }
 
+.hero-carousel-prev,
+.hero-carousel-next {
+  display: none;
+}
 
 /* tab list */
 .tab-list {
@@ -1522,6 +1526,7 @@ body:has(.hero-intro) {
 .btn:active {
   transform: scale(1.1);
 }
+
 .btn-prev {
   top: 45%;
   left: 2%;
@@ -1531,8 +1536,6 @@ body:has(.hero-intro) {
   top: 45%;
   right: 2%;
 }
-
-
 
 .photo-gallery img {
   width: 100%;
@@ -3923,6 +3926,45 @@ a.instruction-download {
   /* HOME SLIDER */
   .hero-cards {
     min-width: 60em;
+    position: relative;
+  }
+
+  .hero-carousel-prev,
+  .hero-carousel-next {
+    display: block;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .hero-carousel-prev:active,
+  .hero-carousel-next:active {
+    transform: scale(0.9);
+  }
+
+  .hero-carousel-prev:disabled,
+  .hero-carousel-next:disabled {
+    opacity: 0.5;
+  }
+
+  .hero-carousel-prev img,
+  .hero-carousel-next img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .hero-carousel-next {
+    right: 2rem;
+    top: 7%;
+  }
+
+  .hero-carousel-prev {
+    right: 5rem;
+    top: 7%;
   }
 
 }
@@ -4036,6 +4078,20 @@ a.instruction-download {
   .category-cards-description {
     max-width: 50rem;
   }
+
+  .hero-carousel-next {
+    right: 0%;
+    top: 7%;
+  }
+
+  .hero-carousel-prev {
+    right: 3rem;
+    top: 7%;
+  }
+
+  .hero-cards h2 {
+    padding-bottom: var(--spacing-16);
+  }
 }
 
 /* 1920 */
@@ -4058,10 +4114,6 @@ a.instruction-download {
     text-wrap: balance;
   }
   .usp-list {
-    padding-bottom: var(--spacing-16);
-  }
-
-  .hero-cards h2 {
     padding-bottom: var(--spacing-16);
   }
 
