@@ -3975,29 +3975,20 @@ a.instruction-download {
     top: 7%;
   }
 
-  .category-page-cards .hero-carousel-prev,
-  .category-page-cards .hero-carousel-next {
-    top: 50%;
-  }
-
-  .category-page-cards .hero-carousel-next {
-    right: -2%;
-   }
-
-   .category-page-cards .hero-carousel-prev {
-    left: -2%;
-   }
-
   .category-page-heroes .hero-carousel-prev {
     left: initial;
     right: 3rem;
-    top: -4.5rem;
+    top: -3.5rem;
   }
 
   .category-page-heroes .hero-carousel-next {
     left: initial;
     right: 0rem;
-    top: -4.5rem;
+    top: -3.5rem;
+  }
+
+  .category-page-heroes .hero-cards {
+    margin-block: 4.2rem;
   }
 }
 
