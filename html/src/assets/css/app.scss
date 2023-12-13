@@ -1630,6 +1630,10 @@ body:has(.hero-intro) {
   background-color: hsl(var(--color-content));
 }
 
+.short-description {
+  padding: var(--spacing-16);
+}
+
 /* Long Description */
 .long-description {
   background: hsl(var(--color-surface-elevated));
