@@ -2825,8 +2825,16 @@ a.instruction-download {
   /* 455 (height) / 1090 (width) = 0.417 */
 }
 
+.category-media-16-9 figure,
+.category-media-video-16-9 {
+  position: relative;
+  padding-top: 56.25%;
+}
+
 .category-media-video iframe,
-.category-media figure img {
+.category-media figure img,
+.category-media-video-16-9 iframe,
+.category-media-16-9 figure img {
   border: none; 
   position: absolute; 
   top: 0; 
