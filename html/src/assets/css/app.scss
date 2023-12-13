@@ -2694,6 +2694,7 @@ select {
   font-weight: 300;
 }
 
+
 .bg-color-surface-bright:has(.confirmation-problem) {
   min-height: 85vh;
 }
@@ -2724,7 +2725,7 @@ select {
 }
 
 .confirmation-container h2 {
-  font-size: var(--text-size-600);
+  font-size: var(--text-size-400);
   margin-bottom: var(--spacing-24);
 }
 
