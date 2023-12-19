@@ -1754,6 +1754,7 @@ body:has(.hero-intro) {
   border: 2px solid hsl(var(--color-border));
   border-radius: var(--border-radius-outer);
   text-align: center;
+  margin-top: var(--spacing-16);
 }
 
 .buy-now img {
@@ -3776,6 +3777,7 @@ a.instruction-download {
     position: sticky;
     top: 1rem;
     align-self: flex-start;
+    margin-top: 0;
     font-size: var(--text-size-300);
   }
 
