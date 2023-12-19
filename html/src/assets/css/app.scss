@@ -3794,9 +3794,13 @@ a.instruction-download {
   }
 
   .product-metadata {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(5, auto);
+    display: flex;
+    flex: 0 0 auto;
+    gap: 2rem;
+  }
+
+  .product-metadata .language {
+    max-width: 30rem;
   }
 
   .product-metadata .distance, .product-metadata .duration, .product-metadata .info, .product-metadata .language, .product-metadata .rating {
