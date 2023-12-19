@@ -1533,7 +1533,7 @@ body:has(.hero-intro) {
   position: relative;
   overflow: hidden;
   border-radius: var(--border-radius-outer);
-  margin-bottom: var(--spacing-24);
+  /* margin-bottom: var(--spacing-24); */
 }
 
 .slide {
@@ -1610,7 +1610,7 @@ body:has(.hero-intro) {
   padding: var(--spacing-16);
   background-color: hsl(var(--color-blue-400));
   border: 2px solid hsl(var(--color-border));
-  margin-block: var(--spacing-24);
+  margin-top: var(--spacing-24);
 }
 
 .audio-player h3 {
@@ -1684,6 +1684,7 @@ body:has(.hero-intro) {
   background: hsl(var(--color-surface-elevated));
   border: 2px solid hsl(var(--color-border));
   border-radius: var(--border-radius-outer);
+  margin-top: var(--spacing-24);
 }
 
 .long-description h2 {
@@ -3405,9 +3406,9 @@ a.instruction-download {
 }
 
 /* ============ MEDIA QUERIES ============ */
-@media screen and (min-width: 23em) { .slider { min-height: 12.937rem; } }
+/* @media screen and (min-width: 23em) { .slider { min-height: 12.937rem; } }
 @media screen and (min-width: 30em) { .slider { min-height: 15rem; } }
-@media screen and (min-width: 38em) { .slider { min-height: 20rem; } }
+@media screen and (min-width: 38em) { .slider { min-height: 20rem; } } */
 
 @media screen and (min-width: 37.5em) {   .hero-card { min-width: 40%; } }
 
