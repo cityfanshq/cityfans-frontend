@@ -2874,10 +2874,6 @@ a.instruction-download {
 }
 
 /* Category Page */
-.category-media {
-  margin-bottom: var(--spacing-24);
-}
-
 .category-media figure,
 .category-media-video {
   position: relative;
@@ -2914,10 +2910,13 @@ a.instruction-download {
   padding-inline: var(--spacing-16);
   margin-bottom: var(--spacing-32);
   font-size: var(--text-size-400);
+  padding-top: var(--spacing-16);
 }
 
 .category-cards-description h1 {
   font-size: var(--text-size-600);
+  list-style: 1.25;
+  padding-bottom: var(--spacing-16);
 }
 
 .category-page-cards {
