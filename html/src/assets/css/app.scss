@@ -4088,6 +4088,21 @@ a.instruction-download {
   .city-home-hero h1 {
     font-size: var(--text-size-900);
   }
+
+  .category-media-short {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .category-media-short figure {
+    height: 300px;
+  }
+
+  .category-media-short figure img {
+    position: absolute;
+  }
+
 }
 
 /* 1344 */
