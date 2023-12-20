@@ -1346,6 +1346,10 @@ h6 {
   opacity: 1;
 }
 
+.footer-content div:nth-child(2) {
+  margin-top: calc(var(--spacing-default)*3.5);
+} /* this needs to be more robust depending on the content strategy. Ideally we would have a title for each column and this should then be removed */
+
 .footer-logos {
   border-top: 1px solid hsl(var(--footer-divider));
 }
@@ -3414,6 +3418,12 @@ a.instruction-download {
 }
 
 /* ============ MEDIA QUERIES ============ */
+@media screen and (min-width: 403px) {
+  .footer-content div:nth-child(2) {
+    /*margin-top: calc(var(--spacing-default)*3.5);*/
+    margin-top: var(--spacing-32);
+  }
+}
 @media screen and (min-width: 23em) { .slider { min-height: 12.937rem; } }
 @media screen and (min-width: 30em) { .slider { min-height: 15rem; } }
 @media screen and (min-width: 38em) { .slider { min-height: 20rem; } }
