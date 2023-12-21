@@ -773,6 +773,10 @@ h6 {
   gap: 1rem;
 }
 
+.primary-navigation:has(.link-all-cities) {
+  gap: 0;
+}
+
 .primary-navigation li select {
   padding: var(--spacing-4) var(--spacing-24) var(--spacing-4) var(--spacing-4);
   font-size: var(--text-size-300);
@@ -783,6 +787,15 @@ h6 {
   min-width: 100%;
   color: hsl(var(--color-content-inverted));
   background: transparent url('../../assets/img/ui/select-arrow-white.svg') no-repeat right 10% center;
+}
+
+.primary-navigation li a {
+  font-size: var(--text-size-300);
+  color: hsl(var(--color-content-inverted));
+}
+
+.primary-navigation .link-all-cities {
+  padding-right: var(--spacing-12);
 }
 
 .primary-navigation li select:focus {
@@ -1320,6 +1333,10 @@ h6 {
 
 .primary-footer small {
   font-size: var(--text-size-300);
+}
+
+.primary-footer:has(+ .buy-now-sticky) {
+  padding-bottom: 50px;
 }
 
 .footer-content li, .footer-logos li {
@@ -3708,6 +3725,12 @@ a.instruction-download {
     padding-right: var(--spacing-32);
   }
 
+  .primary-navigation li a {
+    display: grid;
+    font-size: 1rem;
+    padding-top: 2px;
+  }
+
   .hero-intro div h1 {
     grid-row: 1;
     text-align: left;
@@ -3748,6 +3771,10 @@ a.instruction-download {
 
   .hero-card h3 {
     margin-top: var(--spacing-16);
+  }
+
+  .primary-footer:has(+ .buy-now-sticky) {
+    padding-bottom: var(--spacing-24);
   }
 
   .card {
