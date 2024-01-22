@@ -2380,6 +2380,7 @@ select {
   text-align: center;
   gap: 2rem;
   grid-template-rows: auto;
+  text-wrap: pretty;
   margin-bottom: var(--spacing-32);
 }
 
