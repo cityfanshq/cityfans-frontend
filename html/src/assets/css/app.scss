@@ -2991,8 +2991,8 @@ a.instruction-download {
 
 .category-cards-description h1 {
   font-size: var(--text-size-600);
-  list-style: 1.25;
   padding-bottom: var(--spacing-16);
+  line-height: 1.25;
 }
 
 .category-page-cards {
@@ -4211,6 +4211,16 @@ a.instruction-download {
 
   .category-media-short figure img {
     position: absolute;
+  }
+
+  .category-media-2-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .category-cards-description {
+    text-wrap: pretty;
   }
 
 }

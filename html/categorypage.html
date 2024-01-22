@@ -61,78 +61,77 @@
 
     <section class="bg-color-surface">
       <div class="category-page-cards category-page-heroes | default-container">
-        <section class="category-media">
-          <!-- We can add a hero video or image. Images should be wrapped inside a <figure> and videos inside the <iframe>. 
+        <div class="category-media-2-columns">
+          <section class="category-media">
+            <!-- We can add a hero video or image. Images should be wrapped inside a <figure> and videos inside the <iframe>. 
 
-              Although the home and the cards use the 16:9 aspect ratio (works nice in general for the web), it would be nice if in this page we use the cinematic/anamorphic aspect ratio (2.35) because of the width of the page on desktop. This would push less of the content down. These are example of image sizes that fit this ratio, more or less:
+                Although the home and the cards use the 16:9 aspect ratio (works nice in general for the web), it would be nice if in this page we use the cinematic/anamorphic aspect ratio (2.35) because of the width of the page on desktop. This would push less of the content down. These are example of image sizes that fit this ratio, more or less:
 
-              - 1920x817
-              - 1200x500 (adapted)
-              - 1128x470
-              - 1090x455 (rounded, and fits well on this page on cityfans)
-              - 651x277
+                - 1920x817
+                - 1200x500 (adapted)
+                - 1128x470
+                - 1090x455 (rounded, and fits well on this page on cityfans)
+                - 651x277
 
-              etc.But we might not have that option, so below we have ways to use both 16:9 and not 16:9. We consider 16:9 to be the default. -->
+                etc.But we might not have that option, so below we have ways to use both 16:9 and not 16:9. We consider 16:9 to be the default. -->
 
-              <!-- image: if NOT 16:9… -->
-              <!--
-                <div class="category-media">
-                  <figure>
-                    <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
-                  </figure> 
-                </div>
-              -->
+                <!-- image: if NOT 16:9… -->
+                <!--
+                  <div class="category-media">
+                    <figure>
+                      <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
+                    </figure> 
+                  </div>
+                -->
 
-              <!-- image: if 16:9 (The default)… -->
-              <!-- 
-                <div class="category-media-16-9">
-                  <figure>
-                    <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
-                  </figure> 
-                </div>
-              -->
+                <!-- image: if 16:9 (The default)… -->
+                <!-- 
+                  <div class="category-media-16-9">
+                    <figure>
+                      <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
+                    </figure> 
+                  </div>
+                -->
 
-              <!-- video: if NOT 16:9… -->
-              <!-- 
-                <div class="category-media-video">
-                    <iframe
-                      src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
-                      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
-                    </iframe> 
-                </div> 
-              -->
+                <!-- video: if NOT 16:9… -->
+                <!-- 
+                  <div class="category-media-video">
+                      <iframe
+                        src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
+                      </iframe> 
+                  </div> 
+                -->
 
-              <!-- video: if 16:9 (the default)… -->
-              <!-- 
+                <!-- video: if 16:9 (the default)… -->
+                <!-- 
+                  <div class="category-media-video-16-9">
+                      <iframe
+                        src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
+                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
+                      </iframe> 
+                  </div> 
+                -->
+
                 <div class="category-media-video-16-9">
-                    <iframe
-                      src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
-                      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
-                    </iframe> 
-                </div> 
-              -->
+                  <iframe
+                    src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
+                  </iframe> 
+                </div>
 
-              <!-- <div class="category-media-video-16-9">
-                <iframe
-                  src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
-                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
-                </iframe> 
-              </div> -->
-
-              <div class="category-media | category-media-short">
-                <figure>
-                  <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
-                </figure> 
-              </div>
-        </section>
-
-        <section class="category-cards-description">
-          <h1>Experiences that are good for a category (v2)</h1>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
-        </section>
+                <!-- <div class="category-media | category-media-short">
+                  <figure>
+                    <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
+                  </figure> 
+                </div> -->
+          </section>
+          <section class="category-cards-description">
+            <h1>Unleash Your Inner Detective with Intriguing City Games</h1>
+  
+            <p>Get ready to put your puzzle-solving skills to the test and embark on a thrilling adventure through the city. Let the city be your playground and prepare for an immersive experience that will leave you craving for more!</p>
+          </section>
+        </div>
 
         <div class="hero-cards">
           <div class="hero-carousel" id="hero-carousel">
