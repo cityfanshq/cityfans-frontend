@@ -1558,12 +1558,10 @@ body:has(.hero-intro) {
 /* product page carousel */
 .slider {
   width: 100%;
-  /* min-height: 28.125rem;*/
   aspect-ratio: 16/9;
   position: relative;
   overflow: hidden;
   border-radius: var(--border-radius-outer);
-  /* margin-bottom: var(--spacing-24); */
 }
 
 .slide {
@@ -3252,7 +3250,11 @@ a.instruction-download {
 
 .blog-post-section {
   padding-inline: var(--spacing-16);
-  margin-block: var(--spacing-32);
+  margin-block: var(--spacing-24);
+}
+
+.blog-post-section:first-child {
+  margin-top: 0;
 }
 
 .blog-post-section figure,
@@ -3269,6 +3271,12 @@ a.instruction-download {
   margin-bottom: var(--spacing-8);
 }
 
+.blog-post-section br {
+  content: "A" !important;
+  display: block !important;
+  margin-bottom: 1rem !important;
+}
+
 .blog-post-section p {
   margin-bottom: var(--spacing-8);
 }
@@ -3280,12 +3288,16 @@ a.instruction-download {
 .blog-post-section h1 {
   font-size: var(--text-size-600);
   line-height: 1.24;
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-16);
 }
 
 .blog-post-section h2 {
   font-size: var(--text-size-500);
   line-height: 1.24;
+}
+
+.blog-post-section p + h2 {
+  margin-top: var(--spacing-24);
 }
 
 .blog-post-section h2,
@@ -3312,7 +3324,11 @@ a.instruction-download {
 }
 
 .blog-related-products {
-  margin-top: var(--spacing-24);
+  margin-block: var(--spacing-24);
+}
+
+.blog-related-products h3 {
+  margin-bottom: var(--spacing-16);
 }
 
 .blog-post-card {
@@ -3429,16 +3445,10 @@ a.instruction-download {
   text-decoration: none;
 }
 
-.blog-post-section h1 {
-  margin-bottom: 0;
-}
-
-.blog-post-section:has(h1) {
-  margin-bottom: 0;
-}
-
 .blog-post-section {
   padding-block: var(--spacing-24);
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .blog-post-section + .blog-post-section {
@@ -3457,6 +3467,13 @@ a.instruction-download {
 
 .blog {
   padding-bottom: var(--spacing-32);
+}
+
+.blog h1 {
+  font-size: var(--text-size-600);
+  padding: var(--spacing-16) var(--spacing-16) var(--spacing-24) var(--spacing-16);
+  line-height: 1.25;
+  text-wrap: pretty;
 }
 
 .city-cards-description {
@@ -3497,10 +3514,6 @@ a.instruction-download {
     margin-top: var(--spacing-32);
   }
 }
-
-/* @media screen and (min-width: 23em) { .slider { min-height: 12.937rem; } }
-@media screen and (min-width: 30em) { .slider { min-height: 15rem; } }
-@media screen and (min-width: 38em) { .slider { min-height: 20rem; } } */
 
 @media screen and (min-width: 37.5em) {   .hero-card { min-width: 40%; } }
 
@@ -3656,8 +3669,6 @@ a.instruction-download {
   .card-list-category {
     padding-inline: 0;
   }
-
-  /* .slider { min-height: 26rem; } */
 
   .terms-and-conditions { 
     padding-inline: 0;
@@ -4077,8 +4088,6 @@ a.instruction-download {
     font-size: 1rem;
   }
 
-  /* .slider { min-height: 22rem; } */
-
   .stripe-checkout aside {
     width: 50%;
     margin-inline: 0;
@@ -4133,6 +4142,12 @@ a.instruction-download {
 
   .blog-related-products {
     padding-inline: 0;
+  }
+
+  .blog h1 {
+    padding: var(--spacing-24) 0 var(--spacing-24) 0;
+    line-height: 1.25;
+    text-wrap: pretty;
   }
 
   /* HOME SLIDER */
@@ -4384,8 +4399,6 @@ a.instruction-download {
   .usp-list {
     padding-bottom: var(--spacing-16);
   }
-
-  /* .slider { min-height: 25rem; } */
 }
 
 @media screen and (max-width: 64em) {
