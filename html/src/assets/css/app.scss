@@ -2720,6 +2720,60 @@ select {
   margin: var(--spacing-48) 0 var(--spacing-16) 0;
 }
 
+/* Checkout voucher */
+.checkout-voucher {
+  border-top: 1px dotted hsl(var(--receipt-border));
+  padding-block: var(--spacing-16);
+}
+.checkout-voucher-item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+.checkout-voucher-item button {
+  align-self: stretch;
+  display: block;
+  border-radius: 0 
+  var(--border-radius-inner-inner) var(--border-radius-inner-inner) 0;
+  padding: var(--spacing-8);
+  font-size: var(--text-size-300);
+  border-left: none;
+  border-top: 2px solid hsl(var(--color-border));
+  border-right: 2px solid hsl(var(--color-border));
+  border-bottom: 2px solid hsl(var(--color-border));
+  background-color: hsl(var(--color-gray-400));
+  cursor: pointer;
+}
+
+.checkout-voucher-item button:hover {
+  background-color: hsl(var(--color-gray-700) / 0.5);
+}
+
+.checkout-voucher-item input[type=text] {
+  border-radius: var(--border-radius-inner-inner) 0 0 var(--border-radius-inner-inner);
+  margin-left: var(--spacing-16);
+  font-size: var(--text-size-300);
+}
+
+.checkout-voucher-item input[type=text]:focus-visible,
+.checkout-voucher-item input[type=text]:focus {
+  outline: none;
+}
+
+.checkout-voucher label {
+  font-size: var(--text-size-300);
+}
+
+.checkout-voucher span {
+  color: hsl(var(--color-red-400));
+  font-size: var(--text-size-300);
+  text-align: right;
+  display: block;
+  padding-top: var(--spacing-8);
+  padding-right: var(--spacing-4);
+}
+
 /* Confirmation page */
 .bg-color-ancillary.padding-block-600 {
   min-height: 82vh;
@@ -4010,6 +4064,10 @@ a.instruction-download {
 
   .customer-data-item {
     padding-bottom: var(--spacing-32);
+  }
+
+  .checkout-voucher-item {
+    padding-bottom: 0;
   }
 
   .category-cards-description {

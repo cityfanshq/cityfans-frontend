@@ -238,6 +238,24 @@
                 </li>
               </ul>
 
+              <!-- 
+                For this verion, this voucher block should disappear after the voucher is applied succesfully, because:
+
+                1) we won’t have interactions such as removing applied vouchers since only one can be applied at once;
+
+                2) succesfully applied vouchers have space in the UI already with good visual affordance (red strikethrough)
+              -->
+              <div class="checkout-voucher">
+                <form action="">
+                  <div class="customer-data-item checkout-voucher-item">
+                    <label for="">Voucher</label>
+                    <input type="text" />
+                    <button>Apply</button>
+                  </div>
+                </form>
+                <span class="voucher-error">Enter a valid discount code</span>
+              </div>
+
               <div class="purchase-total">
                 <span>All taxes are included</span>
                 <p>€157.20</p>
