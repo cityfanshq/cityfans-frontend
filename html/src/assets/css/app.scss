@@ -2743,6 +2743,7 @@ select {
   border-bottom: 2px solid hsl(var(--color-border));
   background-color: hsl(var(--color-gray-400));
   cursor: pointer;
+  color: hsl(var(--color-content));
 }
 
 .checkout-voucher-item button:hover {
