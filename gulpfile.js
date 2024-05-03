@@ -9,9 +9,11 @@ const { src, series, parallel, dest, watch } = require('gulp');
 const jsPath = './html/src/assets/js/**/*.js';
 const cssPath = './html/src/assets/css/**/*.scss';
   
-// function copyHtml() {
-// 	return src('./html/src/*.html').pipe(gulp.dest('./html/app/'));
-// }
+
+// HOW TO USE GULP IN THIS REPO
+//npm install -g gulp
+//npm init
+//npm ionstall gulp gulp-concat gulp-terser gulp-postcss cssnano autoprefixer --save-dev
 
 function jsTask() {
 	return src(jsPath)
@@ -30,6 +32,11 @@ function cssTask() {
 function watchTask() {
 	watch([cssPath, jsPath], { interval: 1000 }, parallel(cssTask, jsTask));
 }
+
+// function copyHtml() {
+// 	return src('./html/src/*.html').pipe(gulp.dest('./html/app/'));
+// }
+
 
 exports.cssTask = cssTask;
 exports.jsTask = jsTask;
