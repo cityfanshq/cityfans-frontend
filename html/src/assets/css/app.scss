@@ -440,7 +440,6 @@
   /*
   ----------------------------------------------------------------------------
   3.SPACING
-    We are using Lexend Deca as the main typeface of the application with the following weights:
   */
 
   /* this is based on our grid and is used as a fallback. Values can be rewritten if needed */
@@ -460,7 +459,6 @@
   /*
   ----------------------------------------------------------------------------
   4.BORDER RADIUS
-    We are using Lexend Deca as the main typeface of the application with the following weights:
   */
 
   --border-radius-outer:       1rem;
@@ -472,10 +470,6 @@
   --box-shadow-subtle:  0.08rem 0.08rem hsl(var(--color-border));
 
 }
-
-/* ////////////////////////
-  HELLOO
-\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 html {
   font-size:              var(--root-fontsize);
@@ -1474,6 +1468,54 @@ body:has(.hero-intro) {
 
 .btn-confirm:active {
   transform: var(--btn-active-animation);
+}
+
+/* BREADCRUMBS */
+.breadcrumbs {
+  overflow-x: auto;
+  mask: linear-gradient(black 0 0) left,
+  linear-gradient(to right, black, transparent) right;
+  mask-size: calc(100% - 30px) 100%, 30px 100%;
+  mask-repeat: no-repeat;
+  scrollbar-width: none;
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-24);
+}
+
+.breadcrumbs ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content;
+  flex-wrap: nowrap;
+}
+
+.breadcrumbs ul li {
+  list-style-type: none;
+  font-size: var(--text-size-300);
+}
+
+.breadcrumbs ul li a {
+  color: hsl(var(--color-almost-black-400) / 0.7);
+  font-weight: 300;
+}
+
+.breadcrumbs ul li::after {
+  content: '›';
+  display: inline-block;
+  margin-inline: var(--spacing-8);
+  color: hsl(var(--color-almost-black-400) / 0.5);
+}
+
+.breadcrumbs ul li:last-child::after {
+  display: none;
+}
+
+.breadcrumbs-module:has(+ .category-page-cards) {
+  padding: var(--spacing-16);
+}
+
+.breadcrumbs-module:has(+ .category-page-cards) .breadcrumbs {
+  margin-bottom: var(--spacing-8);
 }
 
 /* PAGE-SPECIFIC */
@@ -3659,12 +3701,16 @@ a.instruction-download {
     padding-inline: 0;
     font-size: var(--text-size-400);
   }
+  
+  .breadcrumbs-module:has(+ .category-page-cards) {
+    padding-inline: var(--spacing-32);
+  }
 
   .category-media,
   .category-media iframe,
   .category-media figure,
   .category-media img {
-    border-radius: 0 0 var(--border-radius-outer) var(--border-radius-outer);
+    border-radius: var(--border-radius-outer);
   }
 
   .card-list-category {
@@ -4241,6 +4287,23 @@ a.instruction-download {
     text-wrap: pretty;
   }
 
+  .breadcrumbs {
+    margin-top: 0;
+    border-bottom: 1px solid hsl(var(--color-almost-black-400) / 0.1);
+    padding-bottom: var(--spacing-32);
+  }
+
+  .default-container:has(.breadcrumbs) {
+    padding-top: 0.45rem;
+  }
+
+  .breadcrumbs-module:has(+ .category-page-cards) .breadcrumbs {
+    border-bottom: none;
+    padding-top: var(--spacing-24);
+    padding-bottom: var(--spacing-16);
+    margin-bottom: 0;
+  }
+
 }
 
 /* 1344 */
@@ -4375,6 +4438,15 @@ a.instruction-download {
 
   .all-cities {
     padding-block: var(--spacing-24);
+  }
+
+  .breadcrumbs-module:has(+ .category-page-cards) .breadcrumbs {
+    
+    padding-bottom: 0;
+  }
+
+  .default-container:has(.breadcrumbs) {
+    padding: var(--spacing-4) 0 0 0;
   }
 }
 
