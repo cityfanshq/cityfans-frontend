@@ -33,12 +33,29 @@
           <ul class="primary-navigation | flex">
             <li>
               <form action="#">
+                <select name="city-select">
+                    <option selected>Amsterdam, NL</option>
+                    <option value="">Leeds, UK</option>
+                    <option value="">London, UK</option>
+                    <option value="">Dublin, IE</option>
+                    <option value="">Barcelona, ES</option>
+                    <option value="">Innsbruck, AT</option>
+                    <option value="">Stockholm, SE</option>
+                    <option value="">Copenhagen, DK</option>
+                    <option value="">Prague, CZ</option>
+                    <option value="">Oslo, NO</option>
+                </select>
+              </form>
+            </li>
+
+            <li>
+              <form action="#">
                 <select name="language-select">
-                  <option value="en" selected="">English</option>
-                  <option value="de">Deutsch</option>
-                  <option value="es">Español </option>
-                  <option value="fr">Français</option>
-                  <option value="it">Italiano</option>
+                  <option value="en" selected="">EN</option>
+                  <option value="de">DE</option>
+                  <option value="es">ES</option>
+                  <option value="fr">FR</option>
+                  <option value="it">IT</option>
                 </select>
               </form>
             </li>
@@ -46,11 +63,8 @@
             <li>
               <form action="#">
                 <select name="currency-select">
-                  <option selected="" value="EUR">€ EUR</option>
-                  <option value="USD">$ USD</option>
-                  <option value="GBP">£ GBP</option>
-                  <option value="CAD">C$ CAD</option>
-                  <option value="NOK">kr NOK</option>
+                  <option selected="" value="EUR">€</option>
+                  <option value="USD">$</option>
                 </select>
               </form>
             </li>
@@ -59,20 +73,20 @@
       </div>
     </header>
 
-    <section class="product-page-content | bg-color-surface">
-          <!-- Breadcrumbs -->
-          <div class="breadcrumbs-module | default-container">
-            <section class="breadcrumbs">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="allcities.html">Cities</a></li>
-                <li><a href="citypage.html">Amsterdam</a></li>
-                <li><a href="categorypage.html">For Solo Travelers</a></li>
-                <li>Self-Guided Audio Tour at Van Gogh Museum</li>
-              </ul>
-            </section>
-            <!-- ------------- -->
+    <section class="product-page-breadcrumbs">
+      <div class="rounded-breadcrumbs">
+        <div>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Amsterdam</a></li>
+            <li><a href="">Self-guided audio tour</a></li>
+          </ul>
+        </div>
+      </div> 
+    </section>
 
+    <section class="product-page-content | bg-color-surface">          
+          <div class="default-container">
             <h1>Self-Guided Audio Tour at Van Gogh Museum</h1>
 
             <ul class="product-metadata">
@@ -355,24 +369,69 @@
           </article> <!-- LEFT -->
  
           <div>
-            <aside class="buy-now">
-            <a href="checkout.html" class="btn-buy-now margin-all-200">
-              Buy now from €7.99
-            </a>
+            <aside class="product-aside">
+              <div class="buy-now">
+                <a href="checkout.html" class="btn-buy-now margin-all-200">
+                  Buy now from €7.99
+                </a>
+      
+                <ul class="buy-now-content">
+                  <li>
+                    <strong>
+                      The entrance ticket to the museum is not included—but you can buy it easily in the next step
+                    </strong>
+                  </li>
+                  <li>Instant confirmation</li>
+                  <li>Start any time after purchase</li>
+                  <li>
+                    <p>🔒 Pay safely via Stripe</p>
+                    <p><img src="app/assets/img/ui/stripe.svg" alt="Stripe Logo" aria-hidden="true"></p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="product-category-explanation">
+                <h4>
+                  <img src="app/assets/img/ui/tag-audioguide.svg" alt="" aria-hidden="true">
+                  <span>What is a self-guided audio tour?</span>
+                </h4>
+
+                <p>A self-guided audio tour is like having a witty friend in your pocket, narrating interesting facts and stories about the places you're exploring through your earphones, giving you the ultimate freedom to roam at your own pace.</p>
+              </div>
+
+              <div class="product-tags">
+                <div class="experience-tags">
+                  <h3>Great For</h3>
+
+                  <div>
+                    <div>
+                      <span>
+                        <em>Families</em>
+                      </span>
+
+                      <span>
+                        <em>Families</em>
+                      </span>
   
-            <ul class="buy-now-content">
-              <li>
-                <strong>
-                  The entrance ticket to the museum is not included—but you can buy it easily in the next step
-                </strong>
-              </li>
-              <li>Instant confirmation</li>
-              <li>Start any time after purchase</li>
-              <li>
-                <p>🔒 Pay safely via Stripe</p>
-                <p><img src="app/assets/img/ui/stripe.svg" alt="Stripe Logo" aria-hidden="true"></p>
-              </li>
-            </ul>
+                      <span>
+                        <em>Families</em>
+                      </span>
+  
+                      <span>
+                        <em>Largeeeeeeeeeeeeeeeeeeeee</em>
+                      </span>
+  
+                      <span>
+                        <em>Team Building</em>
+                      </span>
+  
+                      <span>
+                        <em>Group of Friends</em>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </aside>
           </div><!-- RIGHT -->
         </div>
@@ -380,113 +439,139 @@
     </section>
 
     <section class="more-experiences">
-      <div class="default-container">
-        <h2 class="text-align-center color-content-inverted">More experiences you would love</h2>
+      <div>
+        <div class="default-container">
+          <h2 class="text-align-center color-content-inverted">More experiences you would love</h2>
 
-        <ul class="card-list">
-          <li class="card">
-            <a href="productpage.html">
-              <figure class="img-container">
-                <img src="app/assets/img/content/card.png" alt="card image">
-              </figure>
-
-                <span class="card-category">CITY GAME</span>
-
-                <header class="card-header">
-                  <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                </header>
-                
-                <footer class="card-footer">
-                  <div>
-                    <span class="rating">4.3</span>
-                  </div>
+          <ul class="hero-carousel-cell hero-experiences hero-narrow-cards">
+            <li class="hero-card">
+              <a href="productpage.html">
+                  <figure class="img-container">
+                    <img src="app/assets/img/content/card.png" alt="card image">
+                  </figure>
                   
-                  <div> 
-                    <span class="location">Amsterdam, NL</span>
-                    <span class="price">€7.99</span>
+                  <div class="hero-card-meta">
+                    <div>
+                      <span class="hero-card-category">City Game</span>
+                    </div>
+
+                    <div>
+                      <span class="rating">4.3</span>
+                    </div>
                   </div>
-                </footer>
-            </a>
-          </li>
 
-          <li class="card">
-            <a href="productpage.html">
-              <figure class="img-container">
-                <img src="app/assets/img/content/card.png" alt="card image">
-              </figure>
-
-                <span class="card-category">Audio Guide</span>
-
-                <header class="card-header">
-                  <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                </header>
-                
-                <footer class="card-footer">
-                  <div>
-                    <span class="rating">4.3</span>
-                  </div>
+                  <header class="hero-card-header">
+                    <h4>Amsterdam’s Jordaan: a local culture riddle route</h4>
+                  </header>
                   
-                  <div> 
-                    <span class="location">Amsterdam, NL</span>
-                    <span class="price">€7.99</span>
-                  </div>
-                </footer>
-            </a>
-          </li>
+                  <footer class="hero-card-footer">
+                    <div>
+                      <span class="location">Amsterdam, NL</span>
+                    </div>
 
-          <li class="card">
-            <a href="productpage.html">
-              <figure class="img-container">
-                <img src="app/assets/img/content/card.png" alt="card image">
-              </figure>
+                    <div> 
+                      <span class="price">€7.99</span>
+                    </div>
+                  </footer>
+              </a>
+            </li>
 
-                <span class="card-category">Audio Guide</span>
-
-                <header class="card-header">
-                  <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                </header>
-                
-                <footer class="card-footer">
-                  <div>
-                    <span class="rating">4.3</span>
-                  </div>
+            <li class="hero-card">
+              <a href="productpage.html">
+                  <figure class="img-container">
+                    <img src="app/assets/img/content/card.png" alt="card image">
+                  </figure>
                   
-                  <div> 
-                    <span class="location">Amsterdam, NL</span>
-                    <span class="price">€7.99</span>
+                  <div class="hero-card-meta">
+                    <div>
+                      <span class="hero-card-category">City Game</span>
+                    </div>
+
+                    <div>
+                      <span class="rating">4.3</span>
+                    </div>
                   </div>
-                </footer>
-            </a>
-          </li>
 
-          <li class="card">
-            <a href="productpage.html">
-              <figure class="img-container">
-                <img src="app/assets/img/content/card.png" alt="card image">
-              </figure>
-
-                <span class="card-category">Audio Guide</span>
-
-                <header class="card-header">
-                  <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                </header>
-                
-                <footer class="card-footer">
-                  <div>
-                    <span class="rating">4.3</span>
-                  </div>
+                  <header class="hero-card-header">
+                    <h4>The Mechelen Syndicate City Escape Game</h4>
+                  </header>
                   
-                  <div> 
-                    <span class="location">Amsterdam, NL</span>
-                    <span class="price">€7.99</span>
-                  </div>
-                </footer>
-            </a>
-          </li>
-        </ul>
+                  <footer class="hero-card-footer">
+                    <div>
+                      <span class="location">Amsterdam, NL</span>
+                    </div>
 
-        <div class="see-all">
-          <a href="categorypage.html" class="btn-see-all">See All</a>
+                    <div> 
+                      <span class="price">€7.99</span>
+                    </div>
+                  </footer>
+              </a>
+            </li>
+
+            <li class="hero-card">
+              <a href="productpage.html">
+                  <figure class="img-container">
+                    <img src="app/assets/img/content/card.png" alt="card image">
+                  </figure>
+                  
+                  <div class="hero-card-meta">
+                    <div>
+                      <span class="hero-card-category">City Game</span>
+                    </div>
+
+                    <div>
+                      <span class="rating">4.3</span>
+                    </div>
+                  </div>
+
+                  <header class="hero-card-header">
+                    <h4>Magical Dublin: multicultural secrets of today</h4>
+                  </header>
+                  
+                  <footer class="hero-card-footer">
+                    <div>
+                      <span class="location">Amsterdam, NL</span>
+                    </div>
+
+                    <div> 
+                      <span class="price">€7.99</span>
+                    </div>
+                  </footer>
+              </a>
+            </li>
+
+            <li class="hero-card">
+              <a href="productpage.html">
+                  <figure class="img-container">
+                    <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="card image">
+                  </figure>
+                  
+                  <div class="hero-card-meta">
+                    <div>
+                      <span class="hero-card-category">City Game</span>
+                    </div>
+
+                    <div>
+                      <span class="rating">4.3</span>
+                    </div>
+                  </div>
+
+                  <header class="hero-card-header">
+                    <h4>Magical Dublin: multicultural secrets of today</h4>
+                  </header>
+                  
+                  <footer class="hero-card-footer">
+                    <div>
+                      <span class="location">Amsterdam, NL</span>
+                    </div>
+
+                    <div> 
+                      <span class="price">€7.99</span>
+                    </div>
+                  </footer>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

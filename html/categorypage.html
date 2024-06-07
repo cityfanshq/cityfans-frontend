@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Experiences · cityfans</title>
+  <title>cityfans · Team Building</title>
   <meta name="description" content="cityfans offers experiences for digital natives and curious city-fans that entertain and inspire through digital tools.">
 
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -24,1074 +24,937 @@
 
 <body>
   <main>
-    <header class="primary-header">
-      <div class="default-container flex align-items-center space-between">
-        <div>
-          <a href="index.html" class="logo"><img src="app/assets/img/ui/logo.svg" alt="the cityfans logo"></a>
-        </div>
-        <nav>
-          <ul class="primary-navigation | flex">
-            <li>
-              <form action="#">
-                <select name="language-select">
-                  <option value="en" selected="">English</option>
-                  <option value="de">Deutsch</option>
-                  <option value="es">Español </option>
-                  <option value="fr">Français</option>
-                  <option value="it">Italiano</option>
-                </select>
-              </form>
-            </li>
-
-            <li>
-              <form action="#">
-                <select name="currency-select">
-                  <option selected="" value="EUR">€ EUR</option>
-                  <option value="USD">$ USD</option>
-                  <option value="GBP">£ GBP</option>
-                  <option value="CAD">C$ CAD</option>
-                  <option value="NOK">kr NOK</option>
-                </select>
-              </form>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section class="bg-color-surface">
-      <!-- Breadcrumbs -->
-      <div class="breadcrumbs-module | default-container">
-        <section class="breadcrumbs">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="citypage.html">Amsterdam</a></li>
-            <li>Intriguing City Games</li>
-          </ul>
-        </section>
-      </div>
-      <!-- ------------- -->
-
-      <div class="category-page-cards category-page-heroes | default-container">
-        <div class="category-media-2-columns">
-          <section class="category-media">
-            <!-- We can add a hero video or image. Images should be wrapped inside a <figure> and videos inside the <iframe>. 
-
-                Although the home and the cards use the 16:9 aspect ratio (works nice in general for the web), it would be nice if in this page we use the cinematic/anamorphic aspect ratio (2.35) because of the width of the page on desktop. This would push less of the content down. These are example of image sizes that fit this ratio, more or less:
-
-                - 1920x817
-                - 1200x500 (adapted)
-                - 1128x470
-                - 1090x455 (rounded, and fits well on this page on cityfans)
-                - 651x277
-
-                etc.But we might not have that option, so below we have ways to use both 16:9 and not 16:9. We consider 16:9 to be the default. -->
-
-                <!-- image: if NOT 16:9… -->
-                <!--
-                  <div class="category-media">
-                    <figure>
-                      <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
-                    </figure> 
-                  </div>
-                -->
-
-                <!-- image: if 16:9 (The default)… -->
-                <!-- 
-                  <div class="category-media-16-9">
-                    <figure>
-                      <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
-                    </figure> 
-                  </div>
-                -->
-
-                <!-- video: if NOT 16:9… -->
-                <!-- 
-                  <div class="category-media-video">
-                      <iframe
-                        src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
-                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
-                      </iframe> 
-                  </div> 
-                -->
-
-                <!-- video: if 16:9 (the default)… -->
-                <!-- 
-                  <div class="category-media-video-16-9">
-                      <iframe
-                        src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
-                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
-                      </iframe> 
-                  </div> 
-                -->
-
-                <div class="category-media-video-16-9">
-                  <iframe
-                    src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="false">
-                  </iframe> 
-                </div>
-
-                <!-- <div class="category-media | category-media-short">
-                  <figure>
-                    <img src="app/assets/img/content/amsterdam2.jpg" alt="card image">
-                  </figure> 
-                </div> -->
-          </section>
-          <section class="category-cards-description">
-            <h1>Unleash Your Inner Detective with Intriguing City Games</h1>
-  
-            <p>Get ready to put your puzzle-solving skills to the test and embark on a thrilling adventure through the city. Let the city be your playground and prepare for an immersive experience that will leave you craving for more!</p>
-          </section>
-        </div>
-
-        <div class="hero-cards">
-          <div class="hero-carousel" id="hero-carousel">
-            <button class="hero-carousel-prev">
-              <img src="app/assets/img/ui/btn-prev.svg" aria-hidden="true" alt="hero card gallery previous button">
-            </button>
-  
-            <ul class="hero-carousel-cell">
-              <li class="hero-card">
-                <a href="productpage.html">
-                    <figure class="img-container">
-                      <img src="app/assets/img/content/card.png" alt="card image">
-                    </figure>
-                    
-                    <span class="hero-card-category">City Game</span>
-  
-                    <header class="hero-card-header">
-                      <h3>Ghosts of Amsterdam: The Haunting Stories</h3>
-                      <span class="location">Amsterdam, NL</span>
-                    </header>
-                    
-                    <footer class="hero-card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="price">€7.99</span>
-                      </div>
-                    </footer>
-                </a>
+    <div class="hero-intro-background">
+      <!-- this is probably not needed in the category page -->
+      <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+    </div>
+    
+    <div class="tophalf-animation">
+      <header class="primary-header">
+        <div class="default-container flex align-items-center space-between">
+          <div>
+            <a href="index.html" class="logo"><img src="app/assets/img/ui/logo.svg" alt="the cityfans logo"></a>
+          </div>
+          <nav>
+            <ul class="primary-navigation | flex">
+              <li>
+                <form action="#">
+                  <select name="city-select">
+                      <option selected>Amsterdam, NL</option>
+                      <option value="">Leeds, UK</option>
+                      <option value="">London, UK</option>
+                      <option value="">Dublin, IE</option>
+                      <option value="">Barcelona, ES</option>
+                      <option value="">Innsbruck, AT</option>
+                      <option value="">Stockholm, SE</option>
+                      <option value="">Copenhagen, DK</option>
+                      <option value="">Prague, CZ</option>
+                      <option value="">Oslo, NO</option>
+                  </select>
+                </form>
               </li>
-  
-              <li class="hero-card">
-                <a href="productpage.html">
-                    <figure class="img-container">
-                      <img src="app/assets/img/content/card.png" alt="card image">
-                    </figure>
-                    
-                    <span class="hero-card-category">City Game</span>
-  
-                    <header class="hero-card-header">
-                      <h3>Ghosts of Amsterdam: The Haunting Stories</h3>
-                      <span class="location">Amsterdam, NL</span>
-                    </header>
-                    
-                    <footer class="hero-card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="price">€7.99</span>
-                      </div>
-                    </footer>
-                </a>
+
+              <li>
+                <form action="#">
+                  <select name="language-select">
+                    <option value="en" selected="">EN</option>
+                    <option value="de">DE</option>
+                    <option value="es">ES</option>
+                    <option value="fr">FR</option>
+                    <option value="it">IT</option>
+                  </select>
+                </form>
               </li>
-  
-              <li class="hero-card"> 
-                <a href="productpage.html">
-                    <figure class="img-container">
-                      <img src="app/assets/img/content/card.png" alt="card image">
-                    </figure>
-                    
-                    <span class="hero-card-category">City Game</span>
-  
-                    <header class="hero-card-header">
-                      <h3>Ghosts of Amsterdam: The Haunting Stories</h3>
-                      <span class="location">Amsterdam, NL</span>
-                    </header>
-                    
-                    <footer class="hero-card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="price">€7.99</span>
-                      </div>
-                    </footer>
-                </a>
-              </li>
-  
-              <li class="hero-card"> 
-                <a href="productpage.html">
-                    <figure class="img-container">
-                      <img src="app/assets/img/content/card.png" alt="card image">
-                    </figure>
-                    
-                    <span class="hero-card-category">City Game</span>
-  
-                    <header class="hero-card-header">
-                      <h3>Ghosts of Amsterdam: The Haunting Stories</h3>
-                      <span class="location">Amsterdam, NL</span>
-                    </header>
-                    
-                    <footer class="hero-card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="price">€7.99</span>
-                      </div>
-                    </footer>
-                </a>
-              </li>
-  
-              <li class="hero-card">
-                <a href="productpage.html">
-                    <figure class="img-container">
-                      <img src="app/assets/img/content/card.png" alt="card image">
-                    </figure>
-                    
-                    <span class="hero-card-category">City Game</span>
-  
-                    <header class="hero-card-header">
-                      <h3>Ghosts of Amsterdam: The Haunting Stories</h3>
-                      <span class="location">Amsterdam, NL</span>
-                    </header>
-                    
-                    <footer class="hero-card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="price">€18</span>
-                      </div>
-                    </footer>
-                </a>
-              </li>
-  
-              <li class="hero-card">
-                <a href="productpage.html">
-                    <figure class="img-container">
-                      <img src="app/assets/img/content/card.png" alt="card image">
-                    </figure>
-                    
-                    <span class="hero-card-category">City Game</span>
-  
-                    <header class="hero-card-header">
-                      <h3>Ghosts of Amsterdam: The Haunting Stories</h3>
-                      <span class="location">Amsterdam, NL</span>
-                    </header>
-                    
-                    <footer class="hero-card-footer">
-                      <div>
-                        <span class="rating">4.3</span>
-                      </div>
-                      
-                      <div> 
-                        <span class="price">€18</span>
-                      </div>
-                    </footer>
-                </a>
+
+              <li>
+                <form action="#">
+                  <select name="currency-select">
+                    <option selected="" value="EUR">€</option>
+                    <option value="USD">$</option>
+                  </select>
+                </form>
               </li>
             </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero-intro">
+        <div class="hero-intro-foreground">
+          <h1>Embark on team-building adventures like never before</h1>
+          <p>Explore the city with your teammates, bond, and have a blast with our thrilling digital experiences. Let's unite and create lasting memories!</p>
+        </div>
+      </section>
+
+      <section class="experiences-tabs">
+        <section class="top-picks">
+          <div class="rounded-breadcrumbs">
+            <div>
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Amsterdam</a></li>
+                <li><a href="">Team Building</a></li>
+              </ul>
+            </div>
+          </div> 
+          <div class="default-container">
+            <h2>Top Picks</h2>
+            <ul class="hero-carousel-cell hero-experiences">
+          <li class="hero-card">
+            <a href="productpage.html">
+                <figure class="img-container">
+                  <img src="app/assets/img/content/card.png" alt="card image">
+                </figure>
+                
+                <div class="hero-card-meta">
+                  <div>
+                    <span class="hero-card-category">City Game</span>
+                  </div>
+
+                  <div>
+                    <span class="rating">4.3</span>
+                  </div>
+                </div>
+
+                <header class="hero-card-header">
+                  <h3>Amsterdam’s Jordaan: a local culture riddle route</h3>
+                </header>
+                
+                <footer class="hero-card-footer">
+                  <div>
+                    <span class="location">Amsterdam, NL</span>
+                  </div>
+
+                  <div> 
+                    <span class="price">€7.99</span>
+                  </div>
+                </footer>
+            </a>
+          </li>
+
+          <li class="hero-card">
+            <a href="productpage.html">
+                <figure class="img-container">
+                  <img src="app/assets/img/content/card.png" alt="card image">
+                </figure>
+                
+                <div class="hero-card-meta">
+                  <div>
+                    <span class="hero-card-category">City Game</span>
+                  </div>
+
+                  <div>
+                    <span class="rating">4.3</span>
+                  </div>
+                </div>
+
+                <header class="hero-card-header">
+                  <h3>Amsterdam’s Jordaan: a local culture riddle route why is this breaking</h3>
+                </header>
+                
+                <footer class="hero-card-footer">
+                  <div>
+                    <span class="location">Amsterdam, NL</span>
+                  </div>
+
+                  <div> 
+                    <span class="price">€7.99</span>
+                  </div>
+                </footer>
+            </a>
+          </li>
+
+          <li class="hero-card">
+            <a href="productpage.html">
+                <figure class="img-container">
+                  <img src="app/assets/img/content/card.png" alt="card image">
+                </figure>
+                
+                <div class="hero-card-meta">
+                  <div>
+                    <span class="hero-card-category">City Game</span>
+                  </div>
+
+                  <div>
+                    <span class="rating">4.3</span>
+                  </div>
+                </div>
+
+                <header class="hero-card-header">
+                  <h3>Magical Dublin: multicultural secrets of today</h3>
+                </header>
+                
+                <footer class="hero-card-footer">
+                  <div>
+                    <span class="location">Amsterdam, NL</span>
+                  </div>
+
+                  <div> 
+                    <span class="price">€7.99</span>
+                  </div>
+                </footer>
+            </a>
+          </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </div> <!-- CLOSE: [tophalf-animation] -->
+
+    <section class="home-product-cards favourite-cards | category-page-cards">
+      <div>
+        <div class="default-container">
+          <div class="category-cards">
+            <div class="segmentation-cards">
+              <div class="pill-title">
+                <h3>More city games to engage your team</h3>
+              </div>
+              <ul class="hero-carousel-cell hero-experiences hero-narrow-cards">
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
   
-            <button class="hero-carousel-next">
-              <img src="app/assets/img/ui/btn-next.svg" aria-hidden="true" alt="hero card gallery next button">
-           </button>
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Amsterdam’s Jordaan: a local culture riddle route</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>The Mechelen Syndicate City Escape Game</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Magical Dublin: multicultural secrets of today</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Magical Dublin: multicultural secrets of today</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Amsterdam’s Jordaan: a local culture riddle route</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>The Mechelen Syndicate City Escape Game</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Magical Dublin: multicultural secrets of today</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Magical Dublin: multicultural secrets of today</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="segmentation-cards">
+              <div class="pill-title">
+                <h3>Immersive experiences at top locations</h3>
+              </div>
+              <ul class="hero-carousel-cell hero-experiences hero-narrow-cards">
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Amsterdam’s Jordaan: a local culture riddle route</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>The Mechelen Syndicate City Escape Game</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Magical Dublin: multicultural secrets of today</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Magical Dublin: multicultural secrets of today</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Amsterdam’s Jordaan: a local culture riddle route</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>The Mechelen Syndicate City Escape Game</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/card.png" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Magical Dublin: multicultural secrets of today</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+  
+                <li class="hero-card">
+                  <a href="productpage.html">
+                      <figure class="img-container">
+                        <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="card image">
+                      </figure>
+                      
+                      <div class="hero-card-meta">
+                        <div>
+                          <span class="hero-card-category">City Game</span>
+                        </div>
+  
+                        <div>
+                          <span class="rating">4.3</span>
+                        </div>
+                      </div>
+  
+                      <header class="hero-card-header">
+                        <h4>Magical Dublin: multicultural secrets of today</h4>
+                      </header>
+                      
+                      <footer class="hero-card-footer">
+                        <div>
+                          <span class="location">Amsterdam, NL</span>
+                        </div>
+  
+                        <div> 
+                          <span class="price">€7.99</span>
+                        </div>
+                      </footer>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="city-page-cta">
+              <a href="citypage.html">
+                <div class="city-card-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+
+                <span>Amsterdam has much more to offer! Check it out ›</span>
+              </a>
+            </div>
+          </div>
+
+        </div> <!-- closes div: default-container -->
+      </div>
+    </section> 
+
+    <section class="city-pills">
+      <div>
+        <div class="default-container">
+          <h2>Which city will you play in?</h2>
+
+          <ul class="city-pills-list">
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Amsterdam, NL</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Barcelona, ES</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Dublin, IE</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Berlin, DE</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Copenhagen, DK</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Stockholm, SE</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Innsbruck, AT</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>London, UK</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Leeds, UK</span>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="citypage-2.html">
+                <div class="city-pill-cover">
+                  <img src="app/assets/img/content/amsterdam-16-9.jpg" alt="" aria-hidden="true">
+                </div>
+                <div>
+                  <span>Prague, CZ</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- CLOSE: [city-pills] -->
+
+    <section class="about-company">
+      <div>
+        <div class="default-container">
+          <div class="about-company-intro">
+            <h2>We are a vibrant marketplace of digital experiences, designed to immerse you in the heartbeat of a city</h2>
+
+            <div class="about-company-video">
+              <iframe
+                src="https://customer-bca1pgq1zup5tsfk.cloudflarestream.com/7828f853bca92ed31fe5edaa5c62c673/iframe?autoplay=true&muted=true"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowfullscreen="false"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="about-company-usp">
+            <ul class="usp-list">
+              <li>
+                <img src="app/assets/img/ui/balloon.svg" alt="">
+                <p role="heading" class="heading-balance">City Exploration, Your Way</p>
+                <p> Say goodbye to boring itineraries! Here your journey reveals local gems in a fun, interactive way</p>
+              </li>
+      
+              <li>
+                <img src="app/assets/img/ui/diamond.svg" alt="">
+                <p role="heading" class="heading-balance">Explore, Connect, Experience</p>
+                <p>Challenge your friends or venture solo and discover intriguing places that you might otherwise miss</p>
+              </li>
+      
+              <li>
+                <img src="app/assets/img/ui/explainer.svg" alt="">
+                <p role="heading" class="heading-balance">Discover Local Stories</p>
+                <p>Our adventures feature unique content developed by locals who know their city best</p>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
+    </section><!-- CLOSE: [about-company] -->
 
-        <div class="type-cards">
-          <h2>Do we want a subtitle here, like this?</h2>
+    <section class="players-hub">
+      <div>
+        <div class="default-container">
+          <div class="players-hub-form">
+            <div>
+              <h2>Welcome to players hub</h2>
+              <p>Join for exclusive access to top-secret quests, city events, mind-blowing local tips, and mingle with the coolest folks in each town</p>
 
-            <section class="container-tabs">
-              <ul class="nav nav-tabs tab-list">
-                <li class="active"><a href="#tab-audioguides">Audio Guides</a></li>
-                <li class=""><a href="#tab-citygames">City Games</a></li>
-                <li class=""><a href="#tab-virtualtours">Virtual Tours</a></li>
-              </ul>
+              <!-- WHEN THE FORM IS SUBMITTED, HIDE IT AND SHOW THIS: -->
+              <!-- <p class="newsletter-confirmation">Whohooo! 🎉 You’re in!</p> -->
 
-              <div class="tab-content">
-                <div id="tab-audioguides" class="tab-pane active">
-                  <!-- tab 5 (e.g: audio guides) -->
-                  <ul class="card-list">
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-                  </ul>
+              <form action="">
+                <div class="customer-data-item">
+                  <label for="">Your best email</label>
+                  <input type="email" name="email" required placeholder="example@provider.com" />
                 </div>
 
-                <div id="tab-citygames" class="tab-pane">
-                  <!-- tab 6 (e.g: city games) -->
-                  <ul class="card-list">
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-                  </ul>
+                <div class="customer-data-item">
+                  <label>Where do you play?</label>
+                  <select>
+                      <option value="Amsterdam">Amsterdam, NL</option>
+                      <option value="">Leeds, UK</option>
+                      <option value="">London, UK</option>
+                      <option value="">Dublin, IE</option>
+                      <option value="">Barcelona, ES</option>
+                      <option value="">Innsbruck, AT</option>
+                      <option value="">Stockholm, SE</option>
+                      <option value="">Copenhagen, DK</option>
+                      <option value="">Prague, CZ</option>
+                      <option value="">Oslo, NO</option>
+                    </select>
                 </div>
 
-                <div id="tab-virtualtours" class="tab-pane">
-                  <!-- tab 7 (e.g: virtual tours) -->
-                  <ul class="card-list">
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div> 
-            </section> <!-- CLOSE: TABS “Choose your style” -->
-        </div>
-
-        <div class="type-cards">
-          <h2>Great adventures near Amsterdam</h2>
-
-            <section class="container-tabs">
-              <ul class="nav nav-tabs tab-list">
-                <li class="active"><a href="#tab-utrecht">Utrecht</a></li>
-                <li class=""><a href="#tab-maastricht">Maastricht</a></li>
-                <li class=""><a href="#tab-rotterdam">Rotterdam</a></li>
-              </ul>
-
-              <div class="tab-content">
-                <div id="tab-utrecht" class="tab-pane active">
-                  <ul class="card-list">
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-                  </ul>
+                <div class="customer-data-item">
+                  <div></div>
+                  <button class="btn-buy-now">
+                    <span>Join the club</span>
+                    <span><img src="app/assets/img/ui/eyes.svg" alt="" aria-hidden="true"></span>
+                  </button>
                 </div>
 
-                <div id="tab-maastricht" class="tab-pane">
-                  <!-- tab 6 (e.g: city games) -->
-                  <ul class="card-list">
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
+                
+              </form>
+            </div>
 
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div id="tab-rotterdam" class="tab-pane">
-
-                  <ul class="card-list">
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">CITY GAME</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-
-                    <li class="card">
-                      <a href="productpage.html">
-                        <figure class="img-container">
-                          <img src="app/assets/img/content/card.png" alt="card image">
-                        </figure>
-
-                          <span class="card-category">Audio Guide</span>
-
-                          <header class="card-header">
-                            <h3>Uncovering Amsterdam’s Best Kept Centrum Secrets</h3>
-                          </header>
-                          
-                          <footer class="card-footer">
-                            <div>
-                              <span class="rating">4.3</span>
-                            </div>
-                            
-                            <div> 
-                              <span class="location">Amsterdam, NL</span>
-                              <span class="price">€7.99</span>
-                            </div>
-                          </footer>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div> 
-            </section> <!-- CLOSE: TABS “Choose your style” -->
-        </div> <!-- closes div:type-cards -->
-      </div> <!-- closes div:category-cards -->
-    </section>
-
-    <section class="destinations | bg-color-surface-bright">
-      <div class="default-container">
-        <h2 class="text-align-center">Where would you go next?</h2>
-
-        <ul class="destination-cards">
-          <li class="destination-card">
-            <a href="productpage.html">
-              <figure class="img-container">
-                <img src="app/assets/img/content/city.jpg" alt="city card image">
-              </figure>
-
-              <h3>Amsterdam</h3>
-            </a>
-          </li>
-
-          <li class="destination-card">
-            <a href="productpage.html">
-              <figure class="img-container">
-                <img src="app/assets/img/content/city.jpg" alt="city card image">
-              </figure>
-
-              <h3>Amsterdam</h3>
-            </a>
-          </li>
-
-          <li class="destination-card">
-            <a href="productpage.html">
-              <figure class="img-container">
-                <img src="app/assets/img/content/city.jpg" alt="city card image">
-              </figure>
-
-              <h3>Amsterdam</h3>
-            </a>
-          </li>
-
-          <li class="destination-card">
-            <a href="productpage.html">
-              <figure class="img-container">
-                <img src="app/assets/img/content/city.jpg" alt="city card image">
-              </figure>
-
-              <h3>Amsterdam</h3>
-            </a>
-          </li>
-        </ul>
-
-        <div class="see-all">
-          <a href="categorypage.html" class="btn-see-all">See All</a>
+            <div class="newsletter-gif">
+              <img src="app/assets/img/ui/newsletter-01.gif" alt="" aria-hidden="true">
+            </div>
+          </div>
         </div>
       </div>
     </section>
