@@ -1064,6 +1064,10 @@ h6 {
   padding-left: var(--spacing-16);
 }
 
+.category-cards .tab-content {
+  padding-right: var(--spacing-16);
+}
+
 /* category cards */
 .category-cards {
   margin-bottom: var(--spacing-32);
@@ -1393,13 +1397,18 @@ body:has(.hero-intro) {
   background-color: hsl(var(--color-primary));
   background-image: url('../../assets/img/ui/decorative.svg');
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: 130%;
+  background-position: 20% top;
 }
 
 /* buttons */
 .see-all {
   text-align: center;
-  margin: var(--spacing-24) 0 var(--spacing-48) 0;
+  padding: var(--spacing-24) 0 var(--spacing-48) 0;
+}
+
+.experiences-tabs .see-all {
+  padding: 0 inherit 2.5rem inherit;
 }
 
 .destinations .see-all {
@@ -3580,9 +3589,9 @@ a.instruction-download {
 /* 2024 HOME ANIMATION */
 .tophalf-animation {
   position: relative;
-  background: linear-gradient(-42deg, hsl(277 38% 46% / 0.9), hsl(0 68% 64% / 1), hsl(255 46% 61% / 0.85), hsl(277 49% 55% / 1), hsl(245 50% 55% / 0.9), hsl(277 49% 55% / 1));
+  background: linear-gradient(-42deg, hsl(277 38% 46% / 0.9), hsl(282, 68%, 64%), hsla(269, 49%, 43%, 0.85), hsl(275, 49%, 55%), hsl(270 50% 55% / 0.9), hsl(277, 57%, 41%));
   background-size: 400% 400%;
-  animation: gradient 22s ease infinite;
+  animation: gradient 8s ease infinite;
   height: 100%;
 }
 
@@ -3668,7 +3677,7 @@ a.instruction-download {
   min-width: 6rem;
   width: 100%;
   line-height: 1.2;
-  padding-block: var(--spacing-8);
+  padding: var(--spacing-8);
 }
 
 .experiences-tabs .tab-list a, .experiences-tabs .tab-list a:visited {
@@ -3836,7 +3845,7 @@ a.instruction-download {
 .favourite-cards h2 {
   font-size: var(--text-size-500);
   text-align: center;
-  padding-block: var(--spacing-24);
+  padding-block: var(--spacing-32);
 }
 
 .city-pills-list {
@@ -3961,12 +3970,6 @@ a.instruction-download {
   padding-bottom: var(--spacing-48);
 }
 
-
-
-.hero-narrow-cards .hero-card {
-  min-width: 65%;
-}
-
 .hero-narrow-cards .hero-card img {
   border-radius: var(--border-radius-inner) var(--border-radius-inner) 0 0;
 }
@@ -4072,9 +4075,13 @@ a.instruction-download {
   margin-bottom: var(--spacing-16);
 }
 
+.hero-city-tag + h1 {
+  line-height: 1.15;
+}
+
 .hero-intro-foreground p {
   text-align: center;
-  margin-top: var(--spacing-24);
+  margin-top: var(--spacing-8);
   color: hsl(var(--almost-white));
   width: 68%;
   margin-inline: auto;
@@ -4131,7 +4138,6 @@ a.instruction-download {
   padding-top: 56.25%;
   border-radius: var(--border-radius-outer);
   overflow: hidden;
-  transform: rotate(1.2deg);
 }
 
 .about-company-video iframe {
@@ -4143,7 +4149,7 @@ a.instruction-download {
 }
 
 .about-company-intro {
-  padding: var(--spacing-16) var(--spacing-16) var(--spacing-8) var(--spacing-16);
+  padding: 0 var(--spacing-16) var(--spacing-8) var(--spacing-16);
   color: hsl(var(--color-content-inverted));
 }
 
@@ -4151,7 +4157,7 @@ a.instruction-download {
   font-size: var(--text-size-500);
   text-align: center;
   line-height: 1.22;
-  padding-block: var(--spacing-24);
+  padding-block: var(--spacing-32);
   text-wrap: balance;
 }
 
@@ -4256,7 +4262,7 @@ a.instruction-download {
 .ugc h2 {
   font-size: var(--text-size-500);
   line-height: 1.22;
-  padding-block: var(--spacing-24);
+  padding-block: var(--spacing-32);
 }
 
 .ugc-content-gallery {
@@ -4314,6 +4320,7 @@ a.instruction-download {
   border: 1px solid hsl(var(--almost-black));
   text-wrap: pretty;
   gap: var(--spacing-24);
+  background: hsl(var(--color-almost-white-400));
 }
 
 .ugc-loveletter-paragraph {
@@ -4439,8 +4446,11 @@ a.instruction-download {
 
 .playing-together h2 {
   font-size: var(--text-size-500);
-  padding-top: var(--spacing-32);
-  margin-bottom: var(--spacing-16);
+  padding: var(--spacing-32) var(--spacing-16) var(--spacing-16) var(--spacing-16);
+}
+
+.playing-together h2 + p {
+  padding-inline: var(--spacing-16);
 }
 
 .playing-together p {
@@ -4478,7 +4488,7 @@ a.instruction-download {
 
 .see-more-desktop-only {
   position: relative;
-  display: none;
+  display: block;
 }
 
 .see-more-desktop-only .spinner::before {
@@ -4652,6 +4662,24 @@ a.instruction-download {
   line-height: 1.2;
 }
 
+.segmentation-cards .hero-carousel-cell {
+  display: grid;
+  gap: var(--spacing-default, --spacing-16);
+  grid-template-columns: minmax(1rem, 1fr) minmax(1rem, 1fr);
+  overflow: visible;
+}
+
+.hero-city-tag {
+  text-align: center;
+  font-size: var(--text-size-500);
+  font-weight: 600;
+  margin-bottom: var(--spacing-16);
+}
+
+.experiences-tabs .tab-list li {
+  padding-inline: var(--spacing-12);
+  min-height: 50px;
+}
 
 /* ============ MEDIA QUERIES ============ */
 @media screen and (min-width: 403px) {
@@ -4672,18 +4700,11 @@ a.instruction-download {
     gap: 1.5rem;
   }
 
-  .players-hub-form {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    text-align: left;
-    gap: var(--spacing-4);
-  }
-
   .newsletter-gif {
     margin-top: var(--spacing-48);
   }
 
-  .hero-card {
+  .experiences-tabs .hero-card {
     min-width: 65%;
   }
 
@@ -4696,10 +4717,18 @@ a.instruction-download {
   }
 }
 
+
 @media screen and (min-width: 625px) {
   .hero-intro-foreground {
     margin-inline: auto;
     width: 80%;
+  }
+
+  .players-hub-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: left;
+    gap: var(--spacing-4);
   }
 
   .experiences-tabs .tab-list li a {
@@ -4724,10 +4753,6 @@ a.instruction-download {
     margin-bottom: var(--spacing-24);
   }
 
-  .hero-narrow-cards .hero-card {
-    min-width: 45%;
-  }
-
   .hero-narrow-cards .hero-card:hover,
   .hero-experiences .hero-card:hover,
   .city-pills-list li:hover {
@@ -4749,7 +4774,9 @@ a.instruction-download {
   }
 
   .about-company-intro h2 {
-    font-size: var(--text-size-600);
+    font-size: var(--text-size-700);
+    text-wrap: pretty;
+    padding-block: var(--spacing-48);
   }
 
   .ugc-item {
@@ -4757,7 +4784,7 @@ a.instruction-download {
   }
 
   .players-hub > div {
-    background-position: center;
+    background-position: center center;
   }
 
   .players-hub-form {
@@ -4770,13 +4797,21 @@ a.instruction-download {
   }
 }
 
-@media screen and (min-width: 37.5em) {   .hero-card { min-width: 40%; } }
+@media screen and (min-width: 37.5em) {   .experiences-tabs .hero-card { min-width: 40%; } }
 
 /* 768px */
 @media screen and (min-width: 48em) {
   .experience-descriptors {
     grid-template-columns: 2fr 1fr;
     justify-content: space-between;
+  }
+
+  .segmentation-cards .hero-carousel-cell {
+    grid-template-columns: repeat(3,minmax(1rem,1fr));
+  }
+
+  .tophalf-animation {
+    animation: gradient 15s ease infinite;
   }
 
   .rounded-breadcrumbs ul {
@@ -5083,11 +5118,6 @@ a.instruction-download {
   .all-cities h1 {
     margin-inline: 0;
   }
-
-  .experiences-tabs .tab-list li {
-    padding-inline: var(--spacing-12);
-    min-height: 50px;
-  }
 }
 
 @media screen and (min-width: 800px) {
@@ -5115,6 +5145,18 @@ a.instruction-download {
     padding-right: var(--spacing-32);
   }
 
+  .experiences-tabs .see-all {
+    padding-bottom: 4rem;
+  }
+
+  body:has(.hero-intro) {
+    background-size: 100%;
+  }
+
+  .segmentation-cards .hero-carousel-cell {
+    grid-template-columns: repeat(4,minmax(1rem,1fr));
+  }
+
 
   .see-more-mobile-spinner {
     display: none;
@@ -5137,10 +5179,6 @@ a.instruction-download {
 
   .ugc-loveletter-paragraph {
     font-size: 1rem;
-  }
-
-  .see-more-desktop-only {
-    display: block;
   }
 
   .hero-highlight {
@@ -5222,22 +5260,9 @@ a.instruction-download {
     font-size: 3rem;
   }
 
-  .players-hub > div {
-    background-position: 0 600%;
-  }
-
   .about-company-intro {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: var(--spacing-48);
-    align-items: center;
-    padding-top: var(--spacing-48);
-  }
-
-  .about-company-intro h2 {
-    text-align: left;
-    font-size: 1.6rem;
-    text-wrap: pretty;
+    width: 70%;
+    margin-inline: auto;
   }
 
   .about-company-usp .usp-list p {
