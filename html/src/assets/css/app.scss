@@ -978,9 +978,10 @@ h6 {
   left: 1rem;
   background: hsl(var(--color-surface-dark));
   color: hsl(var(--color-content-inverted));
-  padding-inline: var(--spacing-16);
+  padding-inline: var(--spacing-8);
   padding-block: var(--spacing-4);
   border-radius: var(--border-radius-inner-inner);
+  line-height: 1;
 }
 
 .hero-card-footer {
@@ -3754,6 +3755,7 @@ a.instruction-download {
   margin-top: var(--spacing-16);
   margin-bottom: var(--spacing-8);
   padding-inline: var(--spacing-16);
+  gap: 0.5rem;
 }
 
 .hero-experiences .hero-card-meta .rating {
@@ -3769,13 +3771,26 @@ a.instruction-download {
   padding-inline: var(--spacing-16);
 }
 
+.hero-narrow-cards.hero-experiences .hero-card-meta,
+.hero-narrow-cards.hero-experiences .hero-card-header,
+.hero-narrow-cards.hero-experiences .hero-card-footer {
+  padding-inline: var(--spacing-8);
+}
+
 .hero-experiences .hero-card-footer {
   margin-bottom: var(--spacing-16);
+  gap: 0.5rem;
+}
+
+.hero-experiences .hero-card-footer div {
+  line-height: 1;
 }
 
 .hero-experiences .hero-card-footer .location {
   font-size: var(--text-size-300);
   font-weight: 300;
+  display: inline-block;
+  line-height: 1;
 }
 
 .hero-experiences .hero-card-footer .price {
@@ -4807,6 +4822,12 @@ a.instruction-download {
   .experience-descriptors {
     grid-template-columns: 2fr 1fr;
     justify-content: space-between;
+  }
+
+  .hero-narrow-cards.hero-experiences .hero-card-meta,
+  .hero-narrow-cards.hero-experiences .hero-card-header,
+  .hero-narrow-cards.hero-experiences .hero-card-footer {
+    padding-inline: var(--spacing-16);
   }
 
   .segmentation-cards .hero-carousel-cell {
