@@ -1409,7 +1409,7 @@ body:has(.hero-intro) {
 }
 
 .experiences-tabs .see-all {
-  padding: 0 inherit 2.5rem inherit;
+  padding: 2.5rem inherit 2rem inherit;
 }
 
 .destinations .see-all {
@@ -4098,7 +4098,6 @@ a.instruction-download {
   text-align: center;
   margin-top: var(--spacing-8);
   color: hsl(var(--almost-white));
-  width: 68%;
   margin-inline: auto;
 }
 
@@ -4360,6 +4359,8 @@ a.instruction-download {
   padding: var(--spacing-16);
   background: linear-gradient(to bottom, hsl(var(--almost-black) / 0.8), transparent);
   width: 100%;
+  z-index: 9999;
+  top: 0;
 }
 
 .ugc-user-handle a {
@@ -5170,7 +5171,11 @@ a.instruction-download {
   }
 
   .experiences-tabs .see-all {
-    padding-bottom: 4rem;
+    padding-bottom: 0;
+  }
+
+  .hero-intro-foreground p {
+    width: 68%;
   }
 
   body:has(.hero-intro) {
