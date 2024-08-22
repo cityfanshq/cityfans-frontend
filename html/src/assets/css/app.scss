@@ -2422,6 +2422,7 @@ select {
   border-radius: var(--border-radius-outer) var(--border-radius-outer) 0 0;
   margin-block: var(--spacing-16);
   padding: var(--spacing-16);
+  margin-bottom: var(--spacing-32);
 }
 
 .purchase-overview p + .btn-buy-now {
