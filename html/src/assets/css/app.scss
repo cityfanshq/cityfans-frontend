@@ -1895,7 +1895,7 @@ body:has(.hero-intro) {
   width: 100%;
 }
 
-p.sticky-money-back {
+.buy-now-sticky p.sticky-money-back {
   text-align: center;
   padding-top: var(--spacing-4);
   padding-bottom: var(--spacing-4);
@@ -4652,6 +4652,28 @@ a.instruction-download {
 
 .product-category-explanation {
   padding: var(--spacing-24);
+}
+
+.money-back-guarantee {
+  margin-top: var(--spacing-16);
+  padding: var(--spacing-16);
+  border-radius: var(--border-radius-outer);
+  text-align: center;
+}
+
+.money-back-guarantee h4{
+  font-size: 18px;
+}
+
+.money-back-guarantee p{
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: var(--spacing-8);
+}
+
+.money-back-guarantee span.small{
+  font-weight: normal;
+  font-size: 12px;
 }
 
 .bg-color-surface:has(.checkout-grid),
