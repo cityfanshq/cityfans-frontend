@@ -4676,6 +4676,25 @@ a.instruction-download {
   font-size: 12px;
 }
 
+.safe-payments {
+  margin-top: var(--spacing-8);
+  padding: var(--spacing-16);
+  border-radius: var(--border-radius-outer);
+  text-align: center;
+  p {
+    font-weight: lighter;
+
+  }
+  .image {
+    padding-top: var(--spacing-16);
+    img{
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+
 .bg-color-surface:has(.checkout-grid),
 .bg-color-ancillary:has(.confirmation-container) {
   border-radius: var(--border-radius-outer) var(--border-radius-outer) 0 0;
@@ -5000,12 +5019,18 @@ a.instruction-download {
     gap: 1rem;
   }
 
-  .purchase-overview {
+  .checkout-aside-container{
     position: -webkit-sticky;
     position: sticky;
     top: 1rem;
     margin-top: 0;
+    padding: 0;
+  }
+
+  .purchase-overview {
+    margin-top: 0;
     padding: var(--spacing-24);
+    margin-bottom: var(--spacing-32);
   }
 
   .buy-now {
