@@ -1,8 +1,8 @@
 :root {
-  /* 
+  /*
   ----------------------------------------------------------------------------
   1.COLOR SETUP
-    Our color token system consists of 4 layers: 
+    Our color token system consists of 4 layers:
 
     1.1 Raw Colors (the primitive colors used as a foundation)
     1.2 Base Tokens (numbered nicknames for shades and highlights)
@@ -13,7 +13,7 @@
     dark theme design by re-routing the custom CSS properties of Semantic
     Tokens under a media-query (e.g: “prefers-color-scheme: dark”).
 
-    In our Figma file, we find parity of this system on the layers 1.1, 1.2, 
+    In our Figma file, we find parity of this system on the layers 1.1, 1.2,
     1.3—whereas here lies a havier usage of the layer 1.4, components.
 
     To use our color tokens inside CSS classes, we wrap the color’s variable
@@ -34,7 +34,7 @@
   --almost-black-h:       0;
   --almost-black-s:       0%;
   --almost-black-l:       13%;
-    --almost-black-hsl:   var(--almost-black-h) var(--almost-black-s) 
+    --almost-black-hsl:   var(--almost-black-h) var(--almost-black-s)
                           var(--almost-black-l);
     --almost-black:       var(--almost-black-hsl);
     --almost-black-hex:   #222222;
@@ -43,7 +43,7 @@
   --almost-white-h:       0;
   --almost-white-s:       0%;
   --almost-white-l:       96%;
-    --almost-white-hsl:   var(--almost-white-h) var(--almost-white-s) 
+    --almost-white-hsl:   var(--almost-white-h) var(--almost-white-s)
                           var(--almost-white-l);
     --almost-white:       var(--almost-white-hsl);
     --almost-white-hex:   #F6F6F6;
@@ -131,13 +131,13 @@
 
   /* 1.2 COLORS: BASE TOKENS */
   /* We derive raw colors variants and give them numbered nicknames based on a
-  consistent nomenclature. 
+  consistent nomenclature.
 
   In our case, we are being inspired by the way font-weight works (200 is extra
   light, 400 is regular, 700 bold) and design systems such as Material Design,
   so any color nicknamed with a 400 is exactly the same as the raw color it
-  referrs to, whereas its 200 variant is a lighter version of that raw color 
-  and the 700 variant is a darker version. 
+  referrs to, whereas its 200 variant is a lighter version of that raw color
+  and the 700 variant is a darker version.
 
   We are using calc() to generate these variations in a consistent manner
   through variables (but we can break away from them when needed).
@@ -149,127 +149,127 @@
   --base-token-variation-value-xs: 5%;
 
   /* Almost Black: Variants */
-  --color-almost-black-200: 
-      var(--almost-black-h) var(--almost-black-s) 
+  --color-almost-black-200:
+      var(--almost-black-h) var(--almost-black-s)
       calc(var(--almost-black-l) + var(--base-token-variation-value));
 
   --color-almost-black-400: var(--almost-black);
 
-  --color-almost-black-700: 
-        var(--almost-black-h) var(--almost-black-s) 
+  --color-almost-black-700:
+        var(--almost-black-h) var(--almost-black-s)
         calc(var(--almost-black-l) - var(--base-token-variation-value));
 
   /* Almost White: Variants */
-  --color-almost-white-200: 
-      var(--almost-white-h) var(--almost-white-s) 
+  --color-almost-white-200:
+      var(--almost-white-h) var(--almost-white-s)
       calc(var(--almost-white-l) + var(--base-token-variation-value));
 
   --color-almost-white-400: var(--almost-white);
 
-  --color-almost-white-700:  
-        var(--almost-white-h) var(--almost-white-s) 
+  --color-almost-white-700:
+        var(--almost-white-h) var(--almost-white-s)
         calc(var(--almost-white-l) - var(--base-token-variation-value));
 
   /* Black: Variants */
-  --color-black-200: 
-      var(--black-h) var(--black-s) 
+  --color-black-200:
+      var(--black-h) var(--black-s)
       calc(var(--black-l) + var(--base-token-variation-value));
 
   --color-black-400: var(--black);
 
   /* Blue: Variants */
-  --color-blue-200: 
-      var(--blue-h) var(--blue-s) 
+  --color-blue-200:
+      var(--blue-h) var(--blue-s)
       calc(var(--blue-l) + var(--base-token-variation-value-xs));
 
   --color-blue-400: var(--blue);
 
-  --color-blue-700: 
-        var(--blue-h) var(--blue-s) 
+  --color-blue-700:
+        var(--blue-h) var(--blue-s)
         calc(var(--blue-l) - var(--base-token-variation-value));
 
   /* Cream: Variants */
-  --color-cream-200: 
-      var(--cream-h) var(--cream-s) 
+  --color-cream-200:
+      var(--cream-h) var(--cream-s)
       calc(var(--cream-l) + var(--base-token-variation-value));
 
   --color-cream-400: var(--cream);
 
-  --color-cream-700: 
-        var(--cream-h) var(--cream-s) 
+  --color-cream-700:
+        var(--cream-h) var(--cream-s)
         calc(var(--cream-l) - var(--base-token-variation-value));
 
   /* Gray: Variants */
-  --color-gray-200: 
-      var(--gray-h) var(--gray-s) 
+  --color-gray-200:
+      var(--gray-h) var(--gray-s)
       calc(var(--gray-l) + var(--base-token-variation-value-xs));
 
   --color-gray-400: var(--gray);
 
-  --color-gray-700: 
-        var(--gray-h) var(--gray-s) 
+  --color-gray-700:
+        var(--gray-h) var(--gray-s)
         calc(var(--gray-l) - var(--base-token-variation-value));
-  
-  --color-gray-900: 
-        var(--gray-h) var(--gray-s) 
+
+  --color-gray-900:
+        var(--gray-h) var(--gray-s)
         calc(var(--gray-l) - calc(var(--base-token-variation-value) * 2));
 
   /* Green: Variants */
-  --color-green-200: 
-      var(--green-h) var(--green-s) 
+  --color-green-200:
+      var(--green-h) var(--green-s)
       calc(var(--green-l) + var(--base-token-variation-value));
 
   --color-green-400: var(--green);
 
-  --color-green-700: 
-        var(--green-h) var(--green-s) 
+  --color-green-700:
+        var(--green-h) var(--green-s)
         calc(var(--green-l) - var(--base-token-variation-value));
 
   /* Orange: Variants */
-  --color-orange-200: 
-      var(--orange-h) var(--orange-s) 
+  --color-orange-200:
+      var(--orange-h) var(--orange-s)
       calc(var(--orange-l) + var(--base-token-variation-value));
 
   --color-orange-400: var(--orange);
 
-  --color-orange-700: 
-        var(--orange-h) var(--orange-s) 
+  --color-orange-700:
+        var(--orange-h) var(--orange-s)
         calc(var(--orange-l) - var(--base-token-variation-value));
 
   /* Purple: Variants */
-  --color-purple-200: 
-      var(--purple-h) var(--purple-s) 
+  --color-purple-200:
+      var(--purple-h) var(--purple-s)
       calc(var(--purple-l) + var(--base-token-variation-value));
 
   --color-purple-400: var(--purple);
 
-  --color-purple-700: 
-        var(--purple-h) var(--purple-s) 
+  --color-purple-700:
+        var(--purple-h) var(--purple-s)
         calc(var(--purple-l) - var(--base-token-variation-value));
 
   /* Red: Variants */
-  --color-red-200: 
-      var(--red-h) var(--red-s) 
+  --color-red-200:
+      var(--red-h) var(--red-s)
       calc(var(--red-l) + var(--base-token-variation-value));
 
   --color-red-400: var(--red);
 
-  --color-red-700: 
-        var(--red-h) var(--red-s) 
+  --color-red-700:
+        var(--red-h) var(--red-s)
         calc(var(--red-l) - var(--base-token-variation-value));
 
   /* White: Variants */
   --color-white-400: var(--white);
 
   /* Yellow: Variants */
-  --color-yellow-200: 
-      var(--yellow-h) var(--yellow-s) 
+  --color-yellow-200:
+      var(--yellow-h) var(--yellow-s)
       calc(var(--yellow-l) + var(--base-token-variation-value-xs));
 
   --color-yellow-400: var(--yellow);
 
-  --color-yellow-700: 
-        var(--yellow-h) var(--yellow-s) 
+  --color-yellow-700:
+        var(--yellow-h) var(--yellow-s)
         calc(var(--yellow-l) - var(--base-token-variation-value));
 
 
@@ -337,10 +337,10 @@
   --btn-active-animation:     scale(0.97);
 
   --receipt-bg:               var(--color-gray-400);
-  --receipt-border:           var(--color-gray-700);  
+  --receipt-border:           var(--color-gray-700);
   --receipt-content-faded:    var(--color-gray-900);
 
-  /* 
+  /*
     REMINDER:
     To use our color tokens inside CSS classes, we wrap the color’s variable
     inside a hsl() functional notation (we use the version without commas)
@@ -382,26 +382,26 @@
     › Size #900: 48px size over 68px leading (3rem over 1.41 line-height)
 
     @ How is the line-height chosen?
-      The designer will test how the text works with the different font-sizes 
-      generated by the type scale, using factors from the base value (in 
+      The designer will test how the text works with the different font-sizes
+      generated by the type scale, using factors from the base value (in
       our case 16—so factors are 1, 2, 4, 8 and 16) as a way to separate text
-      vertically. This should fit well with the grid point value chosen for 
+      vertically. This should fit well with the grid point value chosen for
       organizing the screen (in our case, 8).
- 
+
     @ How is line-height calculated for the web?
 
-        leading value in Figma (e.g: 40) / font-size in Figma (e.g: 24px) = 1.6 
+        leading value in Figma (e.g: 40) / font-size in Figma (e.g: 24px) = 1.6
 
     Then instead of using `px` units for font-sizes (they are less accessible),
-    we convert px into `em` units (by diving the value in pixels by the default 
+    we convert px into `em` units (by diving the value in pixels by the default
     browser font-size, 16—e.g: 20px / 16 = 1.25em) and declare as `rem` instead
     (while line-height should not have any units attached to it, ideally).
-    Although `em` is a good unit in certain occasions, for typography its best 
+    Although `em` is a good unit in certain occasions, for typography its best
     if we use `rem` for its predictability.
   ----------------------------------------------------------------------------
   */
 
-  --typeface-default:      'Lexend Deca', 
+  --typeface-default:      'Lexend Deca',
                            'Helvetica Neue', helvetica, 'Segoe UI', 'Apple Color Emoji', arial, sans-serif;
 
   --root-fontsize: 1em;
@@ -422,20 +422,20 @@
   --text-size-100: var(--font-size-8px);
   --text-size-200: var(--font-size-10px);
   --text-size-300: var(--font-size-12px);
-  --text-size-400: clamp(var(--font-size-16px), 
-                        var(--font-size-clamp-factor), 
+  --text-size-400: clamp(var(--font-size-16px),
+                        var(--font-size-clamp-factor),
                         var(--font-size-20px));
-  --text-size-500: clamp(var(--font-size-20px), 
-                        var(--font-size-clamp-factor), 
+  --text-size-500: clamp(var(--font-size-20px),
+                        var(--font-size-clamp-factor),
                         var(--font-size-24px));
-  --text-size-600: clamp(var(--font-size-24px), 
-                        var(--font-size-clamp-factor), 
+  --text-size-600: clamp(var(--font-size-24px),
+                        var(--font-size-clamp-factor),
                         var(--font-size-32px));
-  --text-size-700: clamp(var(--font-size-32px), 
-                        var(--font-size-clamp-factor), 
+  --text-size-700: clamp(var(--font-size-32px),
+                        var(--font-size-clamp-factor),
                         var(--font-size-40px));
-  --text-size-800: clamp(var(--font-size-40px), 
-                        var(--font-size-clamp-factor), 
+  --text-size-800: clamp(var(--font-size-40px),
+                        var(--font-size-clamp-factor),
                         var(--font-size-48px));
   --text-size-900: var(--font-size-48px);
 
@@ -511,7 +511,7 @@ h6 {
 
 .text-size-300 {
   font-size:      var(--text-size-300);
-  line-height:    1.66; 
+  line-height:    1.66;
 }
 
 .text-size-400 {
@@ -866,23 +866,23 @@ h6 {
 
 .video-home {
   margin-bottom: var(--spacing-24);
-  position: relative; 
+  position: relative;
   padding-top: 56.25%;
 }
 
 .video-home iframe {
-  border: none; 
-  position: absolute; 
-  top: 0; 
-  height: 100%; 
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
   width: 100%;
 }
 
 
 /* component headings */
-.hero-cards h2, 
-.category-cards h2, 
-.type-cards h2, 
+.hero-cards h2,
+.category-cards h2,
+.type-cards h2,
 .destinations h2,
 .partners h2 {
   font-size: var(--text-size-600);
@@ -894,7 +894,7 @@ h6 {
   color: hsl(var(--color-content-inverted));
 }
 
-.category-cards h2, 
+.category-cards h2,
 .type-cards h2 {
   padding-inline: var(--spacing-16);
   text-wrap: balance;
@@ -1103,7 +1103,7 @@ h6 {
   min-height: 100%;
 }
 
-.card img { 
+.card img {
   border-radius: var(--border-radius-inner-inner);
 }
 
@@ -1347,7 +1347,7 @@ h6 {
 }
 
 .primary-footer:has(+ .buy-now-sticky) {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .footer-content li, .footer-logos li {
@@ -1367,7 +1367,7 @@ h6 {
   font-weight: 300;
   text-decoration: none;
   opacity: 0.8;
-  transition: opacity 0.2s; 
+  transition: opacity 0.2s;
 }
 
 .footer-content a:hover {
@@ -1542,7 +1542,7 @@ body:has(.hero-intro) {
 
 /* PAGE-SPECIFIC */
 /* --- product page */
-.product-page-content .default-container, 
+.product-page-content .default-container,
 .more-experiences .default-container,
 .checkout-grid.default-container {
   padding: var(--spacing-16);
@@ -1678,15 +1678,15 @@ body:has(.hero-intro) {
 }
 
 .photo-gallery-video {
-  position: relative; 
+  position: relative;
   padding-top: 56.25%;
 }
 
 .photo-gallery-video iframe {
-  border: none; 
-  position: absolute; 
-  top: 0; 
-  height: 100%; 
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -1893,6 +1893,12 @@ body:has(.hero-intro) {
   bottom: 0;
   z-index: 99;
   width: 100%;
+}
+
+p.sticky-money-back {
+  text-align: center;
+  padding-top: var(--spacing-4);
+  padding-bottom: var(--spacing-4);
 }
 
 .product-page .primary-footer {
@@ -2312,7 +2318,7 @@ select {
 .addons-module h2 {
   font-size: var(--text-size-400);
   padding: var(--spacing-16);
-  
+
   background: hsl(var(--color-white-400));
   font-weight: 500;
 }
@@ -2381,7 +2387,7 @@ select {
 .extras-thumbnail {
   display: block;
   flex: 0 0 25%;
-  align-self: center;  
+  align-self: center;
 
 }
 
@@ -2606,7 +2612,7 @@ select {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  
+
   font-size: var(--text-size-300);
   line-height: 1.45;
 }
@@ -2812,7 +2818,7 @@ select {
 .checkout-voucher-item button {
   align-self: stretch;
   display: block;
-  border-radius: 0 
+  border-radius: 0
   var(--border-radius-inner-inner) var(--border-radius-inner-inner) 0;
   padding: var(--spacing-8);
   font-size: var(--text-size-300);
@@ -2940,7 +2946,7 @@ select {
 }
 
 .instructions-item {
-  display: flex; 
+  display: flex;
   align-items: flex-start;
   padding-bottom: var(--spacing-24);
   margin-bottom: var(--spacing-24);
@@ -3007,7 +3013,7 @@ select {
   padding: var(--spacing-16);
   border: 1px dashed hsl(var(--color-border));
   border-radius: var(--border-radius-inner);
-  
+
 }
 
 a.instruction-download {
@@ -3017,7 +3023,7 @@ a.instruction-download {
   padding-left: var(--spacing-32);
   word-break: break-all;
   word-wrap: wrap;
-  
+
 }
 
 .instruction-download:hover {
@@ -3046,10 +3052,10 @@ a.instruction-download {
 .category-media figure img,
 .category-media-video-16-9 iframe,
 .category-media-16-9 figure img {
-  border: none; 
-  position: absolute; 
-  top: 0; 
-  height: 100%; 
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -3161,7 +3167,7 @@ a.instruction-download {
 .long-content li a[href*="tiktok"],
 .long-content li a[href*="instagram"],
 .long-content li a[href*="facebook"],
-.long-content li a[href*="twitter"], 
+.long-content li a[href*="twitter"],
 .long-content li a[href*="linkedin"] {
   padding-left: var(--spacing-24);
   color: hsl(var(--color-content));
@@ -3309,17 +3315,17 @@ a.instruction-download {
 .blog-media-hero figure,
 .blog-media-hero-video,
 .blog-section-video {
-  position: relative; 
+  position: relative;
   padding-top: 56.25%;
 }
 
 .blog-media-hero-video iframe,
 .blog-section-video iframe,
 .blog-media-hero figure img {
-  border: none; 
-  position: absolute; 
-  top: 0; 
-  height: 100%; 
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -3488,7 +3494,7 @@ a.instruction-download {
 }
 
 .blog-pagination div,
-.blog-pagination-items { 
+.blog-pagination-items {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -4148,17 +4154,17 @@ a.instruction-download {
 
 .about-company-video {
   margin-bottom: var(--spacing-8);
-  position: relative; 
+  position: relative;
   padding-top: 56.25%;
   border-radius: var(--border-radius-outer);
   overflow: hidden;
 }
 
 .about-company-video iframe {
-  border: none; 
-  position: absolute; 
-  top: 0; 
-  height: 100%; 
+  border: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -4213,7 +4219,7 @@ a.instruction-download {
 }
 
 .pc-card .pc-card-wrapper {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   gap: var(--spacing-16);
   text-decoration: none;
@@ -4263,7 +4269,7 @@ a.instruction-download {
 }
 
 .ugc > div {
-  background-color: hsl(var(--color-ancillary-variant)); 
+  background-color: hsl(var(--color-ancillary-variant));
   border-radius: var(--border-radius-outer) var(--border-radius-outer) 0 0;
   padding-bottom: var(--spacing-32);
 }
@@ -4386,7 +4392,7 @@ a.instruction-download {
 }
 
 .players-hub > div {
-  background: hsl(var(--color-almost-black-400)) url('../../assets/img/ui/decorative-purple.svg') top/108% no-repeat; 
+  background: hsl(var(--color-almost-black-400)) url('../../assets/img/ui/decorative-purple.svg') top/108% no-repeat;
   border-radius: var(--border-radius-outer) var(--border-radius-outer) 0 0;
   padding-bottom: var(--spacing-32);
   color: hsl(var(--color-content-inverted));
@@ -4456,7 +4462,7 @@ a.instruction-download {
 }
 
 .playing-together > div {
-  background-color: hsl(var(--color-almost-white-400)); 
+  background-color: hsl(var(--color-almost-white-400));
   border-radius: var(--border-radius-outer) var(--border-radius-outer) 0 0;
   padding-bottom: var(--spacing-32);
   color: hsl(var(--color-content));
@@ -4850,7 +4856,7 @@ a.instruction-download {
     max-width: none;
     width: 100%;
   }
-  
+
   .hero-intro-background img {
     max-width: none;
     width: 100%;
@@ -4946,8 +4952,8 @@ a.instruction-download {
   .footer-logos div {
     padding-inline: var(--spacing-32);
     margin-top: var(--spacing-16);
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -4987,18 +4993,18 @@ a.instruction-download {
   .purchase-overview h2 {
     margin: var(--spacing-8) 0 var(--spacing-32) 0;
   }
-  
+
   .purchase-overview li p {
     font-size: var(--text-size-300);
     font-weight: 300;
   }
-  
+
   .purchase-item h3 {
     font-weight: 500;
     line-height: 1.30;
     font-size: var(--text-size-300);
   }
-  
+
   .purchase-total p {
     font-size: var(--text-size-400);
     font-weight: 700;
@@ -5012,7 +5018,7 @@ a.instruction-download {
     padding-inline: 0;
     font-size: var(--text-size-400);
   }
-  
+
   .breadcrumbs-module:has(+ .category-page-cards) {
     padding-inline: var(--spacing-32);
   }
@@ -5028,7 +5034,7 @@ a.instruction-download {
     padding-inline: 0;
   }
 
-  .terms-and-conditions { 
+  .terms-and-conditions {
     padding-inline: 0;
   }
 
@@ -5113,7 +5119,7 @@ a.instruction-download {
     font-size: var(--text-size-600);
     line-height: 1.24;
   }
-  
+
   .blog-home-hero figure:after {
     content: '';
     position: absolute;
@@ -5253,7 +5259,7 @@ a.instruction-download {
     padding-bottom: var(--spacing-48);
   }
 
-  .city-pills h2, .favourite-cards h2, .ugc h2, .playing-together h2, 
+  .city-pills h2, .favourite-cards h2, .ugc h2, .playing-together h2,
   .category-cards .sparkles-title {
     font-size: var(--text-size-700);
   }
@@ -5372,7 +5378,7 @@ a.instruction-download {
     font-size: var(--text-size-500);
   }
 
-  .category-cards h2, .destination-cards, .hero-cards h2, .tab-content, 
+  .category-cards h2, .destination-cards, .hero-cards h2, .tab-content,
   .type-cards h2 {
     font-size: var(--text-size-500);
   }
@@ -5546,7 +5552,7 @@ a.instruction-download {
     border: 2px solid hsl(var(--color-red-400));
     font-size: 1rem;
   }
-  
+
   .error-outer p[role="title"] {
     margin-bottom: var(--spacing-16);
   }
@@ -5960,7 +5966,7 @@ a.instruction-download {
   }
 
   .breadcrumbs-module:has(+ .category-page-cards) .breadcrumbs {
-    
+
     padding-bottom: 0;
   }
 
@@ -6159,7 +6165,7 @@ a.instruction-download {
   vertical-align: top;
   width: 100%;
   background-color: hsl(var(--color-white-400));
-  
+
   border: 1px solid hsl(var(--color-border-lighter));
   border-radius: var(--border-radius-inner-inner);
   overflow: hidden;
