@@ -121,7 +121,7 @@
                       <figure class="extras-thumbnail">
                         <img src="app/assets/img/content/card2.jpg" alt="addon description">
                       </figure>
-                      
+
                       <div>
                         <p>Unlimited travel on all GVB routes regardless of distance, both day and night, for the chosen period (Train,  Connexxion and EBS not included)</p>
                       </div>
@@ -162,118 +162,136 @@
                       <li class="product-overview-time">10:30</li>
                       <li class="product-overview-quantity">2x Child, 2x Adult, 1x Senior</li>
                     </ul>
-                </div> 
+                </div>
 
                 </section> <!-- addon item (e.g: Bikes) -->
               </section><!-- addons module-->
             </article>
-            
+
             <div>
-              <aside class="purchase-overview">
-              <h2>Overview of your purchase</h2>
+              <div class="checkout-aside-container">
+                <aside class="purchase-overview">
+                <h2>Overview of your purchase</h2>
 
-              <!-- simple version with voucher -->
-              <ul class="purchase-item">
-                <li>
-                  <h3>1x Self-guided audio-tour at Van Gogh</h3>
-                </li>
-                <li class="purchase-item-voucher">
-                  <p class="price-voucher">Voucher Applied (-20%)</p>
-                  <p class="price-discount">€7.99</p>
-                  <p class="purchase-item-discounted">€6.40</p>
-                </li>
-              </ul>
+                <!-- simple version with voucher -->
+                <ul class="purchase-item">
+                  <li>
+                    <h3>1x Self-guided audio-tour at Van Gogh</h3>
+                  </li>
+                  <li class="purchase-item-voucher">
+                    <p class="price-voucher">Voucher Applied (-20%)</p>
+                    <p class="price-discount">€7.99</p>
+                    <p class="purchase-item-discounted">€6.40</p>
+                  </li>
+                </ul>
 
-              <!-- complex version with total (similar to voucher) -->
-              <ul class="purchase-item">
-                <li>
-                  <h3>Self-guided audio-tour at Van Gogh</h3>
-                </li>
-                <li>
-                  <p>2x Adult</p>
-                  <p class="purchase-item-price">€112</p>
-                </li>
-                <li>
-                  <p>1x Child</p>
-                  <p class="purchase-item-price">€42</p>
-                </li>
-                <li class="purchase-item-subtotal">
-                  <p class="price-subtotal">Sub-total</p>
-                  <p class="purchase-item-subtotal">€154</p>
-                </li>
-              </ul>
-              
-              <!-- simple version (no voucher) -->
-              <ul class="purchase-item">
-                <li>
-                  <h3>1x Self-guided audio-tour at Van Gogh</h3>
-                  <p class="purchase-item-price">€6.40</p>
-                </li>
-              </ul>
+                <!-- complex version with total (similar to voucher) -->
+                <ul class="purchase-item">
+                  <li>
+                    <h3>Self-guided audio-tour at Van Gogh</h3>
+                  </li>
+                  <li>
+                    <p>2x Adult</p>
+                    <p class="purchase-item-price">€112</p>
+                  </li>
+                  <li>
+                    <p>1x Child</p>
+                    <p class="purchase-item-price">€42</p>
+                  </li>
+                  <li class="purchase-item-subtotal">
+                    <p class="price-subtotal">Sub-total</p>
+                    <p class="purchase-item-subtotal">€154</p>
+                  </li>
+                </ul>
 
-              <!-- complex version with voucher -->
-              <ul class="purchase-item">
-                <li><h3>Virtual Reality Experience in The Netherlands</h3></li>
-                <li>
-                  <p>2x Adult</p>
-                  <p class="purchase-item-price">€112</p>
-                </li>
-                <li>
-                  <p>1x Child</p>
-                  <p class="purchase-item-price">€42</p>
-                </li>
-                <li class="purchase-item-voucher">
-                  <p class="price-voucher">Voucher Applied (-20%)</p>
-                  <p class="price-discount">€1545.25</p>
-                  <p class="purchase-item-discounted">€123.20</p>
-                </li>
-              </ul>
-              
-              <!-- complex version (no voucher) -->
-              <ul class="purchase-item">
-                <li><h3>Tickets for GVB Amsterdam Public Transport</h3></li>
-                <li>
-                  <p>1x Child</p>
-                  <p class="purchase-item-price">€42</p>
-                </li>
-              </ul>
+                <!-- simple version (no voucher) -->
+                <ul class="purchase-item">
+                  <li>
+                    <h3>1x Self-guided audio-tour at Van Gogh</h3>
+                    <p class="purchase-item-price">€6.40</p>
+                  </li>
+                </ul>
 
-              <!-- 
-                For this verion, this voucher block should disappear after the voucher is applied succesfully, because:
+                <!-- complex version with voucher -->
+                <ul class="purchase-item">
+                  <li><h3>Virtual Reality Experience in The Netherlands</h3></li>
+                  <li>
+                    <p>2x Adult</p>
+                    <p class="purchase-item-price">€112</p>
+                  </li>
+                  <li>
+                    <p>1x Child</p>
+                    <p class="purchase-item-price">€42</p>
+                  </li>
+                  <li class="purchase-item-voucher">
+                    <p class="price-voucher">Voucher Applied (-20%)</p>
+                    <p class="price-discount">€1545.25</p>
+                    <p class="purchase-item-discounted">€123.20</p>
+                  </li>
+                </ul>
 
-                1) we won’t have interactions such as removing applied vouchers since only one can be applied at once;
+                <!-- complex version (no voucher) -->
+                <ul class="purchase-item">
+                  <li><h3>Tickets for GVB Amsterdam Public Transport</h3></li>
+                  <li>
+                    <p>1x Child</p>
+                    <p class="purchase-item-price">€42</p>
+                  </li>
+                </ul>
 
-                2) succesfully applied vouchers have space in the UI already with good visual affordance (red strikethrough)
-              -->
-              <div class="checkout-voucher">
-                <form action="">
-                  <div class="customer-data-item checkout-voucher-item">
-                    <label for="">Voucher</label>
-                    <input type="text" />
-                    <button>Apply</button>
+                <!--
+                  For this verion, this voucher block should disappear after the voucher is applied succesfully, because:
+
+                  1) we won’t have interactions such as removing applied vouchers since only one can be applied at once;
+
+                  2) succesfully applied vouchers have space in the UI already with good visual affordance (red strikethrough)
+                -->
+                <div class="checkout-voucher">
+                  <form action="">
+                    <div class="customer-data-item checkout-voucher-item">
+                      <label for="">Voucher</label>
+                      <input type="text" />
+                      <button>Apply</button>
+                    </div>
+                  </form>
+                  <span class="voucher-error">Enter a valid discount code</span>
+                </div>
+
+                <div class="purchase-total">
+                  <span>All taxes are included</span>
+                  <p>€157.20</p>
+                </div>
+
+                <div class="payment-disclaimer">
+                  <p>Your order will be placed in EUR (<strong>€156.16</strong>). The final exchange rate will be applied by your bank or credit card provider.</p>
+                </div>
+
+                <a href="customer.html" class="btn-buy-now">
+                  PROCEED
+                </a>
+
+                <div class="payment-tc">
+                  <p>You won’t be charded yet.</p>
+                  <p>By proceeding you agree to our <a href="">Terms and Conditions</a> & <a href="">Privacy Policy</a>.</p>
+                </div>
+                </aside>
+                <div class="money-back-guarantee bg-color-ancillary">
+                  <h4>
+                    Money-back Guarantee*
+                    <!-- <span>What is a self-guided audio tour?</span> -->
+                  </h4>
+
+                  <p>Love it or get your money back.<br/>No questions asked!</p>
+                  <span class="small">*valid for CityGames and Self-Guided Tours</span>
+                </div>
+
+                <div class="safe-payments">
+                  <p>🔒 Payments are secure & encrypted</p>
+                  <div class="image" style="text-align: center;">
+                    <img src="app/assets/img/ui/stripe_badge.svg" alt="Stripe badge"/>
                   </div>
-                </form>
-                <span class="voucher-error">Enter a valid discount code</span>
+                </div>
               </div>
-
-              <div class="purchase-total">
-                <span>All taxes are included</span>
-                <p>€157.20</p>
-              </div>
-
-              <div class="payment-disclaimer">
-                <p>Your order will be placed in EUR (<strong>€156.16</strong>). The final exchange rate will be applied by your bank or credit card provider.</p>
-              </div>
-
-              <a href="customer.html" class="btn-buy-now">
-                PROCEED
-              </a>
-
-              <div class="payment-tc">
-                <p>You won’t be charded yet.</p>
-                <p>By proceeding you agree to our <a href="">Terms and Conditions</a> & <a href="">Privacy Policy</a>.</p>
-              </div>
-              </aside>
             </div>
           </div>
     </section>
@@ -320,11 +338,11 @@
           <p><small>Copyright © 2023 cityfans - All rights reserved</small></p>
           <ul>
             <li><a href="https://www.tiktok.com/@hellocityfans" target="_blank" title="TikTok"><img src="app/assets/img/ui/tiktok.svg" alt="TikTok logo"></a></li>
-            
+
             <li><a href="https://www.instagram.com/hellocityfans/" target="_blank" title="Instagram"><img src="app/assets/img/ui/instagram.svg" alt="Instagram logo"></a></li>
 
             <li><a href="https://www.threads.net/@hellocityfans" target="_blank" title="Threads"><img src="app/assets/img/ui/threads.svg" alt="Threads logo"></a></li>
-            
+
             <li><a href="http://facebook.com/hicityfans" target="_blank"  title="Facebook"><img src="app/assets/img/ui/facebook.svg" alt="Facebook logo"></a></li>
 
             <!-- We don’t have LinkedIn yet, but later we will -->
