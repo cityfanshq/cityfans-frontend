@@ -1555,13 +1555,14 @@ body:has(.hero-intro) {
 .product-page-content h1 {
   font-size: var(--text-size-600);
   line-height: 1.16;
-  margin-bottom: var(--spacing-16);
+  /* margin-bottom: var(--spacing-16); */
   color: hsl(var(--color-purple-400)) !important;
 }
 
 .product-metadata {
+  margin-top: var(--spacing-32);
   display: grid;
-  gap: 1rem;
+  /* gap: 0.3rem; */
 }
 
 .product-metadata li {
@@ -1574,7 +1575,7 @@ body:has(.hero-intro) {
 .product-metadata .rating,
 .product-metadata .info {
   padding-left: var(--spacing-32);
-  font-weight: 300;
+  /* font-weight: 300; */
   font-size: var(--text-size-400);
 }
 
@@ -5509,13 +5510,14 @@ a.instruction-download {
   }
 
   .product-metadata {
-    display: flex;
+    margin-top: var(--spacing-32);
+    /* display: flex; */
     flex: 0 0 auto;
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 
   .product-metadata .language {
-    max-width: 30rem;
+    /* max-width: 30rem; */
   }
 
   .product-metadata .distance, .product-metadata .duration, .product-metadata .info, .product-metadata .language, .product-metadata .rating {
